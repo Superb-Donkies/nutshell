@@ -1,10 +1,4 @@
-const makeEventCard = Object.create(null, {
-    renderEventForm: {
-        value: (object) => {
-            document.querySelector("#event-form").innerHTML+=
-            `<button id="new-event--${object.id}">New Event</button>`
-        }
-    },
+const makeEventlist = Object.create(null, {
     renderEventList: {
         value: (object) => {
             document.querySelector("#event-list").innerHTML+=
@@ -20,4 +14,4 @@ const makeEventCard = Object.create(null, {
     }
 })
 
-module.exports = makeEventCard
+module.exports = makeEventlist
