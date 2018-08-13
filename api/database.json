@@ -1,5 +1,11 @@
 {
-    "users": [],
+    "users": [
+        {
+            "id": 1,
+            "username": "jeremiah3643",
+            "email": "jeremiah@fake.com"
+        }
+    ],
     "articles": [],
     "events": [],
     "tasks": [],
