@@ -2,7 +2,9 @@
 const DataManager = Object.create(null, {
     login: {
         value: () => {
-            
+            return fetch("http://localhost:8088/users")
+                .then(r => r.json())
+
         }
     },
     getArticles: {
@@ -11,3 +13,5 @@ const DataManager = Object.create(null, {
         }
     }
 })
+
+module.exports = DataManager
