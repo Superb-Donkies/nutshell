@@ -2,7 +2,12 @@
     "users": [],
     "articles": [],
     "events": [],
-    "tasks": [],
+    "tasks": [{
+        "id": 1,
+        "title": "Going to the Grocery Store",
+        "completeDate": "October 1, 2018",
+        "userId": 3
+    }],
     "firends": [],
     "messages": []
 }
