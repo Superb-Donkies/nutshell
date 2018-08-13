@@ -1,0 +1,21 @@
+{
+  "name": "donkie",
+  "version": "1.0.0",
+  "description": "a facebook themede group project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "team-superb-donkies",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "grunt": "^1.0.3",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "jquery": "^3.3.1",
+    "matchdep": "^2.0.0"
+  }
+}
