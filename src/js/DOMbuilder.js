@@ -12,7 +12,10 @@ function buildDom(){
                     <div id="task-content"></div>
                 </div>
                 <div class="mid-container">
-                    <div id="article-content"></div>
+                    <div id="article-content">
+                        <div id="article-form-container"></div>
+                        <div id="article-list"></div>
+                    </div>
                 </div>
                 <div class="right-container">
                     <div id="messages-content"></div>
