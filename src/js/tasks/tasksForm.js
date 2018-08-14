@@ -12,6 +12,9 @@ function createForm () {
                     <label>Complete Date</label>
                     <input type="date" id="date-entry">
                 </fieldset>
+                <fieldset>
+                    <button id="save-task">Save Task</button>
+                </fieldset> 
             </form>`
 }
 

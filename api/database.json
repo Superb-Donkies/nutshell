@@ -1,13 +1,21 @@
 {
-    "users": [],
-    "articles": [],
-    "events": [],
-    "tasks": [{
-        "id": 1,
-        "title": "Going to the Grocery Store",
-        "completeDate": "October 1, 2018",
-        "userId": 3
-    }],
-    "firends": [],
-    "messages": []
+  "users": [],
+  "articles": [],
+  "events": [],
+  "tasks": [
+    {
+      "title": "jeremiah suck",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "id": 11
+    },
+    {
+      "title": "hey you guyssssssss",
+      "completeDate": "2018-11-07",
+      "completion": false,
+      "id": 12
+    }
+  ],
+  "firends": [],
+  "messages": []
 }

@@ -22,6 +22,13 @@ const DataManager = Object.create(null, {
             }).then(r => r.json())
         }
     },
+    deleteTask: {
+        value: (taskId) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "DELETE",
+         }).then(r => r.json())
+        }
+    }
 
 
 
