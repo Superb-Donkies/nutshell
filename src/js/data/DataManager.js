@@ -1,10 +1,4 @@
 const DataManager = Object.create(null, {
-    login: {
-        value: () => {}
-    },
-    getArticles: {
-        value: () => {}
-        },
     getTasks: {
         value: () => {
             return fetch("http://localhost:8088/tasks")
@@ -28,9 +22,28 @@ const DataManager = Object.create(null, {
                 method: "DELETE",
          }).then(r => r.json())
         }
+    },
+    editTask: {
+        value: (taskId, task) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "PUT",
+                headers: {"Content-Type": "application/json"
+                },
+                body: JSON.stringify(task)
+            }).then(r => r.json())
+        }
+    },
+    patchTaskButton: {
+        value: (taskId,task) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"
+                },
+                body: JSON.stringify(task)
+            }).then(r => r.json())
+        }
+
     }
-
-
 
 })
 

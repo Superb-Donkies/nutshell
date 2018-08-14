@@ -23,8 +23,9 @@ const promiseMe =
     .then(response => {
         addButton();
         response.forEach(task => {
+            if (task.completion === false) {
             document.querySelector("#task-content").innerHTML += taskCard(task)
-
+            }
         })
     })
 
@@ -60,12 +61,36 @@ function putToDom () {
                    getData.saveTask(newTask) 
                 } 
             })
-                
-            
-
     })
         
 }
+
+//hjgvmjhf,jhfjh,fc,jhf
+
+
+
+
+// document.querySelector("#task-content").addEventListener("click", (event) => {
+//     if (event.target.className === "checkbox") {
+//         let newObject = {
+//             completion: true
+//         }
+//         let taskId = event.target.id.split("--")[1];
+//         getData.patchTaskButton(taskId, newObject)
+//             .then(() => {
+//                 return getData.getTasks()
+
+//             })
+//             .then(response => {
+//                     document.querySelector("#task-content").innerHTML = "";
+//                         response.forEach(task => {
+//                             if (task.completion === false) {
+//                                 document.querySelector("#task-content").innerHTML += taskCard(task)
+//                                 }
+//                         })
+//                     })
+//     }
+// })
 
 
 
