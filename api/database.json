@@ -1,14 +1,19 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "jeremiah3643",
-            "email": "jeremiah@fake.com"
-        }
-    ],
-    "articles": [],
-    "events": [],
-    "tasks": [],
-    "firends": [],
-    "messages": []
+  "users": [
+    {
+      "id": 1,
+      "username": "jeremiah3643",
+      "email": "jeremiah@fake.com"
+    },
+    {
+      "email": "david@fake.com",
+      "username": "david",
+      "id": 2
+    }
+  ],
+  "articles": [],
+  "events": [],
+  "tasks": [],
+  "firends": [],
+  "messages": []
 }
