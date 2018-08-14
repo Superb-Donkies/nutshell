@@ -1,6 +1,7 @@
 const DataManager = require("../data/DataManager")
 
 const loginBuilder = Object.create(null, {
+    // function to create the form for the login
     loginForm: {
         value: () => {
             return `<div>
@@ -11,25 +12,8 @@ const loginBuilder = Object.create(null, {
             </div>`
         }
     },
-    loginCatcher: {
-        value: (email, username) => {
-            DataManager.login(email, username)
-                .then(user => {
-                    if (user.length) {
-                        let userId = user[0].id
-                        sessionStorage.setItem("userId", userId)
-
-                    }
-                })
-        }
-    }
 }
 )
 
-
-// DataManager.login()
-//     .then(
-//         loginBuilder()
-//     )
 
 module.exports = loginBuilder
