@@ -1,12 +1,14 @@
 
 const DataManager = Object.create(null, {
     login: {
-        value: () => {
+        value: (email, username) => {
+            return fetch(`http://localhost:8088/users?email=${email}&username=${username}`)
+                .then(r => r.json())
         }
     },
     getArticles: {
-        value: () => {
-            return fetch("http://localhost:8088/articles")
+        value: (userId) => {
+            return fetch(`http://localhost:8088/articles?userId=${userId}`)
             .then(res => res.json())
         }
     },
