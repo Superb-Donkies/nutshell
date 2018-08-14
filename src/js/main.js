@@ -9,10 +9,7 @@ const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
 
 
-
-
 // Creates the Login page to on Load
-
 
 // function with event listeners to decect login or register
 
