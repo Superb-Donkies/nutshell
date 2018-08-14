@@ -1,10 +1,10 @@
 let eventEditManager = Object.create(null, {
-    saveEditedEvented: {
+    saveEditedEvent: {
         value: () => {
             let editedEvent = {
                 title: document.querySelector("#editedEventTitle").value,
-                date: document.querySelector("#editedEventDate").value,
-                location: document.querySelector("#editedEventLocation").value
+                location: document.querySelector("#editedEventLocation").value,
+                date: document.querySelector("#editedEventDate").value
             }
             return editedEvent
         }
@@ -17,11 +17,11 @@ let eventEditManager = Object.create(null, {
             let eventDate = document.querySelector(`#date--${event.target.id.split("--")[1]}`)
             eventTitleText = eventTitle.textContent;
             eventLocationText = eventLocation.textContent;
-            eventDateInput = eventDate.input;
+            eventDateText = eventDate.textContent;
             eventComponent.innerHTML =
                 `<input type="text" value="${eventTitleText}" id="edited-event-title">
                 <input type="text" value="${eventLocationText}" id="edited-event-location">
-                <input type="date" value="${eventDateInput}" id="edited-event-date">
+                <input type="date" value="${eventDateText}" id="edited-event-date">
                 <div class="button-container">
                     <button class="save-event-edit-btn" id="save-event-edit--${event.target.id.split("--")[1]}">Save Changes</button>
                     <button class="delete-event-btn" id="delet-event--${event.target.id.split("--")[1]}">Remove Event</button>

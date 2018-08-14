@@ -33,6 +33,17 @@ function login() {
                 }).then(user => {
                     let userId = user[0].id
                     document.querySelector("#navbar").innerHTML = navbarFunctions.navbarBuilder()
+                }) ///DAVID DO YOUR STUFF HERE
+                .then(user => {
+                    userId = user[0].id
+                    buildDom();
+                    eventForm.makeEventForm();
+                    DataManager.getEvents(userId)
+                    .then((events) => {
+                        events.forEach((article) => {
+                            document.querySelector("")
+                        })
+                    })
                 })
         }
         else if (typeClickedOn === "register") {
