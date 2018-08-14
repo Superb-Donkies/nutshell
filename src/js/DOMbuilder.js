@@ -1,7 +1,7 @@
 
 
 function buildDom(){
-    document.querySelector("#wrapper").innerHTML +=
+    document.querySelector("#user-page").innerHTML +=
         `<header>
         </header>
         <main>

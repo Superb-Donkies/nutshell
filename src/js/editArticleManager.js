@@ -3,7 +3,7 @@ let getDate = require("./getDate");
 
 const editArticleManager = Object.create(null, {
     saveEditedArticle: {
-        value: () => {
+        value: (userId) => {
             let editedArticle = {
                 userId: userId,
                 title: document.querySelector("#editedTitle").value,

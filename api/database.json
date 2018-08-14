@@ -4,16 +4,37 @@
       "id": 1,
       "username": "ricky",
       "email": "ricky@me.com"
+    },
+    {
+      "email": "alex@me.com",
+      "username": "alex",
+      "id": 2
     }
   ],
   "articles": [
     {
       "userId": 1,
       "title": "Hey Alejandro v2.3.5.6.65.9",
-      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9",
-      "date": "edited on: 08/14/2018 at 15:01:29 PM",
+      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9.10",
+      "date": "edited on: 08/14/2018 at 15:20:56 PM",
       "url": "jerk.com",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "sa,djbf,asd",
+      "summary": "dsbfmsad,bfasdf",
+      "date": "08/14/2018 at 15:29:33 PM",
+      "url": "sdfb,asdbf,s",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "im super stupid",
+      "summary": "yes i am",
+      "date": "08/14/2018 at 15:36:26 PM",
+      "url": "asd,jbasdf.com",
+      "id": 3
     }
   ],
   "events": [],
