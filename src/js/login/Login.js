@@ -12,8 +12,7 @@ const loginBuilder = Object.create(null, {
             </div>`
         }
     },
-}
-)
+});
 
 
 module.exports = loginBuilder
