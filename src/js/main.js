@@ -53,12 +53,41 @@ function login() {
                     buildDom();
                     eventForm.makeEventForm();
                     DataManager.getEvents(userId)
-                    .then((events) => {
-                        events.forEach((article) => {
-                            document.querySelector("")
-                        })
+                    .then(events => {
+                        events.forEach(event => {
+                            document.querySelector("#event-component").innerHTML += makeEventComponent(event);
+                        });
+                    });
+                    document.querySelector("#event-form").addEventListener("click", (e) => {
+                        if(e.target.id === "new-event-button") {
+                            eventForm.renderEventForm();
+                        }
+                        if(e.target.id === "save-event-button") {
+                            let newEvent = {
+                                userId: userId,
+                                title: document.querySelector("#event-title").value,
+                                location: document.querySelector("#event-location").value,
+                                date: document.querySelector("#event-date").value
+                            }
+                            DataManager.saveEvents(newEvent)
+                            .then(() => {
+                                DataManager.getEvents(userId)
+                                .then((events) => {
+                                    events.forEach((event) => document.querySelector("#event-component").innerHTML += makeEventComponent(event))
+                                })
+                            })
+                        }
                     })
+                });
+                document.querySelector("#event-component".addEventListener("click", (e) => {
+                    if(e.target.id === "edit-event-button".value){
+                        let eventsId = e.target.id.split("--")[1];
+                        DataManager.editEvents(events).then(() => {
+                            e.target.parentElement.parentElement.edit()
+                        })
+                    }
                 })
+            )
         }
         // If register button is created run logic that builds the register form
         else if (typeClickedOn === "register") {

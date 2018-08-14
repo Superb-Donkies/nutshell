@@ -1,7 +1,7 @@
 const makeEventForm = Object.create(null, {
     renderAddEventBtn: {
         value: () => {
-            document.querySelector("#event-form").innerHTML = `<button id="new-event-btn">New Event</button>`
+            document.querySelector("#event-form").innerHTML = `<button id="new-event-button">New Event</button>`
         }
     },
     renderEventForm: {

@@ -1,10 +1,5 @@
 const DataManager = Object.create(null, {
     login: {
-        value: () => {
-            value: (email, username) => {
-                return fetch(`http://localhost:8088/users?email=${email}&username=${username}`)
-                    .then(r => r.json())
-            }
         // Function that passes the values from login and looks up user
         value: (email, username) => {
             return fetch(`http://localhost:8088/users?email=${email}&username=${username}`)
@@ -24,7 +19,7 @@ const DataManager = Object.create(null, {
                     email: email,
                     username: username,
                 })
-            });
+            })
         }
     },
     getArticles: {
@@ -33,13 +28,13 @@ const DataManager = Object.create(null, {
     },
     getEvents: {
         value: () => {
-            return fetch("http://localhost:8088/events")
+            return fetch(`http://localhost:8088/events?userId=${userId}`)
                 .then(res => res.json())
         }
     },
     saveEvents: {
         value: (event) => {
-            return fetch("http://localhost:8088/events", {
+            return fetch(`http://localhost:8088/events`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -69,5 +64,6 @@ const DataManager = Object.create(null, {
         }
     }
 })
+
 
 module.exports = DataManager
