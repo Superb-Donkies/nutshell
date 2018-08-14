@@ -5,17 +5,11 @@ const DataManager = require("./data/DataManager")
 const navbarFunctions = require("./navbar/navbar")
 
 
-// Event listener to detect logout button
-document.querySelector("#navbar").addEventListener("click", () => {
-    // Clears session storage
-    sessionStorage.clear()
-    // Clears the navbar div
-    document.querySelector("#navbar").innerHTML = ""
-    // Then rebuilds the Login screen
-    document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
-})
+
+
+
 // Creates the Login page to on Load
-document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+
 
 // function with event listeners to decect login or register
 function login() {
@@ -34,6 +28,7 @@ function login() {
                     if (user.length) {
                         let userId = user[0].id
                         sessionStorage.setItem("userId", userId)
+                        document.querySelector("#loginContainer").innerHTML = ""
                     }
                     // If user does not exist through up an Alert
                     else {
@@ -76,4 +71,24 @@ function login() {
     })
 }
 // Invokes the Login Function
-login()
+loginChecker = () => {
+    if (sessionStorage.getItem("userId") === null) {
+        document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+        login()
+    }
+    else {
+        document.querySelector("#navbar").innerHTML = navbarFunctions.navbarBuilder()
+        document.querySelector("#loginContainer").innerHTML = ""
+        buildDom()
+    }
+}
+loginChecker()
+// Event listener to detect logout button
+document.querySelector("#navbar").addEventListener("click", () => {
+    // Clears session storage
+    sessionStorage.clear()
+    // Clears the navbar div
+    document.querySelector("#navbar").innerHTML = ""
+    // Then rebuilds the Login screen
+    document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+})
