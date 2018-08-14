@@ -1,5 +1,7 @@
 const loginBuilder = require("./login/Login")
 let buildDom = require("./DOMbuilder");
+let eventForm = require("./events/eventForm")
+let eventComponent = require("./events/eventComponent")
 
 document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
 document.querySelector("#loginSubmit").addEventListener("click", () => {
@@ -8,6 +10,8 @@ document.querySelector("#loginSubmit").addEventListener("click", () => {
     loginBuilder.loginCatcher(email, username)
 
 })
+
+
 
 
 // buildDom();
