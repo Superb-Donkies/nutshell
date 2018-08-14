@@ -1,11 +1,6 @@
 
 
 function buildDom(){
-    const body = document.querySelector("body");
-    const script = document.querySelector("script");
-    const mainContainer = document.createElement("div");
-    mainContainer.setAttribute("id", "wrapper");
-    body.insertBefore(mainContainer, script);
     document.querySelector("#wrapper").innerHTML +=
         `<header>
         </header>

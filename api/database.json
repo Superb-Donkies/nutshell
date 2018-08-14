@@ -9,82 +9,11 @@
   "articles": [
     {
       "userId": 1,
-      "title": "Hey Alejandro",
-      "summary": "heyaksjdnflkajsdhflkjashfn",
-      "date": "08/14/2018 at 10:31:22 AM",
+      "title": "Hey Alejandro v2.3.5.6.65.9",
+      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9",
+      "date": "edited on: 08/14/2018 at 15:01:29 PM",
       "url": "jerk.com",
       "id": 1
-    },
-    {
-      "title": "helloooooooowwwww",
-      "summary": "iiiissssssssiiiiiitttttmmmmmmeeeeeeyourelookingfooooor",
-      "date": "08/14/2018 at 10:46:03 AM",
-      "url": "alejandro.com",
-      "id": 2
-    },
-    {
-      "title": "wfsfasf",
-      "summary": "qefqwefqwfew",
-      "date": "08/14/2018 at 10:47:19 AM",
-      "url": "xqwrgwergwerg",
-      "id": 3
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:47:53 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 4
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:48:02 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 5
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:48:03 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 6
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:48:03 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 7
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:48:03 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 8
-    },
-    {
-      "title": "sadfasdfasdf",
-      "summary": "efvewvrtwbetv",
-      "date": "08/14/2018 at 10:48:03 AM",
-      "url": "cwrtgwergvetrgv",
-      "id": 9
-    },
-    {
-      "title": "asvsvsv",
-      "summary": "DScascscdsfv",
-      "date": "08/14/2018 at 10:49:35 AM",
-      "url": "cafvfvsdcadsa.com",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "title": "jrbf,jhqbdsf",
-      "summary": "wdfmnbqwe,hfb",
-      "date": "08/14/2018 at 10:54:34 AM",
-      "url": "s,jhdvf,vheqf.com",
-      "id": 12
     }
   ],
   "events": [],
