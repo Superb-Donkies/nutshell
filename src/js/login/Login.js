@@ -15,7 +15,6 @@ const loginBuilder = Object.create(null, {
         value: (email, username) => {
             DataManager.login(email, username)
                 .then(user => {
-                    debugger
                     if (user.length) {
                         let userId = user[0].id
                         sessionStorage.setItem("userId", userId)
