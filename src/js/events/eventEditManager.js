@@ -30,4 +30,4 @@ let eventEditManager = Object.create(null, {
     }
 });
 
-module.exports = editManager;
+module.exports = eventEditManager

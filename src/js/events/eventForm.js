@@ -1,13 +1,12 @@
 const makeEventForm = Object.create(null, {
-    renderAddEventBtn: {
+    renderAddEventButton: {
         value: () => {
             document.querySelector("#event-form").innerHTML = `<button id="new-event-button">New Event</button>`
         }
     },
     renderEventForm: {
         value: () => {
-            return `
-                <fieldset class="event-form-field">
+            return `<fieldset class="event-form-field">
                     <label for="event-title">Title</label>
                     <input required type="text" id="event-title" placeholder="What're you doing?">
                 </fieldset>

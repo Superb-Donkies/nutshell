@@ -12,7 +12,22 @@
     }
   ],
   "articles": [],
-  "events": [],
+  "events": [
+    {
+      "userId": 2,
+      "title": "Stuff",
+      "location": "Here",
+      "date": "2018-08-23",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "yueyyurd",
+      "location": "somewhere",
+      "date": "2018-08-18",
+      "id": 2
+    }
+  ],
   "tasks": [],
   "firends": [],
   "messages": []
