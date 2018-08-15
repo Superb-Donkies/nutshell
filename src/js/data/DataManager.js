@@ -59,6 +59,24 @@ const DataManager = Object.create(null, {
             })
             .then(result => result.json())
         }
+    },
+    getMessages: {
+        value: () => {
+            return fetch(`http://localhost:8088/messages`)
+            .then(res => res.json())
+        }
+    },
+    saveMessage: {
+        value: (message) => {
+            return fetch("http://localhost:8088/messages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(message)
+            })
+            .then(result => result.json())
+        }
     }
 });
 

@@ -6,7 +6,8 @@ function buildDom(){
         </header>
         <main>
             <div class="left-container">
-                <div id="profile-content"></div>
+                <div id="profile-content">
+                </div>
                 <div id="event-content"></div>
                 <div id="task-content"></div>
             </div>
@@ -17,7 +18,10 @@ function buildDom(){
                 </div>
             </div>
             <div class="right-container">
-                <div id="messages-content"></div>
+                <div id="messages-content">
+                    <div id="message-feed"></div>
+                    <div id="message-form"></div>
+                </div>
                 <div id="friends-content"></div>
             </div>
         </main>

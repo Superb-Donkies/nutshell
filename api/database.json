@@ -40,5 +40,36 @@
   "events": [],
   "tasks": [],
   "firends": [],
-  "messages": []
+  "messages": [
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "Hey Guys!",
+      "id": 1
+    },
+    {
+      "username": "alex",
+      "userId": 2,
+      "content": "Hey man!",
+      "id": 18
+    },
+    {
+      "username": "alex",
+      "userId": 2,
+      "content": "Im always so late",
+      "id": 19
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "Yup. Sad",
+      "id": 20
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "This is a clear form test",
+      "id": 21
+    }
+  ]
 }

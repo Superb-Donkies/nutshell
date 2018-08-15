@@ -7,6 +7,8 @@ const DataManager = require("./data/DataManager");
 const navbarFunctions = require("./navbar/navbar");
 const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
+const addMessageForm = require("./messageForm");
+const messageCard = require("./messageCard");
 
 
 // Creates the Login page to on Load
@@ -26,8 +28,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
             .then(user => {
                 // If user exists set userId as sessionStorage
                 if (user.length) {
-                    let userId = user[0].id
-                    sessionStorage.setItem("userId", userId)
+                    sessionStorage.setItem("user", JSON.stringify(user));
                     document.querySelector("#loginContainer").innerHTML = ""
                 }
                 // If user does not exist through up an Alert
@@ -41,9 +42,10 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 return user
             })
             .then((user) => {
-                userId = user[0].id;
+                let userId = JSON.parse(sessionStorage.getItem("user"))[0].id;
                 buildDom();
                 handleArticles(userId);
+                handleMessages(userId);
         });
     }
     // If register button is created run logic that builds the register form
@@ -76,16 +78,17 @@ document.querySelector("#wrapper").addEventListener("click", () => {
 
 // Invokes the Login Function
 loginChecker = () => {
-    if (sessionStorage.getItem("userId") === null) {
+    if (sessionStorage.getItem("user") === null) {
         document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
-        login()
     }
     else {
         document.querySelector("#navbar").innerHTML = navbarFunctions.navbarBuilder()
         document.querySelector("#loginContainer").innerHTML = ""
-        let userId = parseInt(sessionStorage.getItem("userId"));
-        buildDom()
-        handleArticles(userId)
+        let userId = JSON.parse(sessionStorage.getItem("user"))[0].id;
+        console.log(userId);
+        buildDom();
+        handleArticles(userId);
+        handleMessages(userId);
     }
 }
 loginChecker()
@@ -103,18 +106,35 @@ document.querySelector("#navbar").addEventListener("click", () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+function handleMessages(userId){
+    DataManager.getMessages()
+    .then(messages => {
+        messages.forEach(message => {
+            document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+        })
+    })
+    document.querySelector("#message-form").innerHTML = addMessageForm();
+    document.querySelector("#messages-content").addEventListener("click", (e) => {
+        if(e.target.id === "send-message"){
+            let message = {
+                username: JSON.parse(sessionStorage.getItem("user"))[0].username,
+                userId: userId,
+                content: document.querySelector("#new-message").value
+            }
+            document.querySelector("#new-message").value = "";
+            DataManager.saveMessage(message)
+            .then(() => {
+                DataManager.getMessages()
+                .then(messages => {
+                    document.querySelector("#message-feed").innerHTML = "";
+                    messages.forEach(message => {
+                        document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+                    })
+                })
+            })
+        }
+    })
+}
 
 
 function handleArticles(userId){
