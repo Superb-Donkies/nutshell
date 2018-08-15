@@ -2,7 +2,6 @@
   "users": [
     {
       "id": 1,
-<<<<<<< HEAD
       "username": "ricky",
       "email": "ricky@me.com",
       "about": []
@@ -12,15 +11,6 @@
       "username": "alex",
       "email": "alex@me.com",
       "about": []
-=======
-      "username": "jeremiah3643",
-      "email": "jeremiah@fake.com"
-    },
-    {
-      "email": "david@fake.com",
-      "username": "david",
-      "id": 2
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
     }
   ],
   "articles": [
@@ -44,7 +34,6 @@
   ],
   "tasks": [],
   "firends": [],
-<<<<<<< HEAD
   "messages": [
     {
       "username": "ricky",
@@ -113,7 +102,4 @@
       "id": 27
     }
   ]
-=======
-  "messages": []
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
 }

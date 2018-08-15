@@ -13,7 +13,7 @@ const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
 const buildProfile = require("./profile");
-
+const handleTasks = require("./tasks/mainTasks");
 
 // Creates the Login page to on Load
 
@@ -51,6 +51,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 handleArticles(userId);
                 handleMessages(userId);
                 handleEvents(userId);
+                handleTasks(userId);
             });
     }
     // If register button is created run logic that builds the register form
@@ -95,6 +96,7 @@ loginChecker = () => {
         handleArticles(userId);
         handleMessages(userId);
         handleEvents(userId);
+        handleTasks(userId);
     }
 }
 loginChecker()
@@ -169,26 +171,17 @@ function handleEvents(userId) {
     });
 }
 
-<<<<<<< HEAD
 function handleProfile(){
     document.querySelector("#profile-content").innerHTML = buildProfile();
 }
-
-function handleMessages(userId){
-=======
 function handleMessages(userId) {
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
     DataManager.getMessages()
         .then(messages => {
             messages.forEach(message => {
                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
             })
         })
-<<<<<<< HEAD
-        document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
-    })
-=======
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
+
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
         if (e.target.id === "send-message") {
@@ -199,16 +192,6 @@ function handleMessages(userId) {
             }
             document.querySelector("#new-message").value = "";
             DataManager.saveMessage(message)
-<<<<<<< HEAD
-            .then(() => {
-                DataManager.getMessages()
-                .then(messages => {
-                    document.querySelector("#message-feed").innerHTML = "";
-                    messages.forEach(message => {
-                        document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
-                    })
-                    document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
-=======
                 .then(() => {
                     DataManager.getMessages()
                         .then(messages => {
@@ -217,7 +200,6 @@ function handleMessages(userId) {
                                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
                             })
                         })
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
                 })
         }
     })

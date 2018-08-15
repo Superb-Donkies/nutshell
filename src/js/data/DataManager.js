@@ -85,17 +85,10 @@ const DataManager = Object.create(null, {
     getEvents: {
         value: (userId) => {
             return fetch(`http://localhost:8088/events?userId=${userId}`)
-<<<<<<< HEAD
-                .then(res => res.json())
-        }
-    },
-    saveEvents: {
-=======
                 .then(result => result.json())
         }
     },
     saveEvent: {
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (event) => {
             return fetch(`http://localhost:8088/events`, {
                 method: "POST",
@@ -107,22 +100,14 @@ const DataManager = Object.create(null, {
             .then(result => result.json())
         }
     },
-<<<<<<< HEAD
-    removeEvents: {
-=======
     removeEvent: {
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (eventId) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "Delete"
             }).then(result => result.json())
         }
     },
-<<<<<<< HEAD
-    editEvents: {
-=======
     editEvent: {
->>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (eventId, event) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "PUT",
@@ -132,7 +117,54 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify(event)
             }).then(result => result.json())
         }
+    },
+    getTasks: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/tasks?userId=${userId}`)
+                .then(r => r.json())
+        }
+    },
+    saveTask: {
+        value: (task) => {
+            return fetch("http://localhost:8088/tasks", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(task)
+            }).then(r => r.json())
+        }
+    },
+    deleteTask: {
+        value: (taskId) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "DELETE",
+            }).then(r => r.json())
+        }
+    },
+    editTask: {
+        value: (taskId, task) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(task)
+            }).then(r => r.json())
+        }
+    },
+    patchTaskButton: {
+        value: (taskId, task) => {
+            return fetch(`http://localhost:8088/tasks/${taskId}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(task)
+            }).then(r => r.json())
+        }
+    
     }
-});
+})
 
 module.exports = DataManager;
