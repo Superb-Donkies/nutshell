@@ -12,6 +12,8 @@ const getDate = require("./getDate");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
+const friendForm = require("./friends/Friends")
+const friendDisplay = require("./friends/friendDisplay")
 const handleTasks = require("./tasks/mainTasks");
 
 
@@ -50,6 +52,11 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
+                document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
+                DataManager.friendsList(userId)
+                    .then(result => {
+                        friendListBuilder(result)
+                    })
                 handleTasks(userId);
                 handleEvents(userId);
             });
@@ -95,20 +102,35 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
+        document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
+        DataManager.friendsList(userId)
+            .then(result => {
+                friendListBuilder(result)
+            });
+        // document.querySelector("#friendBox").innerHTML = friendDisplay.onLoadDisplay(result)
         handleTasks(userId);
         handleEvents(userId);
     }
 }
+
+friendListBuilder = (friend) => {
+    friend.forEach(friends => {
+        document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername)
+    })
+}
+
 loginChecker()
 // Event listener to detect logout button
 document.querySelector("#navbar").addEventListener("click", () => {
-    // Clears session storage
-    sessionStorage.clear()
-    // Clears the navbar div
-    document.querySelector("#navbar").innerHTML = "";
-    document.querySelector("#user-page").innerHTML = "";
-    // Then rebuilds the Login screen
-    document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+    if (event.target.id === "navLogout") {
+        // Clears session storage
+        sessionStorage.clear()
+        // Clears the navbar div
+        document.querySelector("#navbar").innerHTML = "";
+        document.querySelector("#user-page").innerHTML = "";
+        // Then rebuilds the Login screen
+        document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+    }
 })
 
 function handleEvents(userId) {
@@ -170,6 +192,8 @@ function handleEvents(userId) {
         }
     });
 }
+
+
 
 function handleMessages(userId) {
     DataManager.getMessages()
@@ -262,3 +286,43 @@ function handleArticles(userId) {
         }
     });
 }
+
+document.querySelector("#wrapper").addEventListener("click", (e) => {
+    if (e.target.id === "friendButton") {
+        let searchedUser = document.querySelector("#friendSearch").value
+        DataManager.friendChecker(searchedUser)
+            .then(result => {
+                if (result.length) {
+                    // alert(result[0].username)
+                    document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
+                    document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
+                        let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
+                        let friendId = result[0].id
+                        let friendUsername = result[0].username
+                        DataManager.friendValidator(userId, friendId)
+                            .then(response => {
+                                if (response.length) {
+                                    alert("Friend Already Added!")
+                                }
+
+                                else {
+                                    DataManager.friendAdder(userId, friendId, friendUsername)
+                                        .then((friendUsername) => {
+                                            DataManager.friendDisplayer(friendUsername)
+                                            return friendUsername
+                                        })
+                                        .then(friendUsername => {
+                                            let friendBox = friendDisplay.display(friendUsername.friendUsername)
+                                            document.querySelector("#friendBox").innerHTML = friendBox
+                                        })
+                                }
+
+                            })
+                    })
+                }
+                else {
+                    alert("User can't be found.")
+                }
+            })
+    }
+})
