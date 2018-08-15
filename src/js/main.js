@@ -1,11 +1,14 @@
-const loginBuilder = require("./login/Login");
-const buildDom = require("./DOMbuilder");
+const loginBuilder = require("./login/Login")
+let buildDom = require("./DOMbuilder");
+let eventForm = require("./events/eventForm")
+let eventComponent = require("./events/eventComponent")
+let eventEditManager = require("./events/eventEditManager")
+const registerCreator = require("./login/Register")
+const DataManager = require("./data/DataManager")
+const navbarFunctions = require("./navbar/navbar")
 const articleFormManager = require("./articleForm");
 const makeArticle = require("./articleCard");
 const getDate = require("./getDate");
-const DataManager = require("./data/DataManager");
-const navbarFunctions = require("./navbar/navbar");
-const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
@@ -48,6 +51,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 handleArticles(userId);
                 handleMessages(userId);
                 handleTasks(userId);
+                handleEvents(userId);
             });
     }
     // If register button is created run logic that builds the register form
@@ -92,6 +96,7 @@ loginChecker = () => {
         handleArticles(userId);
         handleMessages(userId);
         handleTasks(userId);
+        handleEvents(userId);
     }
 }
 loginChecker()
@@ -106,6 +111,65 @@ document.querySelector("#navbar").addEventListener("click", () => {
     document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
 })
 
+function handleEvents(userId) {
+    eventForm.renderAddEventButton()
+    DataManager.getEvents(userId)
+        .then(events => {
+            events.forEach(event => {
+                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event);
+            })
+        })
+    document.querySelector("#event-content").addEventListener("click", (e) => {
+        if (e.target.id === "new-event-button") {
+            document.querySelector("#event-form").innerHTML = eventForm.renderEventForm();
+        }
+        if (e.target.id === "save-event-button") {
+            let newEvent = {
+                userId: userId,
+                title: document.querySelector("#event-title").value,
+                location: document.querySelector("#event-location").value,
+                date: document.querySelector("#event-date").value
+            }
+            document.querySelector("#event-form").innerHTML = "";
+            eventForm.renderAddEventButton();
+            DataManager.saveEvent(newEvent)
+                .then(() => {
+                    DataManager.getEvents(userId)
+                        .then((events) => {
+                            document.querySelector("#event-component").innerHTML = ""
+                            events.forEach((event) => {
+                                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event)
+                            })
+                        })
+                })
+        }
+    })
+    document.querySelector("#event-component").addEventListener("click", (e) => {
+        if (e.target.className === "edit-event-button") {
+            eventEditManager.transformEvent(e);
+        }
+        if (e.target.className === "delete-event-button") {
+            let eventId = e.target.id.split("--")[1];
+            DataManager.removeEvent(eventId).then(() => {
+                e.target.parentElement.remove();
+            });
+        }
+        if (e.target.className === "save-event-edit-button") {
+            let eventId = e.target.id.split("--")[1];
+            let event = eventEditManager.saveEditedEvent(userId);
+            DataManager.editEvent(eventId, event)
+                .then(() => {
+                    DataManager.getEvents(userId)
+                        .then((events) => {
+                            document.querySelector("#event-component").innerHTML = "";
+                            events.forEach((event) => {
+                                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event)
+                            });
+                        });
+                });
+        }
+    });
+}
 
 function handleMessages(userId) {
     DataManager.getMessages()

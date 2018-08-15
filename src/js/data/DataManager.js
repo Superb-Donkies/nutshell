@@ -80,10 +80,10 @@ const DataManager = Object.create(null, {
     getEvents: {
         value: (userId) => {
             return fetch(`http://localhost:8088/events?userId=${userId}`)
-                .then(res => res.json())
+                .then(result => result.json())
         }
     },
-    saveEvents: {
+    saveEvent: {
         value: (event) => {
             return fetch(`http://localhost:8088/events`, {
                 method: "POST",
@@ -95,14 +95,14 @@ const DataManager = Object.create(null, {
             .then(result => result.json())
         }
     },
-    removeEvents: {
+    removeEvent: {
         value: (eventId) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "Delete"
             }).then(result => result.json())
         }
     },
-    editEvents: {
+    editEvent: {
         value: (eventId, event) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "PUT",
@@ -163,4 +163,3 @@ const DataManager = Object.create(null, {
 })
 
 module.exports = DataManager;
-
