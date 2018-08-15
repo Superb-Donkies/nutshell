@@ -2,6 +2,7 @@
   "users": [
     {
       "id": 1,
+<<<<<<< HEAD
       "username": "ricky",
       "email": "ricky@me.com",
       "about": []
@@ -11,77 +12,39 @@
       "username": "alex",
       "email": "alex@me.com",
       "about": []
+=======
+      "username": "jeremiah3643",
+      "email": "jeremiah@fake.com"
+    },
+    {
+      "email": "david@fake.com",
+      "username": "david",
+      "id": 2
+>>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
     }
   ],
   "articles": [
     {
-      "userId": 1,
-      "title": "Hey Alejandro v2.3.5.6.65.9",
-      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9.10",
-      "date": "edited on: 08/14/2018 at 15:20:56 PM",
-      "url": "jerk.com",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "sa,djbf,asd",
-      "summary": "dsbfmsad,bfasdf",
-      "date": "08/14/2018 at 15:29:33 PM",
-      "url": "sdfb,asdbf,s",
-      "id": 2
-    },
-    {
       "userId": 2,
-      "title": "im super stupid",
-      "summary": "yes i am",
-      "date": "08/14/2018 at 15:36:26 PM",
-      "url": "asd,jbasdf.com",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Sup man",
-      "summary": "sadljkhfaksdhf;lsdf",
-      "date": "08/15/2018 at 9:37:53 AM",
-      "url": "asdlkfhakldsbfh.com",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "test test test",
-      "summary": "adkfhlkqgflqwef",
-      "date": "08/15/2018 at 9:38:52 AM",
-      "url": "test.com",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "dsFSDFFASDF",
-      "summary": "hgjlerbvhbepcqbr",
-      "date": "08/15/2018 at 9:40:18 AM",
-      "url": "asdljbadsb.com",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "asdkfhldshf",
-      "summary": "a,sdhbalsdjbvlsdf",
-      "date": "08/15/2018 at 9:40:30 AM",
-      "url": "sadkjbfds.bc/sDF",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "title": "UAHRG,JAHLUGHKD.GF",
-      "summary": "ASDMFBASJKDGBVA,SGF",
-      "date": "08/15/2018 at 9:40:49 AM",
-      "url": "ASDJGDGF,AJSBCBJA.R.COM",
-      "id": 8
+      "title": "",
+      "summary": "haha",
+      "date": "08/15/2018 at 13:14:24 PM",
+      "url": "",
+      "id": 1
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "userId": 2,
+      "title": "jkyfyj",
+      "location": "drtsdjdykk",
+      "date": "2018-08-17",
+      "id": 3
+    }
+  ],
   "tasks": [],
   "firends": [],
+<<<<<<< HEAD
   "messages": [
     {
       "username": "ricky",
@@ -150,4 +113,7 @@
       "id": 27
     }
   ]
+=======
+  "messages": []
+>>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
 }

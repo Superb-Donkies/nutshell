@@ -1,4 +1,3 @@
-
 const DataManager = Object.create(null, {
     login: {
         // Function that passes the values from login and looks up user
@@ -86,10 +85,17 @@ const DataManager = Object.create(null, {
     getEvents: {
         value: (userId) => {
             return fetch(`http://localhost:8088/events?userId=${userId}`)
+<<<<<<< HEAD
                 .then(res => res.json())
         }
     },
     saveEvents: {
+=======
+                .then(result => result.json())
+        }
+    },
+    saveEvent: {
+>>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (event) => {
             return fetch(`http://localhost:8088/events`, {
                 method: "POST",
@@ -101,14 +107,22 @@ const DataManager = Object.create(null, {
             .then(result => result.json())
         }
     },
+<<<<<<< HEAD
     removeEvents: {
+=======
+    removeEvent: {
+>>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (eventId) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "Delete"
             }).then(result => result.json())
         }
     },
+<<<<<<< HEAD
     editEvents: {
+=======
+    editEvent: {
+>>>>>>> b381e6244d1aa06cbc7729f8a84b98984fef6d71
         value: (eventId, event) => {
             return fetch(`http://localhost:8088/events/${eventId}`, {
                 method: "PUT",

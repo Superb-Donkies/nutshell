@@ -1,6 +1,6 @@
 
 
-function buildDom(){
+function buildDom() {
     document.querySelector("#user-page").innerHTML +=
         `<header>
         </header>
@@ -8,7 +8,10 @@ function buildDom(){
             <div class="left-container">
                 <div id="profile-content">
                 </div>
-                <div id="event-content"></div>
+                <div id="event-content">
+                    <div id="event-form"></div>
+                    <div id="event-component"></div>
+                </div>
                 <div id="task-content"></div>
             </div>
             <div class="mid-container">
