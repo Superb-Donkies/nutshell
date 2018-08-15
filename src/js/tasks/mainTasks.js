@@ -5,17 +5,10 @@ const taskCard = require("./tasksCard");
 const createForm = require("./tasksForm");
 
 
-////targeting the task content area
-
-let taskContent = document.querySelector("#task-content");
 
 
 
 /////////////Button at the top of the Tasks Area
-
-// function addButton () {
-//     document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
-// }
 
 
 // const getTasks = 

@@ -6,8 +6,25 @@
       "email": "alex@me.com"
     }
   ],
-  "articles": [],
-  "events": [],
+  "articles": [
+    {
+      "userId": 1,
+      "title": "This article sucks",
+      "summary": "Big time summary",
+      "date": "08/15/2018 at 14:41:24 PM",
+      "url": "thank.com",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "userId": 1,
+      "title": "no party boys",
+      "location": "the house",
+      "date": "2018-08-23",
+      "id": 1
+    }
+  ],
   "tasks": [
     {
       "title": "stuff is good man",
@@ -103,7 +120,7 @@
     {
       "title": "works still?",
       "completeDate": "2018-08-22",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 33
     },
@@ -115,13 +132,27 @@
       "id": 34
     },
     {
-      "title": "having a good time?",
-      "completeDate": "2018-08-31",
+      "title": "having the best time around for the peeps",
+      "completeDate": "2018-08-29",
       "completion": false,
       "userId": 1,
       "id": 35
+    },
+    {
+      "title": "tasks and stuff",
+      "completeDate": "2018-08-16",
+      "completion": false,
+      "userId": 1,
+      "id": 36
     }
   ],
   "friends": [],
-  "messages": []
+  "messages": [
+    {
+      "username": "alex",
+      "userId": 1,
+      "content": "do these work?",
+      "id": 1
+    }
+  ]
 }
