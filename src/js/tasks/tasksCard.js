@@ -3,7 +3,7 @@
 "use strict";
 
 function createTaskCard (event) {
-    return `<div class="form-card" id="card--${event.id}">
+    return `<div class="task-card" id="card--${event.id}">
                 <h3>${event.title}</h3>
                 <p>${event.completeDate}</p>
                 <input type="checkbox" class="checkbox" id="checkbox--${event.id}">

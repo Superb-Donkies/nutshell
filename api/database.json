@@ -10,54 +10,81 @@
   "events": [],
   "tasks": [
     {
-      "completion": true,
-      "id": 14
-    },
-    {
-      "completion": true,
-      "id": 16
-    },
-    {
-      "completion": true,
-      "id": 17
-    },
-    {
-      "title": "guyguysguys ",
-      "completeDate": "2018-08-29",
-      "completion": true,
+      "title": "change this",
+      "completeDate": "2018-08-24",
+      "completion": false,
+      "userId": 1,
       "id": 18
-    },
-    {
-      "completion": true,
-      "id": 19
     },
     {
       "title": "work with more stuff",
       "completeDate": "2018-10-03",
       "completion": true,
-      "id": 20
-    },
-    {
-      "completion": true,
-      "id": 21
+      "id": 20,
+      "userId": 1
     },
     {
       "title": "sup dudes ",
       "completeDate": "2018-08-22",
       "completion": true,
-      "id": 22
+      "id": 22,
+      "userId": 1
     },
     {
       "title": "play gameboy",
       "completeDate": "2018-11-19",
       "completion": false,
-      "id": 23
+      "id": 23,
+      "userId": 1
     },
     {
       "title": "playing around with all my shit",
       "completeDate": "2018-08-15",
       "completion": true,
-      "id": 24
+      "id": 24,
+      "userId": 1
+    },
+    {
+      "title": "kill the nutshell",
+      "completeDate": "2018-08-24",
+      "completion": true,
+      "userId": 1,
+      "id": 25
+    },
+    {
+      "title": "why my man do you hate me",
+      "completeDate": "2018-10-18",
+      "completion": true,
+      "userId": 1,
+      "id": 26
+    },
+    {
+      "title": "get a coffee and hang with a pal",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 27
+    },
+    {
+      "title": "ricky check it out",
+      "completeDate": "2018-08-16",
+      "completion": false,
+      "userId": 1,
+      "id": 28
+    },
+    {
+      "title": "hello",
+      "completeDate": "2018-08-23",
+      "completion": false,
+      "userId": 1,
+      "id": 29
+    },
+    {
+      "title": "",
+      "completeDate": "",
+      "completion": false,
+      "userId": 1,
+      "id": 30
     }
   ],
   "friends": [],

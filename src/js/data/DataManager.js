@@ -112,9 +112,10 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify(event)
             }).then(result => result.json())
         }
-    },getTasks: {
-        value: () => {
-            return fetch("http://localhost:8088/tasks")
+    },
+    getTasks: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/tasks?userId=${userId}`)
                 .then(r => r.json())
         }
     },

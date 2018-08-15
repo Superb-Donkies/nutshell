@@ -9,6 +9,8 @@ const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
+const taskCard = require("./tasks/tasksCard");
+const createForm = require("./tasks/tasksForm");
 
 
 // Creates the Login page to on Load
@@ -47,7 +49,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 handleArticles(userId);
                 handleMessages(userId);
                 handleTasks(userId);
-        });
+            });
     }
     // If register button is created run logic that builds the register form
     else if (typeClickedOn === "register") {
@@ -107,21 +109,109 @@ document.querySelector("#navbar").addEventListener("click", () => {
 
 
 
-function handleTasks(userId){
-    
-}
-
-
-function handleMessages(userId){
-    DataManager.getMessages()
-    .then(messages => {
-        messages.forEach(message => {
-            document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+function handleTasks(userId) {
+    DataManager.getTasks(userId)
+        .then(response => {
+            document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
+            response.forEach(task => {
+                if (task.completion === false) {
+                    document.querySelector("#task-content").innerHTML += taskCard(task)
+                }
+            })
         })
-    })
+        .then(() => {
+
+            ///////////event listener for the add task
+
+            document.querySelector("#add-task").addEventListener("click", () => {
+                document.querySelector("#task-form").innerHTML += createForm();
+            })
+        })
+        .then(() => {
+
+            /////////putting the task to the dom
+
+            document.querySelector("#task-form").addEventListener("click", () => {
+                if (event.target.id === "save-task") {
+                    const newTask = {
+                        title: document.querySelector("#task-entry").value,
+                        completeDate: document.querySelector("#date-entry").value,
+                        completion: false,
+                        userId: userId
+                    }
+                    DataManager.saveTask(newTask)
+                }
+            })
+
+
+            document.querySelector("#task-content").addEventListener("click", (event) => {
+                if (event.target.className === "checkbox") {
+                    let newObject = {
+                        completion: true
+                    }
+                    let taskId = event.target.id.split("--")[1];
+                    DataManager.patchTaskButton(taskId, newObject)
+                        .then(() => {
+                            return DataManager.getTasks(userId)
+
+                        })
+                        .then(response => {
+                            document.querySelector("#task-content").innerHTML = "";
+                            response.forEach(task => {
+                                if (task.completion === false) {
+                                    document.querySelector("#task-content").innerHTML += taskCard(task)
+                                }
+                            })
+                        })
+                }
+            })
+
+            ///////////editing the task
+
+            document.querySelector("#task-content").addEventListener("click", (event) => {
+                if (event.target.className === "edit-button") {
+                    let newForm = `<form>
+                                    <fieldset class="task">
+                                        <label>Task</label>
+                                        <input type="text" id="task-entry" placeholder="What do you want to do?">
+                                    </fieldset>
+                                    <fieldset class="complete-date">
+                                        <label>Complete Date</label>
+                                        <input type="date" id="date-entry">
+                                    </fieldset>
+                                    <fieldset>
+                                        <button id="edit-save-task">Save Task</button>
+                                    </fieldset> 
+                                    </form>`;
+                    event.target.parentElement.parentElement.innerHTML = newForm;
+                }
+                
+            })
+                    document.querySelector(".task-card").addEventListener("click", () => {
+                        if (event.target.id === "edit-save-task") {
+                            const newTask = {
+                                title: document.querySelector("#task-entry").value,
+                                completeDate: document.querySelector("#date-entry").value,
+                                completion: false,
+                                userId: userId
+                            }
+                            DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask)
+                        }
+                    })
+        })
+};
+
+
+function handleMessages(userId) {
+    DataManager.getMessages()
+        .then(messages => {
+            messages.forEach(message => {
+                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+            })
+        })
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
-        if(e.target.id === "send-message"){
+        if (e.target.id === "send-message") {
             let message = {
                 username: JSON.parse(sessionStorage.getItem("user"))[0].username,
                 userId: userId,
@@ -129,33 +219,33 @@ function handleMessages(userId){
             }
             document.querySelector("#new-message").value = "";
             DataManager.saveMessage(message)
-            .then(() => {
-                DataManager.getMessages()
-                .then(messages => {
-                    document.querySelector("#message-feed").innerHTML = "";
-                    messages.forEach(message => {
-                        document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
-                    })
+                .then(() => {
+                    DataManager.getMessages()
+                        .then(messages => {
+                            document.querySelector("#message-feed").innerHTML = "";
+                            messages.forEach(message => {
+                                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+                            })
+                        })
                 })
-            })
         }
     })
 }
 
 
-function handleArticles(userId){
+function handleArticles(userId) {
     articleFormManager.renderFormBtn();
     DataManager.getArticles(userId)
-    .then((articles) => {
-        articles.forEach((article) => {
-            document.querySelector("#article-list").innerHTML += makeArticle(article);
+        .then((articles) => {
+            articles.forEach((article) => {
+                document.querySelector("#article-list").innerHTML += makeArticle(article);
+            });
         });
-    });
     document.querySelector("#article-form-container").addEventListener("click", (e) => {
-        if(e.target.id === "add-article-btn"){
+        if (e.target.id === "add-article-btn") {
             articleFormManager.renderArticleForm();
         }
-        if(e.target.id === "post-article"){
+        if (e.target.id === "post-article") {
             let newArticle = {
                 userId: userId,
                 title: document.querySelector("#article-title").value,
@@ -166,40 +256,40 @@ function handleArticles(userId){
             document.querySelector("#article-form-container").innerHTML = "";
             articleFormManager.renderFormBtn();
             DataManager.saveArticle(newArticle)
-            .then(() => {
-                DataManager.getArticles(userId)
-                .then((articles) => {
-                    document.querySelector("#article-list").innerHTML = "";
-                    articles.forEach((article) => {
-                        document.querySelector("#article-list").innerHTML += makeArticle(article);
-                    });
+                .then(() => {
+                    DataManager.getArticles(userId)
+                        .then((articles) => {
+                            document.querySelector("#article-list").innerHTML = "";
+                            articles.forEach((article) => {
+                                document.querySelector("#article-list").innerHTML += makeArticle(article);
+                            });
+                        });
                 });
-            });
         }
     });
     document.querySelector("#article-list").addEventListener("click", (e) => {
-        if(e.target.className === "delete-article-btn"){
+        if (e.target.className === "delete-article-btn") {
             let articleId = e.target.id.split("--")[1];
             DataManager.removeArticle(articleId).then(() => {
                 e.target.parentElement.parentElement.remove();
             });
         }
-        if(e.target.className === "edit-article-btn"){
+        if (e.target.className === "edit-article-btn") {
             editArticleManager.transformArticle();
         }
-        if(e.target.className === "save-article-btn"){
+        if (e.target.className === "save-article-btn") {
             let articleId = e.target.id.split("--")[1];
             let article = editArticleManager.saveEditedArticle(userId);
             DataManager.editArticle(articleId, article)
-            .then(() => {
-                DataManager.getArticles(userId)
-                .then((articles) => {
-                    document.querySelector("#article-list").innerHTML = "";
-                    articles.forEach((article) => {
-                        document.querySelector("#article-list").innerHTML += makeArticle(article);
-                    });
+                .then(() => {
+                    DataManager.getArticles(userId)
+                        .then((articles) => {
+                            document.querySelector("#article-list").innerHTML = "";
+                            articles.forEach((article) => {
+                                document.querySelector("#article-list").innerHTML += makeArticle(article);
+                            });
+                        });
                 });
-            });
         }
     });
 }
