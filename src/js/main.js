@@ -157,6 +157,8 @@ function handleArticles(userId){
                 date: getDate(),
                 url: document.querySelector("#article-url").value
             }
+            document.querySelector("#article-form-container").innerHTML = "";
+            articleFormManager.renderFormBtn();
             DataManager.saveArticle(newArticle)
             .then(() => {
                 DataManager.getArticles(userId)
