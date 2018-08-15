@@ -10,8 +10,8 @@
   "events": [],
   "tasks": [
     {
-      "title": "change this",
-      "completeDate": "2018-08-24",
+      "title": "stuff is good man",
+      "completeDate": "2018-08-30",
       "completion": false,
       "userId": 1,
       "id": 18
@@ -31,11 +31,11 @@
       "userId": 1
     },
     {
-      "title": "play gameboy",
-      "completeDate": "2018-11-19",
-      "completion": false,
-      "id": 23,
-      "userId": 1
+      "title": "play playstation",
+      "completeDate": "2018-08-17",
+      "completion": true,
+      "userId": 1,
+      "id": 23
     },
     {
       "title": "playing around with all my shit",
@@ -66,25 +66,60 @@
       "id": 27
     },
     {
-      "title": "ricky check it out",
-      "completeDate": "2018-08-16",
-      "completion": false,
+      "title": "i am the man",
+      "completeDate": "2018-08-29",
+      "completion": true,
       "userId": 1,
       "id": 28
     },
     {
       "title": "hello",
       "completeDate": "2018-08-23",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 29
     },
     {
-      "title": "",
-      "completeDate": "",
-      "completion": false,
+      "title": "this one is empty",
+      "completeDate": "2018-09-27",
+      "completion": true,
       "userId": 1,
       "id": 30
+    },
+    {
+      "title": "I love gaming",
+      "completeDate": "2018-08-23",
+      "completion": true,
+      "userId": 1,
+      "id": 31
+    },
+    {
+      "title": "still good?",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 32
+    },
+    {
+      "title": "works still?",
+      "completeDate": "2018-08-22",
+      "completion": false,
+      "userId": 1,
+      "id": 33
+    },
+    {
+      "title": "loving the nutshell",
+      "completeDate": "2018-10-24",
+      "completion": true,
+      "userId": 1,
+      "id": 34
+    },
+    {
+      "title": "having a good time?",
+      "completeDate": "2018-08-31",
+      "completion": false,
+      "userId": 1,
+      "id": 35
     }
   ],
   "friends": [],

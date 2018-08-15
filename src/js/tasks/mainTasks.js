@@ -1,6 +1,6 @@
 "use strict";
 
-const getData = require("../data/DataManager");
+const DataManager = require("../data/DataManager");
 const taskCard = require("./tasksCard");
 const createForm = require("./tasksForm");
 
@@ -13,89 +13,117 @@ let taskContent = document.querySelector("#task-content");
 
 /////////////Button at the top of the Tasks Area
 
-function addButton () {
-    document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
-}
+// function addButton () {
+//     document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
+// }
 
 
-const promiseMe = 
-    getData.getTasks()
-    .then(response => {
-        addButton();
-        response.forEach(task => {
-            if (task.completion === false) {
-            document.querySelector("#task-content").innerHTML += taskCard(task)
-            }
-        })
-    })
+// const getTasks = 
+//     getData.getTasks()
+//     .then(response => {
+//         addButton();
+//         response.forEach(task => {
+//             if (task.completion === false) {
+//             document.querySelector("#task-content").innerHTML += taskCard(task)
+//             }
+//         })
+//     })
 
 
 //////
 
 
-function putToDom () {
-
-    ////////////Putting the form onto the Page.
 
 
-    promiseMe
-    .then(() => {
 
-        ///////////event listener for the add task
 
-        document.querySelector("#add-task").addEventListener("click", () => {
-            document.querySelector("#task-form").innerHTML += createForm();
+
+function handleTasks(userId) {
+    DataManager.getTasks(userId)
+        .then(response => {
+            document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
+            response.forEach(task => {
+                if (task.completion === false) {
+                    document.querySelector("#task-content").innerHTML += taskCard(task)
+                }
+            })
         })
-    })
-    .then(() => {
-        
-/////////putting the task to the dom
+        .then(() => {
 
-        document.querySelector("#task-form").addEventListener("click", () => {
-            if (event.target.id === "save-task") {
+            ///////////event listener for the add task
+
+            document.querySelector("#add-task").addEventListener("click", () => {
+                document.querySelector("#task-form").innerHTML += createForm();
+            })
+        })
+        .then(() => {
+
+            /////////putting the task to the dom
+
+            document.querySelector("#task-form").addEventListener("click", () => {
+                if (event.target.id === "save-task") {
                     const newTask = {
                         title: document.querySelector("#task-entry").value,
                         completeDate: document.querySelector("#date-entry").value,
                         completion: false,
+                        userId: userId
                     }
-                   getData.saveTask(newTask) 
-                } 
+                    DataManager.saveTask(newTask)
+                }
             })
-    })
-        
-}
-
-//hjgvmjhf,jhfjh,fc,jhf
 
 
+            ///////////editing the task
 
+            document.querySelector("#task-content").addEventListener("click", (event) => {
+                if (event.target.className === "checkbox") {
+                    let newObject = {
+                        completion: true
+                    }
+                    let taskId = event.target.id.split("--")[1];
+                    DataManager.patchTaskButton(taskId, newObject)
+                        .then(() => {
+                            return DataManager.getTasks(userId)
 
-document.querySelector("#task-content").addEventListener("click", (event) => {
-    if (event.target.className === "checkbox") {
-        let newObject = {
-            completion: true
-        }
-        let taskId = event.target.id.split("--")[1];
-        getData.patchTaskButton(taskId, newObject)
-            .then(() => {
-                return getData.getTasks()
-
-            })
-            .then(response => {
-                    document.querySelector("#task-content").innerHTML = "";
-                        response.forEach(task => {
-                            if (task.completion === false) {
-                                document.querySelector("#task-content").innerHTML += taskCard(task)
-                                }
                         })
-                    })
-    }
-})
+                        .then(response => {
+                            document.querySelector("#task-content").innerHTML = "";
+                            response.forEach(task => {
+                                if (task.completion === false) {
+                                    document.querySelector("#task-content").innerHTML += taskCard(task)
+                                }
+                            })
+                        })
+                }
+                if (event.target.className === "edit-button") {
+                    let newForm = `<form>
+                                    <fieldset class="task">
+                                        <label>Task</label>
+                                        <input type="text" id="task-entry" placeholder="What do you want to do?">
+                                    </fieldset>
+                                    <fieldset class="complete-date">
+                                        <label>Complete Date</label>
+                                        <input type="date" id="date-entry">
+                                    </fieldset>
+                                    <fieldset>
+                                        <button class="edit-save-task">Save Task</button>
+                                    </fieldset> 
+                                    </form>`;
+                    event.target.parentElement.parentElement.innerHTML = newForm;
+                }
+                if (event.target.className === "edit-save-task") {
+                    const newTask = {
+                        title: document.querySelector("#task-entry").value,
+                        completeDate: document.querySelector("#date-entry").value,
+                        completion: false,
+                        userId: userId
+                    }
+                    DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask)
+                }
+                
+            })
+                
+        })
+};
 
-
-
-
-
-
-
-module.exports = putToDom;
+module.exports = handleTasks;
