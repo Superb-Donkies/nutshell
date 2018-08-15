@@ -9,6 +9,7 @@ const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
+const buildProfile = require("./profile");
 
 
 // Creates the Login page to on Load
@@ -104,7 +105,9 @@ document.querySelector("#navbar").addEventListener("click", () => {
 })
 
 
-
+function handleProfile(){
+    document.querySelector("#profile-content").innerHTML = buildProfile();
+}
 
 function handleMessages(userId){
     DataManager.getMessages()
@@ -112,6 +115,7 @@ function handleMessages(userId){
         messages.forEach(message => {
             document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
         })
+        document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
     })
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
@@ -130,6 +134,7 @@ function handleMessages(userId){
                     messages.forEach(message => {
                         document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
                     })
+                    document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
                 })
             })
         }

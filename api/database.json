@@ -3,12 +3,14 @@
     {
       "id": 1,
       "username": "ricky",
-      "email": "ricky@me.com"
+      "email": "ricky@me.com",
+      "about": []
     },
     {
-      "email": "alex@me.com",
+      "id": 2,
       "username": "alex",
-      "id": 2
+      "email": "alex@me.com",
+      "about": []
     }
   ],
   "articles": [
@@ -122,6 +124,30 @@
       "userId": 1,
       "content": "VRWVFRWB",
       "id": 23
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "ijashfladhsf\n",
+      "id": 24
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "asmdfbsjlfbjlasd,f",
+      "id": 25
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "asdf,jbasd,jfbsd",
+      "id": 26
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "iasdhflihsdf",
+      "id": 27
     }
   ]
 }
