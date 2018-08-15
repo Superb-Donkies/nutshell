@@ -19,15 +19,66 @@ const DataManager = Object.create(null, {
                     email: email,
                     username: username,
                 })
-            })
+            });
         }
     },
     getArticles: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/articles?userId=${userId}`)
+            .then(res => res.json())
+        }
+    },
+    saveArticle: {
+        value: (article) => {
+            return fetch("http://localhost:8088/articles", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(article)
+            })
+            .then(result => result.json())
+        }
+    },
+    removeArticle: {
+        value: (articleId) => {
+            return fetch(`http://localhost:8088/articles/${articleId}`, {
+                method: "Delete"
+            }).then(result => result.json())
+        }
+    },
+    editArticle: {
+        value: (articleId, article) => {
+            return fetch(`http://localhost:8088/articles/${articleId}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(article)
+            })
+            .then(result => result.json())
+        }
+    },
+    getMessages: {
         value: () => {
+            return fetch(`http://localhost:8088/messages`)
+            .then(res => res.json())
+        }
+    },
+    saveMessage: {
+        value: (message) => {
+            return fetch("http://localhost:8088/messages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(message)
+            })
+            .then(result => result.json())
         }
     },
     getEvents: {
-        value: () => {
+        value: (userId) => {
             return fetch(`http://localhost:8088/events?userId=${userId}`)
                 .then(res => res.json())
         }
@@ -41,7 +92,7 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(event)
             })
-                .then(result => result.json())
+            .then(result => result.json())
         }
     },
     removeEvents: {
@@ -59,11 +110,9 @@ const DataManager = Object.create(null, {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(event)
-            })
-                .then(result => result.json())
+            }).then(result => result.json())
         }
     }
-})
+});
 
-
-module.exports = DataManager
+module.exports = DataManager;
