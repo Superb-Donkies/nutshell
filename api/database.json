@@ -2,35 +2,157 @@
   "users": [
     {
       "id": 1,
-      "username": "jeremiah3643",
-      "email": "jeremiah@fake.com"
-    },
-    {
-      "email": "david@fake.com",
-      "username": "david",
-      "id": 2
+      "username": "alex",
+      "email": "alex@me.com"
     }
   ],
   "articles": [
     {
-      "userId": 2,
-      "title": "",
-      "summary": "haha",
-      "date": "08/15/2018 at 13:14:24 PM",
-      "url": "",
+      "userId": 1,
+      "title": "This article sucks",
+      "summary": "Big time summary",
+      "date": "08/15/2018 at 14:41:24 PM",
+      "url": "thank.com",
       "id": 1
     }
   ],
   "events": [
     {
-      "userId": 2,
-      "title": "jkyfyj",
-      "location": "drtsdjdykk",
-      "date": "2018-08-17",
-      "id": 3
+      "userId": 1,
+      "title": "no party boys",
+      "location": "the house",
+      "date": "2018-08-23",
+      "id": 1
     }
   ],
-  "tasks": [],
-  "firends": [],
-  "messages": []
+  "tasks": [
+    {
+      "title": "stuff is good man",
+      "completeDate": "2018-08-30",
+      "completion": false,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "work with more stuff",
+      "completeDate": "2018-10-03",
+      "completion": true,
+      "id": 20,
+      "userId": 1
+    },
+    {
+      "title": "sup dudes ",
+      "completeDate": "2018-08-22",
+      "completion": true,
+      "id": 22,
+      "userId": 1
+    },
+    {
+      "title": "play playstation",
+      "completeDate": "2018-08-17",
+      "completion": true,
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "title": "playing around with all my shit",
+      "completeDate": "2018-08-15",
+      "completion": true,
+      "id": 24,
+      "userId": 1
+    },
+    {
+      "title": "kill the nutshell",
+      "completeDate": "2018-08-24",
+      "completion": true,
+      "userId": 1,
+      "id": 25
+    },
+    {
+      "title": "why my man do you hate me",
+      "completeDate": "2018-10-18",
+      "completion": true,
+      "userId": 1,
+      "id": 26
+    },
+    {
+      "title": "get a coffee and hang with a pal",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 27
+    },
+    {
+      "title": "i am the man",
+      "completeDate": "2018-08-29",
+      "completion": true,
+      "userId": 1,
+      "id": 28
+    },
+    {
+      "title": "hello",
+      "completeDate": "2018-08-23",
+      "completion": true,
+      "userId": 1,
+      "id": 29
+    },
+    {
+      "title": "this one is empty",
+      "completeDate": "2018-09-27",
+      "completion": true,
+      "userId": 1,
+      "id": 30
+    },
+    {
+      "title": "I love gaming",
+      "completeDate": "2018-08-23",
+      "completion": true,
+      "userId": 1,
+      "id": 31
+    },
+    {
+      "title": "still good?",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 32
+    },
+    {
+      "title": "works still?",
+      "completeDate": "2018-08-22",
+      "completion": true,
+      "userId": 1,
+      "id": 33
+    },
+    {
+      "title": "loving the nutshell",
+      "completeDate": "2018-10-24",
+      "completion": true,
+      "userId": 1,
+      "id": 34
+    },
+    {
+      "title": "having the best time around for the peeps",
+      "completeDate": "2018-08-29",
+      "completion": false,
+      "userId": 1,
+      "id": 35
+    },
+    {
+      "title": "tasks and stuff",
+      "completeDate": "2018-08-16",
+      "completion": false,
+      "userId": 1,
+      "id": 36
+    }
+  ],
+  "friends": [],
+  "messages": [
+    {
+      "username": "alex",
+      "userId": 1,
+      "content": "do these work?",
+      "id": 1
+    }
+  ]
 }

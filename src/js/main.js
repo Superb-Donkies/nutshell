@@ -12,6 +12,7 @@ const getDate = require("./getDate");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
+const handleTasks = require("./tasks/mainTasks");
 
 
 // Creates the Login page to on Load
@@ -49,6 +50,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
+                handleTasks(userId);
                 handleEvents(userId);
             });
     }
@@ -93,6 +95,7 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
+        handleTasks(userId);
         handleEvents(userId);
     }
 }
