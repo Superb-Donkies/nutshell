@@ -10,6 +10,8 @@ const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
 const buildProfile = require("./profile");
+const profileFormManager = require("./profileForm");
+const saveUserDetails = require("./editProfile");
 
 
 // Creates the Login page to on Load
@@ -47,6 +49,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
+                handleProfile(userId);
         });
     }
     // If register button is created run logic that builds the register form
@@ -90,6 +93,7 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
+        handleProfile(userId);
     }
 }
 loginChecker()
@@ -105,8 +109,26 @@ document.querySelector("#navbar").addEventListener("click", () => {
 })
 
 
-function handleProfile(){
-    document.querySelector("#profile-content").innerHTML = buildProfile();
+function handleProfile(userId){
+    DataManager.getUser(userId)
+    .then(user => {
+        document.querySelector("#profile-display").innerHTML = buildProfile(user);
+    })
+    document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
+    document.querySelector("#profile-content").addEventListener("click", (e) => {
+        if(e.target.id === "update-profile"){
+            document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileForm();
+        }
+        if(e.target.id === "save-profile"){
+            DataManager.editProfile(userId, saveUserDetails()).then(() => {
+                document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
+                DataManager.getUser(userId)
+                .then(user => {
+                    document.querySelector("#profile-display").innerHTML = buildProfile(user);
+                })
+            })
+        }
+    })
 }
 
 function handleMessages(userId){

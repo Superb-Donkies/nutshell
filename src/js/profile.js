@@ -1,10 +1,10 @@
 
-function buildProfile(userId, image, username, bio){
-    return `<div id="user-profile--${userId}">
-                <img src="${image}" id="profile-image">
-                <h2 id="profile-username">${username}</h2>
-                <p id="profile-bio">${bio}</p>
-                <button id="update-profile">Update Profile</button>
+function buildProfile(user){
+    return `<div id="user-profile--${user.id}">
+                <img src="${user.about.image}" id="profile-image">
+                <h2 id="profile-username">${user.username}</h2>
+                <h5 id="profile-birthday">${user.about.birthday}</h5>
+                <p id="profile-bio">${user.about.bio}</p>
             </div>`
 }
 

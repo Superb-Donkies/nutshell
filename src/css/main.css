@@ -67,3 +67,8 @@ main {
 .username {
     color: blue;
 }
+
+#profile-image {
+    display: block;
+    width: 100%;
+}

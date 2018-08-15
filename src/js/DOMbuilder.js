@@ -7,6 +7,8 @@ function buildDom(){
         <main>
             <div class="left-container">
                 <div id="profile-content">
+                    <div id="profile-display"></div>
+                    <div id="profile-form"></div>
                 </div>
                 <div id="event-content"></div>
                 <div id="task-content"></div>

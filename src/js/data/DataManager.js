@@ -118,6 +118,23 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify(event)
             }).then(result => result.json())
         }
+    },
+    getUser: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/users/${userId}`)
+            .then(res => res.json())
+        }
+    },
+    editProfile: {
+        value: (userId, object) => {
+            return fetch(`http://localhost:8088/users/${userId}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({about:object})
+            }).then(result => result.json())
+        }
     }
 });
 
