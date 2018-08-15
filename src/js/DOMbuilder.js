@@ -27,7 +27,10 @@ function buildDom() {
                 <div id="messages-content">
                     <div id="message-feed"></div>
                     <div id="message-form"></div>
+                    <div id="friendsSearch"></div>
+                    <div id="friendBox"></div>
                 </div>
+
                 <div id="friends-content"></div>
             </div>
         </main>

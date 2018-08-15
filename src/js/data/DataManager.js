@@ -30,7 +30,7 @@ const DataManager = Object.create(null, {
     getArticles: {
         value: (userId) => {
             return fetch(`http://localhost:8088/articles?userId=${userId}`)
-            .then(res => res.json())
+                .then(res => res.json())
         }
     },
     saveArticle: {
@@ -42,7 +42,7 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(article)
             })
-            .then(result => result.json())
+                .then(result => result.json())
         }
     },
     removeArticle: {
@@ -61,13 +61,13 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(article)
             })
-            .then(result => result.json())
+                .then(result => result.json())
         }
     },
     getMessages: {
         value: () => {
             return fetch(`http://localhost:8088/messages`)
-            .then(res => res.json())
+                .then(res => res.json())
         }
     },
     saveMessage: {
@@ -79,7 +79,51 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(message)
             })
-            .then(result => result.json())
+                .then(result => result.json())
+        }
+    },
+    friendAdder: {
+        value: (userId, friendId, friendUsername) => {
+            return fetch(`http://localhost:8088/friends`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    friendId: friendId,
+                    friendUsername: friendUsername
+                })
+            })
+                .then(result => result.json())
+        }
+    },
+    friendDisplayer: {
+        value: (friendUsername) => {
+            return fetch(`http://localhost:8088/friends?username=${friendUsername.friendUsername}`)
+                .then(r => r.json())
+                .then(result => {
+                    let username = result.friendUsername
+                    return username
+                })
+        }
+    },
+    friendsList: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/friends?userId=${userId}`)
+                .then(result => result.json())
+        }
+    },
+    friendChecker: {
+        value: (searchedUser) => {
+            return fetch(`http://localhost:8088/users?username=${searchedUser}`)
+                .then(result => result.json())
+        }
+    },
+    friendValidator: {
+        value: (userId, friendId) => {
+            return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId}`)
+                .then(response => response.json())
         }
     },
     getEvents: {
@@ -97,7 +141,7 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(event)
             })
-            .then(result => result.json())
+                .then(result => result.json())
         }
     },
     removeEvent: {
@@ -163,8 +207,11 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify(task)
             }).then(r => r.json())
         }
-    
+
     }
-})
+
+
+});
+
 
 module.exports = DataManager;
