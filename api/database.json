@@ -11,21 +11,23 @@
       "id": 2
     }
   ],
-  "articles": [],
+  "articles": [
+    {
+      "userId": 2,
+      "title": "",
+      "summary": "haha",
+      "date": "08/15/2018 at 13:14:24 PM",
+      "url": "",
+      "id": 1
+    }
+  ],
   "events": [
     {
       "userId": 2,
-      "title": "Stuff",
-      "location": "Here",
-      "date": "2018-08-23",
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "title": "yueyyurd",
-      "location": "somewhere",
-      "date": "2018-08-18",
-      "id": 2
+      "title": "jkyfyj",
+      "location": "drtsdjdykk",
+      "date": "2018-08-17",
+      "id": 3
     }
   ],
   "tasks": [],

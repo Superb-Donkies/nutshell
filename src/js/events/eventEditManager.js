@@ -1,20 +1,21 @@
 let eventEditManager = Object.create(null, {
     saveEditedEvent: {
-        value: () => {
+        value: (userId) => {
             let editedEvent = {
-                title: document.querySelector("#editedEventTitle").value,
-                location: document.querySelector("#editedEventLocation").value,
-                date: document.querySelector("#editedEventDate").value
+                userId: userId,
+                title: document.querySelector("#edited-event-title").value,
+                location: document.querySelector("#edited-event-location").value,
+                date: document.querySelector("#edited-event-date").value
             }
             return editedEvent
         }
     },
     transformEvent: {
         value: (event) => {
-            let eventComponent = event.target.parentElement.parentElement;
-            let eventTitle = document.querySelector(`#title--${event.target.id.split("--")[1]}`);
-            let eventLocation = document.querySelector(`#location--${event.target.id.split("--")[1]}`)
-            let eventDate = document.querySelector(`#date--${event.target.id.split("--")[1]}`)
+            let eventComponent = event.target.parentElement;
+            let eventTitle = document.querySelector(`#event-title--${event.target.id.split("--")[1]}`);
+            let eventLocation = document.querySelector(`#event-location--${event.target.id.split("--")[1]}`)
+            let eventDate = document.querySelector(`#event-date--${event.target.id.split("--")[1]}`)
             eventTitleText = eventTitle.textContent;
             eventLocationText = eventLocation.textContent;
             eventDateText = eventDate.textContent;
@@ -23,8 +24,7 @@ let eventEditManager = Object.create(null, {
                 <input type="text" value="${eventLocationText}" id="edited-event-location">
                 <input type="date" value="${eventDateText}" id="edited-event-date">
                 <div class="button-container">
-                    <button class="save-event-edit-btn" id="save-event-edit--${event.target.id.split("--")[1]}">Save Changes</button>
-                    <button class="delete-event-btn" id="delet-event--${event.target.id.split("--")[1]}">Remove Event</button>
+                    <button class="save-event-edit-button" id="save-event-edit--${event.target.id.split("--")[1]}">Save Changes</button>
                 </div>`
         }
     }
