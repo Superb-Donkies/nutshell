@@ -9,7 +9,8 @@ const registerCreator = require("./login/Register");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
-
+const friendForm = require("./friends/Friends")
+const friendDisplay = require("./friends/friendDisplay")
 
 // Creates the Login page to on Load
 
@@ -46,7 +47,12 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
-        });
+                document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
+                DataManager.friendsList(userId)
+                    .then(result => {
+                        friendListBuilder(result)
+                    })
+            });
     }
     // If register button is created run logic that builds the register form
     else if (typeClickedOn === "register") {
@@ -89,33 +95,48 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
+        document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
+        DataManager.friendsList(userId)
+            .then(result => {
+                friendListBuilder(result)
+            });
+        // document.querySelector("#friendBox").innerHTML = friendDisplay.onLoadDisplay(result)
     }
 }
+
+friendListBuilder = (friend) => {
+    friend.forEach(friends => {
+        document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername)
+    })
+}
+
 loginChecker()
 // Event listener to detect logout button
 document.querySelector("#navbar").addEventListener("click", () => {
-    // Clears session storage
-    sessionStorage.clear()
-    // Clears the navbar div
-    document.querySelector("#navbar").innerHTML = "";
-    document.querySelector("#user-page").innerHTML = "";
-    // Then rebuilds the Login screen
-    document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+    if (event.target.id === "navLogout") {
+        // Clears session storage
+        sessionStorage.clear()
+        // Clears the navbar div
+        document.querySelector("#navbar").innerHTML = "";
+        document.querySelector("#user-page").innerHTML = "";
+        // Then rebuilds the Login screen
+        document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+    }
 })
 
 
 
 
-function handleMessages(userId){
+function handleMessages(userId) {
     DataManager.getMessages()
-    .then(messages => {
-        messages.forEach(message => {
-            document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+        .then(messages => {
+            messages.forEach(message => {
+                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+            })
         })
-    })
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
-        if(e.target.id === "send-message"){
+        if (e.target.id === "send-message") {
             let message = {
                 username: JSON.parse(sessionStorage.getItem("user"))[0].username,
                 userId: userId,
@@ -123,33 +144,33 @@ function handleMessages(userId){
             }
             document.querySelector("#new-message").value = "";
             DataManager.saveMessage(message)
-            .then(() => {
-                DataManager.getMessages()
-                .then(messages => {
-                    document.querySelector("#message-feed").innerHTML = "";
-                    messages.forEach(message => {
-                        document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
-                    })
+                .then(() => {
+                    DataManager.getMessages()
+                        .then(messages => {
+                            document.querySelector("#message-feed").innerHTML = "";
+                            messages.forEach(message => {
+                                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
+                            })
+                        })
                 })
-            })
         }
     })
 }
 
 
-function handleArticles(userId){
+function handleArticles(userId) {
     articleFormManager.renderFormBtn();
     DataManager.getArticles(userId)
-    .then((articles) => {
-        articles.forEach((article) => {
-            document.querySelector("#article-list").innerHTML += makeArticle(article);
+        .then((articles) => {
+            articles.forEach((article) => {
+                document.querySelector("#article-list").innerHTML += makeArticle(article);
+            });
         });
-    });
     document.querySelector("#article-form-container").addEventListener("click", (e) => {
-        if(e.target.id === "add-article-btn"){
+        if (e.target.id === "add-article-btn") {
             articleFormManager.renderArticleForm();
         }
-        if(e.target.id === "post-article"){
+        if (e.target.id === "post-article") {
             let newArticle = {
                 userId: userId,
                 title: document.querySelector("#article-title").value,
@@ -160,40 +181,80 @@ function handleArticles(userId){
             document.querySelector("#article-form-container").innerHTML = "";
             articleFormManager.renderFormBtn();
             DataManager.saveArticle(newArticle)
-            .then(() => {
-                DataManager.getArticles(userId)
-                .then((articles) => {
-                    document.querySelector("#article-list").innerHTML = "";
-                    articles.forEach((article) => {
-                        document.querySelector("#article-list").innerHTML += makeArticle(article);
-                    });
+                .then(() => {
+                    DataManager.getArticles(userId)
+                        .then((articles) => {
+                            document.querySelector("#article-list").innerHTML = "";
+                            articles.forEach((article) => {
+                                document.querySelector("#article-list").innerHTML += makeArticle(article);
+                            });
+                        });
                 });
-            });
         }
     });
     document.querySelector("#article-list").addEventListener("click", (e) => {
-        if(e.target.className === "delete-article-btn"){
+        if (e.target.className === "delete-article-btn") {
             let articleId = e.target.id.split("--")[1];
             DataManager.removeArticle(articleId).then(() => {
                 e.target.parentElement.parentElement.remove();
             });
         }
-        if(e.target.className === "edit-article-btn"){
+        if (e.target.className === "edit-article-btn") {
             editArticleManager.transformArticle();
         }
-        if(e.target.className === "save-article-btn"){
+        if (e.target.className === "save-article-btn") {
             let articleId = e.target.id.split("--")[1];
             let article = editArticleManager.saveEditedArticle(userId);
             DataManager.editArticle(articleId, article)
-            .then(() => {
-                DataManager.getArticles(userId)
-                .then((articles) => {
-                    document.querySelector("#article-list").innerHTML = "";
-                    articles.forEach((article) => {
-                        document.querySelector("#article-list").innerHTML += makeArticle(article);
-                    });
+                .then(() => {
+                    DataManager.getArticles(userId)
+                        .then((articles) => {
+                            document.querySelector("#article-list").innerHTML = "";
+                            articles.forEach((article) => {
+                                document.querySelector("#article-list").innerHTML += makeArticle(article);
+                            });
+                        });
                 });
-            });
         }
     });
 }
+
+document.querySelector("#wrapper").addEventListener("click", (e) => {
+    if (e.target.id === "friendButton") {
+        let searchedUser = document.querySelector("#friendSearch").value
+        DataManager.friendChecker(searchedUser)
+            .then(result => {
+                if (result.length) {
+                    // alert(result[0].username)
+                    document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
+                    document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
+                        let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
+                        let friendId = result[0].id
+                        let friendUsername = result[0].username
+                        DataManager.friendValidator(userId, friendId)
+                            .then(response => {
+                                if (response.length) {
+                                    alert("Friend Already Added!")
+                                }
+
+                                else {
+                                    DataManager.friendAdder(userId, friendId, friendUsername)
+                                        .then((friendUsername) => {
+                                            DataManager.friendDisplayer(friendUsername)
+                                            return friendUsername
+                                        })
+                                        .then(friendUsername => {
+                                            let friendBox = friendDisplay.display(friendUsername.friendUsername)
+                                            document.querySelector("#friendBox").innerHTML = friendBox
+                                        })
+                                }
+
+                            })
+                    })
+                }
+                else {
+                    alert("User can't be found.")
+                }
+            })
+    }
+})
