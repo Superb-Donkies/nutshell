@@ -12,13 +12,10 @@ const getDate = require("./getDate");
 const editArticleManager = require("./editArticleManager");
 const addMessageForm = require("./messageForm");
 const messageCard = require("./messageCard");
-<<<<<<< HEAD
 const friendForm = require("./friends/Friends")
 const friendDisplay = require("./friends/friendDisplay")
-=======
 const handleTasks = require("./tasks/mainTasks");
 
->>>>>>> master
 
 // Creates the Login page to on Load
 
@@ -55,16 +52,13 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
-<<<<<<< HEAD
                 document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
                 DataManager.friendsList(userId)
                     .then(result => {
                         friendListBuilder(result)
                     })
-=======
                 handleTasks(userId);
                 handleEvents(userId);
->>>>>>> master
             });
     }
     // If register button is created run logic that builds the register form
@@ -108,17 +102,14 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
-<<<<<<< HEAD
         document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
         DataManager.friendsList(userId)
             .then(result => {
                 friendListBuilder(result)
             });
         // document.querySelector("#friendBox").innerHTML = friendDisplay.onLoadDisplay(result)
-=======
         handleTasks(userId);
         handleEvents(userId);
->>>>>>> master
     }
 }
 
@@ -202,11 +193,8 @@ function handleEvents(userId) {
     });
 }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> master
 function handleMessages(userId) {
     DataManager.getMessages()
         .then(messages => {
@@ -298,7 +286,6 @@ function handleArticles(userId) {
         }
     });
 }
-<<<<<<< HEAD
 
 document.querySelector("#wrapper").addEventListener("click", (e) => {
     if (e.target.id === "friendButton") {
@@ -339,5 +326,3 @@ document.querySelector("#wrapper").addEventListener("click", (e) => {
             })
     }
 })
-=======
->>>>>>> master

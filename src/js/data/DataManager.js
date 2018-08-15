@@ -117,8 +117,8 @@ const DataManager = Object.create(null, {
     },
     friendValidator: {
         value: (userId, friendId) => {
-return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId}`)
-.then(response => response.json())
+            return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId}`)
+                .then(response => response.json())
         }
     },
     getEvents: {
@@ -136,7 +136,7 @@ return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId
                 },
                 body: JSON.stringify(event)
             })
-            .then(result => result.json())
+                .then(result => result.json())
         }
     },
     removeEvent: {
@@ -202,7 +202,7 @@ return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId
                 body: JSON.stringify(task)
             }).then(r => r.json())
         }
-    
+
     }
 
 
