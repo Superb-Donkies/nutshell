@@ -8,27 +8,6 @@ const createForm = require("./tasksForm");
 
 
 
-/////////////Button at the top of the Tasks Area
-
-
-// const getTasks = 
-//     getData.getTasks()
-//     .then(response => {
-//         addButton();
-//         response.forEach(task => {
-//             if (task.completion === false) {
-//             document.querySelector("#task-content").innerHTML += taskCard(task)
-//             }
-//         })
-//     })
-
-
-//////
-
-
-
-
-
 
 
 function handleTasks(userId) {
@@ -62,10 +41,20 @@ function handleTasks(userId) {
                         userId: userId
                     }
                     DataManager.saveTask(newTask)
+                        .then(() => {
+                            DataManager.getTasks(userId)
+                                .then(response => {
+                                    document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
+                                    document.querySelector("#task-content").innerHTML = "";
+                                    response.forEach(task => {
+                                        if (task.completion === false) {
+                                            document.querySelector("#task-content").innerHTML += taskCard(task)
+                                        }
+                                    })
+                                })
+                        })
                 }
             })
-
-
             ///////////editing the task
 
             document.querySelector("#task-content").addEventListener("click", (event) => {
@@ -89,7 +78,7 @@ function handleTasks(userId) {
                         })
                 }
                 if (event.target.className === "edit-button") {
-                    let newForm = `<form>
+                    let newForm = `<div id="edit-task-form">
                                     <fieldset class="task">
                                         <label>Task</label>
                                         <input type="text" id="task-entry" placeholder="What do you want to do?">
@@ -101,7 +90,7 @@ function handleTasks(userId) {
                                     <fieldset>
                                         <button class="edit-save-task">Save Task</button>
                                     </fieldset> 
-                                    </form>`;
+                                    </div>`;
                     event.target.parentElement.parentElement.innerHTML = newForm;
                 }
                 if (event.target.className === "edit-save-task") {
@@ -111,12 +100,19 @@ function handleTasks(userId) {
                         completion: false,
                         userId: userId
                     }
-                    DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask)
-                }
-                
-            })
-                
+                    DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask).then(() => {
+                        DataManager.getTasks(userId).then(tasks => {
+                        document.querySelector("#task-content").innerHTML = "";
+                        tasks.forEach(task => {
+                            if (task.completion === false) {
+                                document.querySelector("#task-content").innerHTML += taskCard(task)
+                            }
+                        })
+                    })
+                })
+            }
         })
+    })
 };
 
 module.exports = handleTasks;

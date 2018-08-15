@@ -1,20 +1,20 @@
 const loginBuilder = require("./login/Login")
-let buildDom = require("./DOMbuilder");
-let eventForm = require("./events/eventForm")
-let eventComponent = require("./events/eventComponent")
-let eventEditManager = require("./events/eventEditManager")
+const buildDom = require("./DOMbuilder");
+const eventForm = require("./events/eventForm")
+const eventComponent = require("./events/eventComponent")
+const eventEditManager = require("./events/eventEditManager")
 const registerCreator = require("./login/Register")
 const DataManager = require("./data/DataManager")
 const navbarFunctions = require("./navbar/navbar")
-const articleFormManager = require("./articleForm");
-const makeArticle = require("./articleCard");
+const articleFormManager = require("./articles/articleForm");
+const makeArticle = require("./articles/articleCard");
 const getDate = require("./getDate");
-const editArticleManager = require("./editArticleManager");
-const addMessageForm = require("./messageForm");
-const messageCard = require("./messageCard");
-const buildProfile = require("./profile");
-const profileFormManager = require("./profileForm");
-const saveUserDetails = require("./editProfile");
+const editArticleManager = require("./articles/editArticleManager");
+const addMessageForm = require("./messages/messageForm");
+const messageCard = require("./messages/messageCard");
+const buildProfile = require("./profile/profileCard");
+const profileFormManager = require("./profile/profileForm");
+const saveUserDetails = require("./profile/editProfile");
 const handleTasks = require("./tasks/mainTasks");
 
 // Creates the Login page to on Load
@@ -204,6 +204,7 @@ function handleMessages(userId) {
             messages.forEach(message => {
                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
             })
+            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
         })
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
@@ -222,6 +223,7 @@ function handleMessages(userId) {
                             messages.forEach(message => {
                                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
                             })
+                            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
                         })
                 })
         }
