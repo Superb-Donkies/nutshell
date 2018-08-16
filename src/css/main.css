@@ -1,16 +1,58 @@
 
 body {
-    background-color: silver;
+    background: linear-gradient(to bottom, #c9d6ff, #e2e2e2) no-repeat;
+    background-size: 100%;
 }
 
-/* #loginContainer {
-    margin: 2em auto;
+#login-form,
+#register-form  {
+    margin: 15% auto 30%;
     padding: 1em;
     background-color: white;
-    width: 50%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-} */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    background: linear-gradient(to bottom, #16222a, #3a6073);
+    color: white;
+}
+
+#login-form input {
+    margin: .5em auto;
+    width: 80%;
+    padding: .2em;
+}
+
+#register-form input {
+    margin: .5em auto;
+    width: 80%;
+    padding: .2em;
+}
+
+#register-form button {
+    width: 20%;
+    margin: 1em auto;
+    padding: .3em;
+    border-radius: 5px;
+    box-shadow: 0 6px 4px -4px black;
+    border: none;
+    color: white;
+}
+
+#backButton {
+    background: linear-gradient( red, rgb(219, 0, 0));
+}
+
+#registerSubmit {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+}
+
+#backButton:hover,
+#registerSubmit:hover {
+    box-shadow: none;
+}
 
 nav {
     background-color: white;
@@ -24,30 +66,31 @@ nav button {
 }
 
 main {
-    padding: 1em;
+    padding: .5em;
     display: flex;
     justify-content: space-around;
 }
 
 .left-container {
-    margin: 1em;
+    margin-left: .5em;
     padding: 1em;
-    width: 30%;
-    background-color: lightgreen;
+    width: 35%;
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
 }
 
 .mid-container {
-    margin: 1em;
+    margin: 0;
     padding: 1em;
     width: 30%;
-    background-color: lightblue;
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    color: white;
 }
 
 .right-container {
-    margin: 1em;
+    margin-right: .5em;
     padding: 1em;
-    width: 30%;
-    background-color: lightcoral;
+    width: 35%;
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
 }
 
 .article-form {
@@ -56,14 +99,65 @@ main {
     justify-content: space-around;
 }
 
+#messages-content {
+    margin: 1.5em auto;
+}
+
 #message-feed {
     margin: .3em;
     padding: .5em;
     background-color: white;
     max-height: 200px;
     overflow-y: scroll;
+    box-shadow: inset 0 0 10px #000000;
 }
 
 .username {
     color: blue;
+}
+
+#message-form {
+    padding: .3em;
+    display: flex;
+    justify-content: space-around;
+}
+
+#message-form textarea {
+    display: block;
+    width: 75%
+}
+
+#message-form button {
+    display: block;
+    width: 20%;
+    border-radius: 5px;
+}
+
+#profile-content {
+    background-color: white;
+    margin: .3em;
+    padding: .5em;
+}
+
+#event-content {
+    background-color: lightgray;
+    margin: .3em;
+    padding: .5em;
+    max-height: 350px;
+    overflow-y: scroll;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+#task-main {
+    background-color: lightseagreen;
+    margin: .3em;
+    padding: .5em;
+    max-height: 350px;
+    overflow-y: scroll;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+#profile-image {
+    display: block;
+    width: 100%;
 }

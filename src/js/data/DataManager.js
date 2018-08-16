@@ -18,6 +18,11 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify({
                     email: email,
                     username: username,
+                    about: {
+                        bio: "Add a bio for yourself!",
+                        image: "",
+                        birthday: "Add your birthday!",
+                    }
                 })
             });
         }
@@ -86,7 +91,7 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify({
                     userId: userId,
-                    friendId: friendId,
+                    otherFriendId: friendId,
                     friendUsername: friendUsername
                 })
             })
@@ -117,13 +122,13 @@ const DataManager = Object.create(null, {
     },
     friendValidator: {
         value: (userId, friendId) => {
-            return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId}`)
+            return fetch(`http://localhost:8088/friends?userId=${userId}&otherFriendId=${friendId}`)
                 .then(response => response.json())
         }
     },
     getEvents: {
         value: (userId) => {
-            return fetch(`http://localhost:8088/events?userId=${userId}`)
+            return fetch(`http://localhost:8088/users/${userId}/events?_sort=date&_order=asc`)
                 .then(result => result.json())
         }
     },
@@ -154,6 +159,23 @@ const DataManager = Object.create(null, {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(event)
+            }).then(result => result.json())
+        }
+    },
+    getUser: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/users/${userId}`)
+            .then(res => res.json())
+        }
+    },
+    editProfile: {
+        value: (userId, object) => {
+            return fetch(`http://localhost:8088/users/${userId}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({about:object})
             }).then(result => result.json())
         }
     },
@@ -203,9 +225,14 @@ const DataManager = Object.create(null, {
             }).then(r => r.json())
         }
 
+    },
+    removeFriend: {
+        value: (id) => {
+            return fetch(`http://localhost:8088/friends/${id}`, {
+                method: 'DELETE'
+            })
+        }
     }
-
-
 });
 
 
