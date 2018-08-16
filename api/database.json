@@ -32,13 +32,6 @@
   "events": [
     {
       "userId": 1,
-      "title": "awesome!",
-      "location": "VERY COOL",
-      "date": "2018-08-17",
-      "id": 2
-    },
-    {
-      "userId": 1,
       "title": "llalas",
       "location": "",
       "date": "2018-08-18",
@@ -50,6 +43,13 @@
       "location": "",
       "date": "2018-08-31",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "",
+      "location": "",
+      "date": "2018-08-30",
+      "id": 5
     }
   ],
   "tasks": [
@@ -185,6 +185,12 @@
       "userId": 1,
       "content": "afkaflj",
       "id": 28
+    },
+    {
+      "username": "david",
+      "userId": 1,
+      "content": "d;ljaf",
+      "id": 29
     }
   ]
 }
