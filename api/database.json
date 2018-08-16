@@ -3,173 +3,223 @@
     {
       "id": 1,
       "username": "alex",
-      "email": "alex@me.com"
-    },
-    {
-      "email": "al2@me.com",
-      "username": "al2",
-      "id": 2
+      "email": "alex@me.com",
+      "about": {
+        "bio": "put something here",
+        "image": "",
+        "birthday": "add your birthday"
+      }
     }
   ],
   "articles": [
     {
       "userId": 1,
-      "title": "This article sucks",
-      "summary": "Big time summary",
-      "date": "08/15/2018 at 14:41:24 PM",
-      "url": "thank.com",
+      "title": "Hey Alejandro v2.3.5.6.65.9",
+      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9.10",
+      "date": "edited on: 08/14/2018 at 15:20:56 PM",
+      "url": "jerk.com",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "sa,djbf,asd",
+      "summary": "dsbfmsad,bfasdf",
+      "date": "08/14/2018 at 15:29:33 PM",
+      "url": "sdfb,asdbf,s",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "im super stupid",
+      "summary": "yes i am",
+      "date": "08/14/2018 at 15:36:26 PM",
+      "url": "asd,jbasdf.com",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "Sup man",
+      "summary": "sadljkhfaksdhf;lsdf",
+      "date": "08/15/2018 at 9:37:53 AM",
+      "url": "asdlkfhakldsbfh.com",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "test test test",
+      "summary": "adkfhlkqgflqwef",
+      "date": "08/15/2018 at 9:38:52 AM",
+      "url": "test.com",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "dsFSDFFASDF",
+      "summary": "hgjlerbvhbepcqbr",
+      "date": "08/15/2018 at 9:40:18 AM",
+      "url": "asdljbadsb.com",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "title": "asdkfhldshf",
+      "summary": "a,sdhbalsdjbvlsdf",
+      "date": "08/15/2018 at 9:40:30 AM",
+      "url": "sadkjbfds.bc/sDF",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "title": "UAHRG,JAHLUGHKD.GF",
+      "summary": "ASDMFBASJKDGBVA,SGF",
+      "date": "08/15/2018 at 9:40:49 AM",
+      "url": "ASDJGDGF,AJSBCBJA.R.COM",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "title": "ergwergtewg",
+      "summary": "regfwerggwerg",
+      "date": "08/15/2018 at 15:14:42 PM",
+      "url": "argwergergerg.com",
+      "id": 9
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "no party boys",
-      "location": "the house",
-      "date": "2018-08-23",
+      "title": "Going on a Date",
+      "location": "Fido",
+      "date": "2018-08-15",
       "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Stuff",
+      "location": "Somewhere",
+      "date": "2018-08-16",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "More Stuff",
+      "location": "Probably the same place",
+      "date": "2018-08-17",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "title": "aksjdhflks",
+      "location": "asdfghasdlkgfhl",
+      "date": "2018-08-16",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "Going to Dentist",
+      "location": "Cool Springs",
+      "date": "2018-08-16",
+      "id": 5
     }
   ],
   "tasks": [
     {
-      "title": "stuff is good man",
-      "completeDate": "2018-08-30",
-      "completion": false,
+      "title": "Slap Alex v3.7",
+      "completeDate": "2018-08-16",
+      "completion": true,
       "userId": 1,
-      "id": 18
+      "id": 1
     },
     {
-      "title": "work with more stuff",
-      "completeDate": "2018-10-03",
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-16",
       "completion": true,
-      "id": 20,
-      "userId": 1
+      "userId": 1,
+      "id": 2
     },
     {
-      "title": "sup dudes ",
-      "completeDate": "2018-08-22",
+      "title": "change p2",
+      "completeDate": "2018-08-30",
       "completion": true,
-      "id": 22,
-      "userId": 1
+      "userId": 1,
+      "id": 3
     },
     {
-      "title": "play playstation",
+      "title": "Slap Alex Again forever",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "sgfgsg",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "dont slap me man",
       "completeDate": "2018-08-17",
       "completion": true,
       "userId": 1,
-      "id": 23
+      "id": 6
     },
     {
-      "title": "playing around with all my shit",
-      "completeDate": "2018-08-15",
-      "completion": true,
-      "id": 24,
-      "userId": 1
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-24",
+      "completion": false,
+      "userId": 2,
+      "id": 7
     },
     {
-      "title": "kill the nutshell",
+      "title": "Slap Alex v3.9975",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "title": "Slap Alex v3.99999745",
       "completeDate": "2018-08-24",
       "completion": true,
-      "userId": 1,
-      "id": 25
-    },
-    {
-      "title": "why my man do you hate me",
-      "completeDate": "2018-10-18",
-      "completion": true,
-      "userId": 1,
-      "id": 26
-    },
-    {
-      "title": "get a coffee and hang with a pal",
-      "completeDate": "2018-08-16",
-      "completion": true,
-      "userId": 1,
-      "id": 27
-    },
-    {
-      "title": "i am the man",
-      "completeDate": "2018-08-29",
-      "completion": true,
-      "userId": 1,
-      "id": 28
-    },
-    {
-      "title": "hello",
-      "completeDate": "2018-08-23",
-      "completion": true,
-      "userId": 1,
-      "id": 29
-    },
-    {
-      "title": "this one is empty",
-      "completeDate": "2018-09-27",
-      "completion": true,
-      "userId": 1,
-      "id": 30
-    },
-    {
-      "title": "I love gaming",
-      "completeDate": "2018-08-23",
-      "completion": true,
-      "userId": 1,
-      "id": 31
-    },
-    {
-      "title": "still good?",
-      "completeDate": "2018-08-16",
-      "completion": true,
-      "userId": 1,
-      "id": 32
-    },
-    {
-      "title": "works still?",
-      "completeDate": "2018-08-22",
-      "completion": true,
-      "userId": 1,
-      "id": 33
-    },
-    {
-      "title": "loving the nutshell",
-      "completeDate": "2018-10-24",
-      "completion": true,
-      "userId": 1,
-      "id": 34
-    },
-    {
-      "title": "having the best time around for the peeps",
-      "completeDate": "2018-08-29",
-      "completion": false,
-      "userId": 1,
-      "id": 35
-    },
-    {
-      "title": "tasks and stuff",
-      "completeDate": "2018-08-16",
-      "completion": false,
-      "userId": 1,
-      "id": 36
-    },
-    {
-      "title": "another task for the boys",
-      "completeDate": "2018-08-16",
-      "completion": true,
       "userId": 2,
-      "id": 37
+      "id": 9
     },
     {
-      "title": "good job",
+      "title": "Slap Alex Again v4",
+      "completeDate": "2018-08-22",
+      "completion": false,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "title": "heloo helloo",
+      "completeDate": "2018-08-22",
+      "completion": false,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "looking around",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "gameboy stuff",
       "completeDate": "2018-08-19",
       "completion": false,
-      "userId": 2,
-      "id": 38
+      "userId": 1,
+      "id": 13
     },
     {
-      "title": "lts go ",
-      "completeDate": "2018-08-17",
+      "title": "drive to alabama",
+      "completeDate": "2018-08-25",
       "completion": false,
-      "userId": 2,
-      "id": 39
+      "userId": 1,
+      "id": 14
     }
   ],
   "friends": [
@@ -182,10 +232,14 @@
   ],
   "messages": [
     {
+      "content": "asdf,jbasd,jfbsd",
+      "id": 26
+    },
+    {
       "username": "alex",
       "userId": 1,
-      "content": "do these work?",
-      "id": 1
+      "content": "good eh??",
+      "id": 27
     }
   ]
 }

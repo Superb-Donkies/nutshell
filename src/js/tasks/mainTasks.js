@@ -2,39 +2,12 @@
 
 const DataManager = require("../data/DataManager");
 const taskCard = require("./tasksCard");
-const createForm = require("./tasksForm");
-
-
-
-
-
-/////////////Button at the top of the Tasks Area
-
-
-// const getTasks = 
-//     getData.getTasks()
-//     .then(response => {
-//         addButton();
-//         response.forEach(task => {
-//             if (task.completion === false) {
-//             document.querySelector("#task-content").innerHTML += taskCard(task)
-//             }
-//         })
-//     })
-
-
-//////
-
-
-
-
-
-
+const createForms = require("./tasksForm");
 
 function handleTasks(userId) {
+    document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
     DataManager.getTasks(userId)
         .then(response => {
-            document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
             response.forEach(task => {
                 if (task.completion === false) {
                     document.querySelector("#task-content").innerHTML += taskCard(task)
@@ -45,8 +18,10 @@ function handleTasks(userId) {
 
             ///////////event listener for the add task
 
-            document.querySelector("#add-task").addEventListener("click", () => {
-                document.querySelector("#task-form").innerHTML += createForm();
+            document.querySelector("#task-main").addEventListener("click", (e) => {
+                if(e.target.id === "add-task"){
+                    document.querySelector("#task-form").innerHTML = createForms.addTaskForm();
+                }
             })
         })
         .then(() => {
@@ -62,10 +37,20 @@ function handleTasks(userId) {
                         userId: userId
                     }
                     DataManager.saveTask(newTask)
+                        .then(() => {
+                            DataManager.getTasks(userId)
+                                .then(response => {
+                                    document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
+                                    document.querySelector("#task-content").innerHTML = "";
+                                    response.forEach(task => {
+                                        if (task.completion === false) {
+                                            document.querySelector("#task-content").innerHTML += taskCard(task)
+                                        }
+                                    })
+                                })
+                        })
                 }
             })
-
-
             ///////////editing the task
 
             document.querySelector("#task-content").addEventListener("click", (event) => {
@@ -89,20 +74,7 @@ function handleTasks(userId) {
                         })
                 }
                 if (event.target.className === "edit-button") {
-                    let newForm = `<form>
-                                    <fieldset class="task">
-                                        <label>Task</label>
-                                        <input type="text" id="task-entry" placeholder="What do you want to do?">
-                                    </fieldset>
-                                    <fieldset class="complete-date">
-                                        <label>Complete Date</label>
-                                        <input type="date" id="date-entry">
-                                    </fieldset>
-                                    <fieldset>
-                                        <button class="edit-save-task">Save Task</button>
-                                    </fieldset> 
-                                    </form>`;
-                    event.target.parentElement.parentElement.innerHTML = newForm;
+                    event.target.parentElement.parentElement.innerHTML = createForms.addEditForm();
                 }
                 if (event.target.className === "edit-save-task") {
                     const newTask = {
@@ -111,12 +83,19 @@ function handleTasks(userId) {
                         completion: false,
                         userId: userId
                     }
-                    DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask)
+                    DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask).then(() => {
+                        return DataManager.getTasks(userId)
+                        }).then(tasks => {
+                            document.querySelector("#task-content").innerHTML = "";
+                            tasks.forEach(task => {
+                                if (task.completion === false) {
+                                document.querySelector("#task-content").innerHTML += taskCard(task)
+                                }
+                            })
+                        })
                 }
-                
             })
-                
-        })
+    })
 };
 
 module.exports = handleTasks;

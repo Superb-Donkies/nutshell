@@ -1,21 +1,23 @@
 const loginBuilder = require("./login/Login")
-let buildDom = require("./DOMbuilder");
-let eventForm = require("./events/eventForm")
-let eventComponent = require("./events/eventComponent")
-let eventEditManager = require("./events/eventEditManager")
+const buildDom = require("./DOMbuilder");
+const eventForm = require("./events/eventForm")
+const eventComponent = require("./events/eventComponent")
+const eventEditManager = require("./events/eventEditManager")
 const registerCreator = require("./login/Register")
 const DataManager = require("./data/DataManager")
 const navbarFunctions = require("./navbar/navbar")
-const articleFormManager = require("./articleForm");
-const makeArticle = require("./articleCard");
+const articleFormManager = require("./articles/articleForm");
+const makeArticle = require("./articles/articleCard");
 const getDate = require("./getDate");
-const editArticleManager = require("./editArticleManager");
-const addMessageForm = require("./messageForm");
-const messageCard = require("./messageCard");
+const editArticleManager = require("./articles/editArticleManager");
+const addMessageForm = require("./messages/messageForm");
+const messageCard = require("./messages/messageCard");
+const buildProfile = require("./profile/profileCard");
+const profileFormManager = require("./profile/profileForm");
+const saveUserDetails = require("./profile/editProfile");
 const friendForm = require("./friends/Friends")
 const friendDisplay = require("./friends/friendDisplay")
 const handleTasks = require("./tasks/mainTasks");
-
 
 // Creates the Login page to on Load
 
@@ -52,6 +54,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);
+                handleProfile(userId);
                 document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
                 DataManager.friendsList(userId)
                     .then(result => {
@@ -102,12 +105,12 @@ loginChecker = () => {
         buildDom();
         handleArticles(userId);
         handleMessages(userId);
+        handleProfile(userId);
         document.querySelector("#friendsSearch").innerHTML = friendForm.friendSearchForm();
         DataManager.friendsList(userId)
             .then(result => {
                 friendListBuilder(result)
             });
-        // document.querySelector("#friendBox").innerHTML = friendDisplay.onLoadDisplay(result)
         handleTasks(userId);
         handleEvents(userId);
     }
@@ -193,6 +196,27 @@ function handleEvents(userId) {
     });
 }
 
+function handleProfile(userId){
+    DataManager.getUser(userId)
+    .then(user => {
+        document.querySelector("#profile-display").innerHTML = buildProfile(user);
+    })
+    document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
+    document.querySelector("#profile-content").addEventListener("click", (e) => {
+        if(e.target.id === "update-profile"){
+            document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileForm();
+        }
+        if(e.target.id === "save-profile"){
+            DataManager.editProfile(userId, saveUserDetails()).then(() => {
+                document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
+                DataManager.getUser(userId)
+                .then(user => {
+                    document.querySelector("#profile-display").innerHTML = buildProfile(user);
+                })
+            })
+        }
+    })
+}
 
 
 function handleMessages(userId) {
@@ -201,6 +225,7 @@ function handleMessages(userId) {
             messages.forEach(message => {
                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
             })
+            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
         })
     document.querySelector("#message-form").innerHTML = addMessageForm();
     document.querySelector("#messages-content").addEventListener("click", (e) => {
@@ -219,12 +244,12 @@ function handleMessages(userId) {
                             messages.forEach(message => {
                                 document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
                             })
+                            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
                         })
                 })
         }
     })
 }
-
 
 function handleArticles(userId) {
     articleFormManager.renderFormBtn();
@@ -293,7 +318,7 @@ document.querySelector("#wrapper").addEventListener("click", (e) => {
         DataManager.friendChecker(searchedUser)
             .then(result => {
                 if (result.length) {
-                    // alert(result[0].username)
+
                     document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
                     document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
                         let userId = JSON.parse(sessionStorage.getItem("user"))[0].id

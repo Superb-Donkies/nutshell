@@ -1,5 +1,5 @@
 
-let getDate = require("./getDate");
+let getDate = require("./../getDate");
 
 const editArticleManager = Object.create(null, {
     saveEditedArticle: {
