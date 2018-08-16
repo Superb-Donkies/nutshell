@@ -12,7 +12,7 @@ function buildDom() {
                 </div>
                 <div id="event-content">
                     <div id="event-form"></div>
-                    <div id="event-component"></div>
+                    <div class="event-container" id="event-component"></div>
                 </div>
                 <div id="task-main">
                     <div id="task-form"></div>

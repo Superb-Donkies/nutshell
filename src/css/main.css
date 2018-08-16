@@ -90,3 +90,11 @@ main {
     display: block;
     width: 100%;
 }
+
+.event-container div:first-child {
+    margin-top: .5em;
+    padding: 5px 15px 10px;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: goldenrod;
+}
