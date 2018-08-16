@@ -209,7 +209,7 @@ friendListBuilder = (friend) => {
         document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername, friends.id)
     })
 }
-loginChecker()
+
 // Event listener to detect logout button
 document.querySelector("#navbar").addEventListener("click", () => {
     if (event.target.id === "navLogout") {
@@ -222,3 +222,4 @@ document.querySelector("#navbar").addEventListener("click", () => {
         document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
     }
 })
+loginChecker()
