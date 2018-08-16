@@ -1,23 +1,16 @@
-const loginBuilder = require("./login/Login")
+const DataManager = require("./data/DataManager");
+const loginBuilder = require("./login/Login");
 const buildDom = require("./DOMbuilder");
-const eventForm = require("./events/eventForm")
-const eventComponent = require("./events/eventComponent")
-const eventEditManager = require("./events/eventEditManager")
-const registerCreator = require("./login/Register")
-const DataManager = require("./data/DataManager")
-const navbarFunctions = require("./navbar/navbar")
-const articleFormManager = require("./articles/articleForm");
-const makeArticle = require("./articles/articleCard");
+const registerCreator = require("./login/Register");
+const navbarFunctions = require("./navbar/navbar");
 const getDate = require("./getDate");
-const editArticleManager = require("./articles/editArticleManager");
-const addMessageForm = require("./messages/messageForm");
-const messageCard = require("./messages/messageCard");
-const buildProfile = require("./profile/profileCard");
-const profileFormManager = require("./profile/profileForm");
-const saveUserDetails = require("./profile/editProfile");
-const friendForm = require("./friends/Friends")
-const friendDisplay = require("./friends/friendDisplay")
+const friendForm = require("./friends/Friends");
+const friendDisplay = require("./friends/friendDisplay");
+const handleProfile = require("./profile/profileHandler");
+const handleEvents = require("./events/eventHandler");
 const handleTasks = require("./tasks/mainTasks");
+const handleArticles = require("./articles/articleHandler");
+const handleMessages = require("./messages/messageHandler");
 
 // Creates the Login page to on Load
 
@@ -136,189 +129,12 @@ document.querySelector("#navbar").addEventListener("click", () => {
     }
 })
 
-function handleEvents(userId) {
-    eventForm.renderAddEventButton()
-    DataManager.getEvents(userId)
-        .then(events => {
-            events.forEach(event => {
-                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event);
-            })
-        })
-    document.querySelector("#event-content").addEventListener("click", (e) => {
-        if (e.target.id === "new-event-button") {
-            document.querySelector("#event-form").innerHTML = eventForm.renderEventForm();
-        }
-        if (e.target.id === "save-event-button") {
-            let newEvent = {
-                userId: userId,
-                title: document.querySelector("#event-title").value,
-                location: document.querySelector("#event-location").value,
-                date: document.querySelector("#event-date").value
-            }
-            document.querySelector("#event-form").innerHTML = "";
-            eventForm.renderAddEventButton();
-            DataManager.saveEvent(newEvent)
-                .then(() => {
-                    DataManager.getEvents(userId)
-                        .then((events) => {
-                            document.querySelector("#event-component").innerHTML = ""
-                            events.forEach((event) => {
-                                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event)
-                            })
-                        })
-                })
-        }
-    })
-    document.querySelector("#event-component").addEventListener("click", (e) => {
-        if (e.target.className === "edit-event-button") {
-            eventEditManager.transformEvent(e);
-        }
-        if (e.target.className === "delete-event-button") {
-            let eventId = e.target.id.split("--")[1];
-            DataManager.removeEvent(eventId).then(() => {
-                e.target.parentElement.remove();
-            });
-        }
-        if (e.target.className === "save-event-edit-button") {
-            let eventId = e.target.id.split("--")[1];
-            let event = eventEditManager.saveEditedEvent(userId);
-            DataManager.editEvent(eventId, event)
-                .then(() => {
-                    DataManager.getEvents(userId)
-                        .then((events) => {
-                            document.querySelector("#event-component").innerHTML = "";
-                            events.forEach((event) => {
-                                document.querySelector("#event-component").innerHTML += eventComponent.renderEventComponent(event)
-                            });
-                        });
-                });
-        }
-    });
-}
-
-function handleProfile(userId){
-    DataManager.getUser(userId)
-    .then(user => {
-        document.querySelector("#profile-display").innerHTML = buildProfile(user);
-    })
-    document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
-    document.querySelector("#profile-content").addEventListener("click", (e) => {
-        if(e.target.id === "update-profile"){
-            document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileForm();
-        }
-        if(e.target.id === "save-profile"){
-            DataManager.editProfile(userId, saveUserDetails()).then(() => {
-                document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
-                DataManager.getUser(userId)
-                .then(user => {
-                    document.querySelector("#profile-display").innerHTML = buildProfile(user);
-                })
-            })
-        }
-    })
-}
-
-
-function handleMessages(userId) {
-    DataManager.getMessages()
-        .then(messages => {
-            messages.forEach(message => {
-                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
-            })
-            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
-        })
-    document.querySelector("#message-form").innerHTML = addMessageForm();
-    document.querySelector("#messages-content").addEventListener("click", (e) => {
-        if (e.target.id === "send-message") {
-            let message = {
-                username: JSON.parse(sessionStorage.getItem("user"))[0].username,
-                userId: userId,
-                content: document.querySelector("#new-message").value
-            }
-            document.querySelector("#new-message").value = "";
-            DataManager.saveMessage(message)
-                .then(() => {
-                    DataManager.getMessages()
-                        .then(messages => {
-                            document.querySelector("#message-feed").innerHTML = "";
-                            messages.forEach(message => {
-                                document.querySelector("#message-feed").innerHTML += messageCard(message.username, message.content)
-                            })
-                            document.querySelector("#message-feed").scrollTop = document.querySelector("#message-feed").scrollHeight;
-                        })
-                })
-        }
-    })
-}
-
-function handleArticles(userId) {
-    articleFormManager.renderFormBtn();
-    DataManager.getArticles(userId)
-        .then((articles) => {
-            articles.forEach((article) => {
-                document.querySelector("#article-list").innerHTML += makeArticle(article);
-            });
-        });
-    document.querySelector("#article-form-container").addEventListener("click", (e) => {
-        if (e.target.id === "add-article-btn") {
-            articleFormManager.renderArticleForm();
-        }
-        if (e.target.id === "post-article") {
-            let newArticle = {
-                userId: userId,
-                title: document.querySelector("#article-title").value,
-                summary: document.querySelector("#article-summary").value,
-                date: getDate(),
-                url: document.querySelector("#article-url").value
-            }
-            document.querySelector("#article-form-container").innerHTML = "";
-            articleFormManager.renderFormBtn();
-            DataManager.saveArticle(newArticle)
-                .then(() => {
-                    DataManager.getArticles(userId)
-                        .then((articles) => {
-                            document.querySelector("#article-list").innerHTML = "";
-                            articles.forEach((article) => {
-                                document.querySelector("#article-list").innerHTML += makeArticle(article);
-                            });
-                        });
-                });
-        }
-    });
-    document.querySelector("#article-list").addEventListener("click", (e) => {
-        if (e.target.className === "delete-article-btn") {
-            let articleId = e.target.id.split("--")[1];
-            DataManager.removeArticle(articleId).then(() => {
-                e.target.parentElement.parentElement.remove();
-            });
-        }
-        if (e.target.className === "edit-article-btn") {
-            editArticleManager.transformArticle();
-        }
-        if (e.target.className === "save-article-btn") {
-            let articleId = e.target.id.split("--")[1];
-            let article = editArticleManager.saveEditedArticle(userId);
-            DataManager.editArticle(articleId, article)
-                .then(() => {
-                    DataManager.getArticles(userId)
-                        .then((articles) => {
-                            document.querySelector("#article-list").innerHTML = "";
-                            articles.forEach((article) => {
-                                document.querySelector("#article-list").innerHTML += makeArticle(article);
-                            });
-                        });
-                });
-        }
-    });
-}
-
 document.querySelector("#wrapper").addEventListener("click", (e) => {
     if (e.target.id === "friendButton") {
         let searchedUser = document.querySelector("#friendSearch").value
         DataManager.friendChecker(searchedUser)
             .then(result => {
                 if (result.length) {
-
                     document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
                     document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
                         let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
