@@ -196,30 +196,100 @@
     {
       "title": "heloo helloo",
       "completeDate": "2018-08-22",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 11
     },
     {
-      "title": "looking around",
-      "completeDate": "2018-08-21",
-      "completion": false,
+      "title": "looking around for the time",
+      "completeDate": "2018-08-29",
+      "completion": true,
       "userId": 1,
       "id": 12
     },
     {
-      "title": "gameboy stuff",
+      "title": "stuff dude",
       "completeDate": "2018-08-19",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 13
     },
     {
-      "title": "drive to alabama",
-      "completeDate": "2018-08-25",
-      "completion": false,
+      "title": "drive to nashville really?",
+      "completeDate": "2018-08-19",
+      "completion": true,
       "userId": 1,
       "id": 14
+    },
+    {
+      "title": "I can still add??",
+      "completeDate": "2018-09-07",
+      "completion": true,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "newest task for the refactor",
+      "completeDate": "2018-07-10",
+      "completion": true,
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "title": "here we go boys and girls",
+      "completeDate": "2018-08-24",
+      "completion": true,
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "things I really wanna do",
+      "completeDate": "2018-08-06",
+      "completion": true,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "can I add stuff",
+      "completeDate": "2018-08-17",
+      "completion": true,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "add this task",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "title": "more tasks for check up",
+      "completeDate": "2018-08-13",
+      "completion": false,
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "title": "another one for the boys",
+      "completeDate": "2018-10-11",
+      "completion": false,
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "title": "more ya??",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "title": "add a new task jabroni rick",
+      "completeDate": "2018-08-28",
+      "completion": false,
+      "userId": 1,
+      "id": 24
     }
   ],
   "friends": [
