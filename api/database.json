@@ -4,6 +4,11 @@
       "id": 1,
       "username": "alex",
       "email": "alex@me.com"
+    },
+    {
+      "email": "al2@me.com",
+      "username": "al2",
+      "id": 2
     }
   ],
   "articles": [
@@ -144,9 +149,37 @@
       "completion": false,
       "userId": 1,
       "id": 36
+    },
+    {
+      "title": "another task for the boys",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 2,
+      "id": 37
+    },
+    {
+      "title": "good job",
+      "completeDate": "2018-08-19",
+      "completion": false,
+      "userId": 2,
+      "id": 38
+    },
+    {
+      "title": "lts go ",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 2,
+      "id": 39
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "userId": 2,
+      "friendId": 1,
+      "friendUsername": "alex",
+      "id": 1
+    }
+  ],
   "messages": [
     {
       "username": "alex",
