@@ -1,5 +1,5 @@
 
-let getDate = require("./getDate");
+let getDate = require("./../getDate");
 
 const editArticleManager = Object.create(null, {
     saveEditedArticle: {
@@ -31,7 +31,6 @@ const editArticleManager = Object.create(null, {
                     <button class="save-article-btn" id="save--${event.target.id.split("--")[1]}">Save Your Changes!</button>
                     <button class="delete-article-btn" id="delete--${event.target.id.split("--")[1]}">Remove This Article</button>
                 </div>`
-            
         }
     }
 })
