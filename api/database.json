@@ -2,6 +2,16 @@
   "users": [
     {
       "id": 1,
+      "username": "ricky",
+      "email": "ricky@me.com",
+      "about": {
+        "bio": "I am Ricky and I really dislike Alex. Such a jerk. Again.",
+        "image": "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/27164902_10157084298692729_6480717072479412519_o.jpg?_nc_cat=0&oh=c54352be81245cefe1184b305da6a17a&oe=5BC5FB92",
+        "birthday": "1988-12-10"
+      }
+    },
+    {
+      "id": 2,
       "username": "alex",
       "email": "alex@me.com",
       "about": {
@@ -161,7 +171,7 @@
     {
       "title": "dont slap me man",
       "completeDate": "2018-08-17",
-      "completion": true,
+      "completion": false,
       "userId": 1,
       "id": 6
     },
