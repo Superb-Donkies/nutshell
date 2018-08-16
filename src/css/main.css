@@ -67,3 +67,26 @@ main {
 .username {
     color: blue;
 }
+
+#profile-content {
+    background-color: white;
+    margin: .3em;
+    padding: .5em;
+}
+
+#event-content {
+    background-color: lightgray;
+    margin: .3em;
+    padding: .5em;
+}
+
+#task-main {
+    background-color: lightseagreen;
+    margin: .3em;
+    padding: .5em;
+}
+
+#profile-image {
+    display: block;
+    width: 100%;
+}

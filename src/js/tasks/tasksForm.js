@@ -3,7 +3,7 @@
 "use strict";
 
 function createForm () {
-    return `<form>
+    return `<div id="form">
                 <fieldset class="task">
                     <label>Task</label>
                     <input type="text" id="task-entry" placeholder="What do you want to do?">
@@ -15,7 +15,7 @@ function createForm () {
                 <fieldset>
                     <button id="save-task">Save Task</button>
                 </fieldset> 
-            </form>`
+            </div>`
 }
 
 module.exports = createForm;
