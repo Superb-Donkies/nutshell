@@ -19,29 +19,37 @@
       "date": "08/16/2018 at 10:51:59 AM",
       "url": "",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "lkjhlkjhlkjhlkjhlkjhlkjhlkjh",
+      "summary": "",
+      "date": "08/16/2018 at 15:11:11 PM",
+      "url": "",
+      "id": 2
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "Sup",
-      "location": "Playa",
+      "title": "awesome!",
+      "location": "VERY COOL",
       "date": "2018-08-17",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "Nothing much son",
-      "location": "lol",
-      "date": "2018-08-15",
       "id": 2
     },
     {
       "userId": 1,
-      "title": "ad;ljf",
-      "location": ";ljadf",
-      "date": "2018-08-23",
+      "title": "llalas",
+      "location": "",
+      "date": "2018-08-18",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "ilu",
+      "location": "",
+      "date": "2018-08-31",
+      "id": 4
     }
   ],
   "tasks": [

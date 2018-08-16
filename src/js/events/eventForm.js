@@ -1,15 +1,21 @@
 // David Taylor
+
 // Created event form using Object.create.
 // Set prototype of object to null.
 // Gave the Object.create two property values.
+
 // One value renders the button to create an event form.
 // The other value renders the form after the button is pressed.
 // Both values operate as functions.
+
 // First value places button inside the div with the id of "element-form" on the DOMBuilder through document.queryseletor
 // Second value creates the event form through function by returning a template literal.
+
 // Template literal builds fieldsets, each having a title, input and placeholder, except date.
 // Save button attached to the bottom of the event form.
-// Object exports to eventHandler.js.
+
+// The makeEventForm variable exports to eventHandler 
+
 
 const makeEventForm = Object.create(null, {
     renderAddEventButton: {

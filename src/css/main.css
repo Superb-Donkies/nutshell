@@ -91,10 +91,13 @@ main {
     width: 100%;
 }
 
+/*
+    David Taylor
+    Defines the style properties of the first child within the event-container element.
+*/
+
 .event-container div:first-child {
-    margin-top: .5em;
-    padding: 5 px 15px 10px;
     font-size: larger;
     font-weight: bolder;
-    background-color: goldenrod;
+    background-color: palevioletred;
 }
