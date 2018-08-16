@@ -20,10 +20,82 @@ document.querySelector("#wrapper").addEventListener("click", () => {
     // Sets variable for whatever Id is clicked on
     let typeClickedOn = event.target.id
     // If the Id is loginSubmit then run this
-    if (typeClickedOn === "loginSubmit") {
+    if (e.target.id === "friendButton") {
+        let searchedUser = document.querySelector("#friendSearch").value
+        DataManager.friendChecker(searchedUser)
+            .then(result => {
+                if (result.length) {
+                    document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
+                    document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
+                        let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
+                        let friendId = result[0].id
+                        let friendUsername = result[0].username
+                        DataManager.friendValidator(userId, friendId)
+                            .then(response => {
+                                if (response.length) {
+                                    alert("Friend Already Added!")
+                                }
+
+                                else {
+                                    DataManager.friendAdder(userId, friendId, friendUsername)
+                                        .then((friendUsername) => {
+                                            DataManager.friendDisplayer(friendUsername)
+                                            return friendUsername
+                                        })
+                                        .then(friendUsername => {
+                                            let friendBox = friendDisplay.onLoadDisplay(friendUsername.friendUsername, friendUsername.id)
+                                            document.querySelector("#friendBox").innerHTML += friendBox
+                                        })
+                                }
+
+                            })
+                    })
+                }
+                else {
+                    alert("User can't be found.")
+                }
+            })
+    }
+    else if (typeClickedOn === "loginSubmit") {
         // Takes the values from the input fields
         let email = document.querySelector("#loginEmail").value
         let username = document.querySelector("#loginUsername").value
+        if (e.target.id === "friendButton") {
+            let searchedUser = document.querySelector("#friendSearch").value
+            DataManager.friendChecker(searchedUser)
+                .then(result => {
+                    if (result.length) {
+                        document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
+                        document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
+                            let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
+                            let friendId = result[0].id
+                            let friendUsername = result[0].username
+                            DataManager.friendValidator(userId, friendId)
+                                .then(response => {
+                                    if (response.length) {
+                                        alert("Friend Already Added!")
+                                    }
+
+                                    else {
+                                        DataManager.friendAdder(userId, friendId, friendUsername)
+                                            .then((friendUsername) => {
+                                                DataManager.friendDisplayer(friendUsername)
+                                                return friendUsername
+                                            })
+                                            .then(friendUsername => {
+                                                let friendBox = friendDisplay.onLoadDisplay(friendUsername.friendUsername, friendUsername.id)
+                                                document.querySelector("#friendBox").innerHTML += friendBox
+                                            })
+                                    }
+
+                                })
+                        })
+                    }
+                    else {
+                        alert("User can't be found.")
+                    }
+                })
+        }
         // Then plugs values into a function that looks up a user to see if they exist
         DataManager.login(email, username)
             .then(user => {
@@ -107,6 +179,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
     }
 })
 
+
 // Invokes the Login Function
 loginChecker = () => {
     if (sessionStorage.getItem("user") === null) {
@@ -130,14 +203,12 @@ loginChecker = () => {
         handleEvents(userId);
     }
 }
-
 friendListBuilder = (friend) => {
     console.log("friend", friend)
     friend.forEach(friends => {
         document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername, friends.id)
     })
 }
-
 loginChecker()
 // Event listener to detect logout button
 document.querySelector("#navbar").addEventListener("click", () => {
@@ -149,44 +220,5 @@ document.querySelector("#navbar").addEventListener("click", () => {
         document.querySelector("#user-page").innerHTML = "";
         // Then rebuilds the Login screen
         document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
-    }
-})
-
-document.querySelector("#wrapper").addEventListener("click", (e) => {
-    if (e.target.id === "friendButton") {
-        let searchedUser = document.querySelector("#friendSearch").value
-        DataManager.friendChecker(searchedUser)
-            .then(result => {
-                if (result.length) {
-                    document.querySelector("#addButton").innerHTML = friendForm.friendConfirmation()
-                    document.querySelector("#friendConfirmationButton").addEventListener("click", () => {
-                        let userId = JSON.parse(sessionStorage.getItem("user"))[0].id
-                        let friendId = result[0].id
-                        let friendUsername = result[0].username
-                        DataManager.friendValidator(userId, friendId)
-                            .then(response => {
-                                if (response.length) {
-                                    alert("Friend Already Added!")
-                                }
-
-                                else {
-                                    DataManager.friendAdder(userId, friendId, friendUsername)
-                                        .then((friendUsername) => {
-                                            DataManager.friendDisplayer(friendUsername)
-                                            return friendUsername
-                                        })
-                                        .then(friendUsername => {
-                                            let friendBox = friendDisplay.onLoadDisplay(friendUsername.friendUsername, friendUsername.id)
-                                            document.querySelector("#friendBox").innerHTML += friendBox
-                                        })
-                                }
-
-                            })
-                    })
-                }
-                else {
-                    alert("User can't be found.")
-                }
-            })
     }
 })
