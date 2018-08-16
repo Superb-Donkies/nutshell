@@ -37,92 +37,14 @@
       "date": "08/16/2018 at 15:11:11 PM",
       "url": "",
       "id": 2
-    },
-    {
-      "userId": 2,
-      "title": "im super stupid",
-      "summary": "yes i am",
-      "date": "08/14/2018 at 15:36:26 PM",
-      "url": "asd,jbasdf.com",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Sup man",
-      "summary": "sadljkhfaksdhf;lsdf",
-      "date": "08/15/2018 at 9:37:53 AM",
-      "url": "asdlkfhakldsbfh.com",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "test test test",
-      "summary": "adkfhlkqgflqwef",
-      "date": "08/15/2018 at 9:38:52 AM",
-      "url": "test.com",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "dsFSDFFASDF",
-      "summary": "hgjlerbvhbepcqbr",
-      "date": "08/15/2018 at 9:40:18 AM",
-      "url": "asdljbadsb.com",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "asdkfhldshf",
-      "summary": "a,sdhbalsdjbvlsdf",
-      "date": "08/15/2018 at 9:40:30 AM",
-      "url": "sadkjbfds.bc/sDF",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "title": "UAHRG,JAHLUGHKD.GF",
-      "summary": "ASDMFBASJKDGBVA,SGF",
-      "date": "08/15/2018 at 9:40:49 AM",
-      "url": "ASDJGDGF,AJSBCBJA.R.COM",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "title": "ergwergtewg v3",
-      "summary": "regfwerggwerg",
-      "date": "edited on: 08/16/2018 at 14:25:58 PM",
-      "url": "argwergergerg.com",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "title": "new article",
-      "summary": "new stuff here",
-      "date": "08/16/2018 at 15:40:31 PM",
-      "url": "nope.com",
-      "id": 10
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "Going on a Date Again!",
-      "location": "Home",
-      "date": "2018-08-15",
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "title": "Stuff",
-      "location": "Somewhere",
-      "date": "2018-08-16",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "title": "More Stuff",
-      "location": "Probably the same place",
-      "date": "2018-08-17",
+      "title": "llalas",
+      "location": "",
+      "date": "2018-08-18",
       "id": 3
     },
     {
@@ -219,29 +141,9 @@
       "id": 9
     },
     {
-      "title": "Slap Alex Again v4",
-      "completeDate": "2018-08-22",
-      "completion": false,
-      "userId": 2,
-      "id": 10
-    },
-    {
-      "title": "Stop Slapping Alex",
-      "completeDate": "2018-08-15",
-      "completion": false,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "title": "slap axel again",
+      "title": "olh",
       "completeDate": "",
-      "completion": false,
-      "userId": 1,
-      "id": 12
-    }
-  ],
-  "friends": [
-    {
+      "completion": true,
       "userId": 1,
       "id": 10
     }
@@ -303,15 +205,15 @@
       "id": 27
     },
     {
-      "username": "alex",
-      "userId": 2,
-      "content": "IM DUMB",
+      "username": "david",
+      "userId": 1,
+      "content": "afkaflj",
       "id": 28
     },
     {
-      "username": "ricky",
+      "username": "david",
       "userId": 1,
-      "content": "I agree.",
+      "content": "d;ljaf",
       "id": 29
     }
   ]
