@@ -203,6 +203,13 @@ const DataManager = Object.create(null, {
             }).then(r => r.json())
         }
 
+    },
+    removeFriend: {
+        value: (id) => {
+            return fetch(`http://localhost:8088/friends/${id}`, {
+                method: "DELETE",
+            }).then(r => r.json())
+        }
     }
 
 

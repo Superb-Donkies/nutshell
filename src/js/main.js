@@ -61,6 +61,17 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 handleEvents(userId);
             });
     }
+    else if (typeClickedOn.includes("removeFriendButton")) {
+        let user = JSON.parse(sessionStorage.getItem("user"))
+        let friendId = event.target.id.split("--")[1]
+        let friendUsername = event.target.className
+        DataManager.removeFriend(friendId)
+
+            .then(
+                event.target.parentElement.remove()
+
+            )
+    }
     // If register button is created run logic that builds the register form
     else if (typeClickedOn === "register") {
         // Clears login form
@@ -107,7 +118,6 @@ loginChecker = () => {
             .then(result => {
                 friendListBuilder(result)
             });
-        // document.querySelector("#friendBox").innerHTML = friendDisplay.onLoadDisplay(result)
         handleTasks(userId);
         handleEvents(userId);
     }
@@ -115,7 +125,7 @@ loginChecker = () => {
 
 friendListBuilder = (friend) => {
     friend.forEach(friends => {
-        document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername)
+        document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername, friends.id)
     })
 }
 
@@ -312,8 +322,8 @@ document.querySelector("#wrapper").addEventListener("click", (e) => {
                                             return friendUsername
                                         })
                                         .then(friendUsername => {
-                                            let friendBox = friendDisplay.display(friendUsername.friendUsername)
-                                            document.querySelector("#friendBox").innerHTML = friendBox
+                                            let friendBox = friendDisplay.onLoadDisplay(friendUsername.friendUsername, friendUsername.id)
+                                            document.querySelector("#friendBox").innerHTML += friendBox
                                         })
                                 }
 
