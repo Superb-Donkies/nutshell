@@ -86,7 +86,7 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify({
                     userId: userId,
-                    friendId: friendId,
+                    otherFriendId: friendId,
                     friendUsername: friendUsername
                 })
             })
@@ -117,7 +117,7 @@ const DataManager = Object.create(null, {
     },
     friendValidator: {
         value: (userId, friendId) => {
-            return fetch(`http://localhost:8088/friends?userId=${userId}&friendId=${friendId}`)
+            return fetch(`http://localhost:8088/friends?userId=${userId}&otherFriendId=${friendId}`)
                 .then(response => response.json())
         }
     },
@@ -207,13 +207,11 @@ const DataManager = Object.create(null, {
     removeFriend: {
         value: (id) => {
             return fetch(`http://localhost:8088/friends/${id}`, {
-                method: "DELETE",
-            }).then(r => r.json())
+                method: 'DELETE'
+            })
         }
     }
 
 
 });
-
-
 module.exports = DataManager;
