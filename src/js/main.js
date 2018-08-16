@@ -134,10 +134,8 @@ document.querySelector("#wrapper").addEventListener("click", () => {
         let friendId = event.target.id.split("--")[1]
         let friendUsername = event.target.className
         DataManager.removeFriend(parseInt(friendId))
-
             .then(
                 event.target.parentElement.remove()
-
             )
     }
     // If register button is created run logic that builds the register form
@@ -158,28 +156,22 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                         alert("User alreay exists!")
                     }
                     else {
-
                         DataManager.register(email, username)
                             .then(() => {
                                 // Then clear the container and rebuild the login form
                                 document.querySelector("#loginContainer").innerHTML = ""
                                 document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
                             })
-
                     }
                 })
-
         })
         // Add event listener to back button to go back to login form
         document.querySelector("#backButton").addEventListener("click", () => {
             document.querySelector("#loginContainer").innerHTML = ""
             document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
         })
-
     }
 })
-
-
 // Invokes the Login Function
 loginChecker = () => {
     if (sessionStorage.getItem("user") === null) {
@@ -209,7 +201,6 @@ friendListBuilder = (friend) => {
         document.querySelector("#friendBox").innerHTML += friendDisplay.onLoadDisplay(friends.friendUsername, friends.id)
     })
 }
-
 // Event listener to detect logout button
 document.querySelector("#navbar").addEventListener("click", () => {
     if (event.target.id === "navLogout") {
