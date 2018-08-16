@@ -43,7 +43,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 return user
             })
             .then((user) => {
-                let userId = JSON.parse(sessionStorage.getItem("user"))[0].id;
+                let userId = user.id;
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);

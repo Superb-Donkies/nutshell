@@ -19,6 +19,16 @@
         "image": "https://i.stack.imgur.com/MRSGX.jpg?s=328&g=1",
         "birthday": "1992-02-18"
       }
+    },
+    {
+      "email": "helen@me.com",
+      "username": "helen",
+      "about": {
+        "bio": "Im Helen and I have been to a shitload of countries",
+        "image": "",
+        "birthday": "1990-12-25"
+      },
+      "id": 3
     }
   ],
   "articles": [
@@ -88,9 +98,9 @@
     },
     {
       "userId": 1,
-      "title": "ergwergtewg",
+      "title": "ergwergtewg v3",
       "summary": "regfwerggwerg",
-      "date": "08/15/2018 at 15:14:42 PM",
+      "date": "edited on: 08/16/2018 at 14:25:58 PM",
       "url": "argwergergerg.com",
       "id": 9
     }
@@ -130,6 +140,13 @@
       "location": "Cool Springs",
       "date": "2018-08-16",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "Go to Lunch",
+      "location": "Pizza 312",
+      "date": "2018-08-17",
+      "id": 6
     }
   ],
   "tasks": [
@@ -202,6 +219,13 @@
       "completion": false,
       "userId": 2,
       "id": 10
+    },
+    {
+      "title": "Stop Slapping Alex",
+      "completeDate": "2018-08-15",
+      "completion": false,
+      "userId": 1,
+      "id": 11
     }
   ],
   "friends": [
@@ -284,6 +308,12 @@
       "userId": 1,
       "content": "iasdhflihsdf",
       "id": 27
+    },
+    {
+      "username": "alex",
+      "userId": 2,
+      "content": "IM DUMB",
+      "id": 28
     }
   ]
 }

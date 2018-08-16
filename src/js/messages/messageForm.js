@@ -1,9 +1,7 @@
 
 function addMessageForm(){
-    return `<div>
-                <textarea id="new-message"></textarea>
-                <button id="send-message">Send</button>
-            </div>`
+    return `<textarea id="new-message"></textarea>
+            <button id="send-message">Send</button>` 
 }
 
 module.exports = addMessageForm;
