@@ -103,13 +103,21 @@
       "date": "edited on: 08/16/2018 at 14:25:58 PM",
       "url": "argwergergerg.com",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "title": "new article",
+      "summary": "new stuff here",
+      "date": "08/16/2018 at 15:40:31 PM",
+      "url": "nope.com",
+      "id": 10
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "Going on a Date",
-      "location": "Fido",
+      "title": "Going on a Date Again!",
+      "location": "Home",
       "date": "2018-08-15",
       "id": 1
     },
@@ -147,6 +155,13 @@
       "location": "Pizza 312",
       "date": "2018-08-17",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "title": "stuff",
+      "location": "here",
+      "date": "2018-08-16",
+      "id": 7
     }
   ],
   "tasks": [
@@ -226,6 +241,13 @@
       "completion": false,
       "userId": 1,
       "id": 11
+    },
+    {
+      "title": "slap axel again",
+      "completeDate": "",
+      "completion": false,
+      "userId": 1,
+      "id": 12
     }
   ],
   "friends": [
@@ -314,6 +336,12 @@
       "userId": 2,
       "content": "IM DUMB",
       "id": 28
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "I agree.",
+      "id": 29
     }
   ]
 }

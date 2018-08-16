@@ -82,7 +82,8 @@ main {
     margin: 0;
     padding: 1em;
     width: 30%;
-    background: linear-gradient(to top, #2980b9, #2c3e50);
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    color: white;
 }
 
 .right-container {
