@@ -102,6 +102,34 @@
       "location": "Fido",
       "date": "2018-08-15",
       "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Stuff",
+      "location": "Somewhere",
+      "date": "2018-08-16",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "More Stuff",
+      "location": "Probably the same place",
+      "date": "2018-08-17",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "title": "aksjdhflks",
+      "location": "asdfghasdlkgfhl",
+      "date": "2018-08-16",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "Going to Dentist",
+      "location": "Cool Springs",
+      "date": "2018-08-16",
+      "id": 5
     }
   ],
   "tasks": [
@@ -146,9 +174,50 @@
       "completion": false,
       "userId": 1,
       "id": 6
+    },
+    {
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-24",
+      "completion": false,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "title": "Slap Alex v3.9975",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "title": "Slap Alex v3.99999745",
+      "completeDate": "2018-08-24",
+      "completion": true,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "title": "Slap Alex Again v4",
+      "completeDate": "2018-08-22",
+      "completion": false,
+      "userId": 2,
+      "id": 10
     }
   ],
-  "firends": [],
+  "friends": [
+    {
+      "userId": 1,
+      "friendId": 2,
+      "friendUsername": "alex",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "friendId": 1,
+      "friendUsername": "ricky",
+      "id": 2
+    }
+  ],
   "messages": [
     {
       "username": "ricky",

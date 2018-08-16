@@ -11,9 +11,9 @@ const createForm = require("./tasksForm");
 
 
 function handleTasks(userId) {
+    document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
     DataManager.getTasks(userId)
         .then(response => {
-            document.querySelector("#task-form").innerHTML = `<button id="add-task">Add Task</button>`;
             response.forEach(task => {
                 if (task.completion === false) {
                     document.querySelector("#task-content").innerHTML += taskCard(task)
@@ -24,8 +24,10 @@ function handleTasks(userId) {
 
             ///////////event listener for the add task
 
-            document.querySelector("#add-task").addEventListener("click", () => {
-                document.querySelector("#task-form").innerHTML += createForm();
+            document.querySelector("#task-main").addEventListener("click", (e) => {
+                if(e.target.id === "add-task"){
+                    document.querySelector("#task-form").innerHTML = createForm();
+                }
             })
         })
         .then(() => {
@@ -101,17 +103,17 @@ function handleTasks(userId) {
                         userId: userId
                     }
                     DataManager.editTask(event.target.parentElement.parentElement.parentElement.id.split("--")[1], newTask).then(() => {
-                        DataManager.getTasks(userId).then(tasks => {
-                        document.querySelector("#task-content").innerHTML = "";
-                        tasks.forEach(task => {
-                            if (task.completion === false) {
+                        return DataManager.getTasks(userId)
+                        }).then(tasks => {
+                            document.querySelector("#task-content").innerHTML = "";
+                            tasks.forEach(task => {
+                                if (task.completion === false) {
                                 document.querySelector("#task-content").innerHTML += taskCard(task)
-                            }
+                                }
+                            })
                         })
-                    })
-                })
-            }
-        })
+                }
+            })
     })
 };
 
