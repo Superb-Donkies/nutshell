@@ -2,6 +2,7 @@ const DataManager = require("../data/DataManager");
 const articleFormManager = require("./articleForm");
 const makeArticle = require("./articleCard");
 const editArticleManager = require("./editArticleManager");
+const getDate = require("../getDate");
 
 function handleArticles(userId) {
     articleFormManager.renderFormBtn();
