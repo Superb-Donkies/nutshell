@@ -1,3 +1,15 @@
+// David Taylor
+// Made an event component to display on the dom using Object.create.
+// Set prototype of Object.create to null.
+// Set value property of Object.create to renderEventComponent, passing in a function as the value.
+// Defined the function as template literal and returned it.
+// Set id for each component tag based on the id of the argument passed through the value.
+// Defined content of tags based on dot notation of argument.databaseArrayKey.
+// Set classes of div and buttons to provide basis for styling.
+// Object exports to eventHandler.js.
+
+
+
 const makeEventComponent = Object.create(null, {
     renderEventComponent: {
         value: (object) => {
