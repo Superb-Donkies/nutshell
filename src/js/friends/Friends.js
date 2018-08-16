@@ -17,7 +17,6 @@ return `<button id="friendConfirmationButton">Add Friend</button>
 
 
 })
-function searchFriend() { }
 
 
 module.exports = friendForm
