@@ -112,6 +112,12 @@ main {
     box-shadow: inset 0 0 10px #000000;
 }
 
+#message-feed p {
+    margin: .1em;
+    width: 100%;
+    word-break: break-all
+}
+
 .username {
     color: blue;
 }
@@ -136,12 +142,14 @@ main {
 #profile-content {
     background-color: white;
     margin: .3em;
+    margin-bottom: 1em;
     padding: .5em;
 }
 
 #event-content {
-    background-color: lightgray;
+    background: linear-gradient(to bottom, #ffefba, #ffffff);
     margin: .3em;
+    margin-bottom: 1em;
     padding: .5em;
     max-height: 350px;
     overflow-y: scroll;
@@ -149,7 +157,7 @@ main {
 }
 
 #task-main {
-    background-color: lightseagreen;
+    background: linear-gradient(to bottom, #ffefba, #ffffff);
     margin: .3em;
     padding: .5em;
     max-height: 350px;
@@ -160,4 +168,9 @@ main {
 #profile-image {
     display: block;
     width: 100%;
+}
+
+.section-header {
+    color: white;
+    text-align: center;
 }

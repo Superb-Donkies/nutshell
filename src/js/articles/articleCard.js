@@ -6,8 +6,8 @@ function makeArticle(object){
                 <a href="${object.url}" id="url--${object.id}" target="_blank">View the Article!</a>
                 <h5>${object.date}</h5>
                 <div class="button-container">
-                    <button class="edit-article-btn" id="edit--${object.id}">Edit Article</button>
-                    <button class="delete-article-btn" id="delete--${object.id}">Delete Article</button>
+                    <button class="edit-article-btn" id="edit--${object.id}">Edit <i class="far fa-edit"></i></button>
+                    <button class="delete-article-btn" id="delete--${object.id}">Delete <i class="far fa-times-circle"></i></button>
                 </div>
             </div>`
 }

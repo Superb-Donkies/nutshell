@@ -25,18 +25,48 @@
       "username": "helen",
       "about": {
         "bio": "Im Helen and I have been to a shitload of countries",
-        "image": "",
+        "image": "https://i.ytimg.com/vi/qQ8kXlsme4c/hqdefault.jpg",
         "birthday": "1990-12-25"
       },
       "id": 3
+    },
+    {
+      "email": "david@me.com",
+      "username": "david",
+      "about": {
+        "bio": "Im quiet.",
+        "image": "https://www.towerofpower.com.au/wp-content/uploads/2008/11/why-people-remain-quiet-shy-and-non-assertive.jpg",
+        "birthday": "1999-04-01"
+      },
+      "id": 4
+    },
+    {
+      "email": "shan@me.com",
+      "username": "shan",
+      "about": {
+        "bio": "I cuts hair and slays bitches",
+        "image": "https://pbs.twimg.com/profile_images/894330027352969216/VPvNwhoI_400x400.jpg",
+        "birthday": "1990-09-17"
+      },
+      "id": 5
+    },
+    {
+      "email": "kayla@me.com",
+      "username": "kayla",
+      "about": {
+        "bio": "Im the very best person to ever live!",
+        "image": "https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/19221504_10156323805382729_8735263925981311453_o.jpg?_nc_cat=0&oh=7abfe0dd0b0969ff9d9fd42019301cfc&oe=5BFE3499",
+        "birthday": "1993-12-01"
+      },
+      "id": 6
     }
   ],
   "articles": [
     {
       "userId": 1,
       "title": "Hey Alejandro v2.3.5.6.65.9",
-      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9.10",
-      "date": "edited on: 08/14/2018 at 15:20:56 PM",
+      "summary": "nice stuff v2.3.5.6.7.9.10",
+      "date": "edited on: 08/16/2018 at 17:06:19 PM",
       "url": "jerk.com",
       "id": 1
     },
@@ -111,6 +141,22 @@
       "date": "08/16/2018 at 15:40:31 PM",
       "url": "nope.com",
       "id": 10
+    },
+    {
+      "userId": 5,
+      "title": "Bitches got stitches",
+      "summary": "they did",
+      "date": "08/16/2018 at 21:29:48 PM",
+      "url": "bitcheswithstitches.com",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "title": "Local Cidery is pretty L.I.T.",
+      "summary": "Pretty much the title.\n\nRose´all day baybay",
+      "date": "08/16/2018 at 21:39:29 PM",
+      "url": "getcrunk.com",
+      "id": 12
     }
   ],
   "events": [
@@ -162,6 +208,27 @@
       "location": "here",
       "date": "2018-08-16",
       "id": 7
+    },
+    {
+      "userId": 5,
+      "title": "Painting with a twist",
+      "location": "murfreesboro",
+      "date": "2018-08-18",
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "title": "holla'in atcha agin",
+      "location": "errwhure",
+      "date": "2018-08-19",
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "title": "Be Amazing",
+      "location": "Everywhere, everyday",
+      "date": "2018-08-16",
+      "id": 10
     }
   ],
   "tasks": [
@@ -248,20 +315,84 @@
       "completion": false,
       "userId": 1,
       "id": 12
+    },
+    {
+      "title": "Slap Alex",
+      "completeDate": "2018-08-24",
+      "completion": false,
+      "userId": 5,
+      "id": 13
+    },
+    {
+      "title": "Slap Alex v3",
+      "completeDate": "2018-08-14",
+      "completion": false,
+      "userId": 5,
+      "id": 14
+    },
+    {
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-18",
+      "completion": false,
+      "userId": 5,
+      "id": 15
+    },
+    {
+      "title": "Bring sexy back",
+      "completeDate": "2018-08-31",
+      "completion": false,
+      "userId": 6,
+      "id": 16
     }
   ],
   "friends": [
     {
       "userId": 1,
-      "friendId": 2,
+      "otherFriendId": 2,
       "friendUsername": "alex",
       "id": 1
     },
     {
-      "userId": 2,
-      "friendId": 1,
-      "friendUsername": "ricky",
+      "userId": 1,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "friendUsername": "david",
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 5
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 6
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 7
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 5,
+      "friendUsername": "shan",
+      "id": 8
     }
   ],
   "messages": [
@@ -342,6 +473,30 @@
       "userId": 1,
       "content": "I agree.",
       "id": 29
+    },
+    {
+      "username": "helen",
+      "userId": 3,
+      "content": "Hey Everyone!",
+      "id": 30
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
+      "id": 31
+    },
+    {
+      "username": "shan",
+      "userId": 5,
+      "content": "lololololol",
+      "id": 32
+    },
+    {
+      "username": "kayla",
+      "userId": 6,
+      "content": "shots!",
+      "id": 33
     }
   ]
 }
