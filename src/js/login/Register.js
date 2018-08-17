@@ -1,3 +1,6 @@
+// Jeremiah Pritchard
+// This module creates the register form when the register button is clicked on the login page
+
 const registerCreator = Object.create(null, {
     registerForm: {
         // Function to create a form to register a new user
