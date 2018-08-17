@@ -2,20 +2,19 @@
   "users": [
     {
       "id": 1,
-      "username": "ricky",
-      "email": "ricky@me.com",
+      "username": "david",
+      "email": "david@fake.com",
       "about": {
-        "bio": "I am Ricky and I really dislike Alex. Such a jerk. Again.",
-        "image": "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/27164902_10157084298692729_6480717072479412519_o.jpg?_nc_cat=0&oh=c54352be81245cefe1184b305da6a17a&oe=5BC5FB92",
-        "birthday": "1988-12-10"
+        "bio": "I like turtles",
+        "image": "https://pics.me.me/its-called-fashion-brenda-look-it-up-dab-moms-its-7175440.png",
+        "birthday": "10/29/1929"
       }
     },
     {
-      "id": 2,
-      "username": "alex",
-      "email": "alex@me.com",
+      "email": "helen@me.com",
+      "username": "helen",
       "about": {
-        "bio": "put something here",
+        "bio": "Im Helen and I have been to a shitload of countries",
         "image": "",
         "birthday": "add your birthday"
       }
@@ -24,114 +23,38 @@
   "articles": [
     {
       "userId": 1,
-      "title": "Hey Alejandro v2.3.5.6.65.9",
-      "summary": "heyaksjdnflkajsdhflkjashfn v2.3.5.6.7.9.10",
-      "date": "edited on: 08/14/2018 at 15:20:56 PM",
-      "url": "jerk.com",
+      "title": "klj",
+      "summary": "adfad",
+      "date": "edited on: 08/17/2018 at 10:29:32 AM",
+      "url": "",
       "id": 1
     },
     {
       "userId": 1,
-      "title": "sa,djbf,asd",
-      "summary": "dsbfmsad,bfasdf",
-      "date": "08/14/2018 at 15:29:33 PM",
-      "url": "sdfb,asdbf,s",
+      "title": "lkjhlkjhlkjhlkjhlkjhlkjhlkjh",
+      "summary": "",
+      "date": "08/16/2018 at 15:11:11 PM",
+      "url": "",
       "id": 2
     },
     {
-      "userId": 2,
-      "title": "im super stupid",
-      "summary": "yes i am",
-      "date": "08/14/2018 at 15:36:26 PM",
-      "url": "asd,jbasdf.com",
+      "userId": 1,
+      "title": "",
+      "summary": "",
+      "date": "08/17/2018 at 10:30:14 AM",
+      "url": "",
       "id": 3
     },
     {
       "userId": 1,
-      "title": "Sup man",
-      "summary": "sadljkhfaksdhf;lsdf",
-      "date": "08/15/2018 at 9:37:53 AM",
-      "url": "asdlkfhakldsbfh.com",
+      "title": "adfad",
+      "summary": "adfa",
+      "date": "08/17/2018 at 10:30:30 AM",
+      "url": "",
       "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "test test test",
-      "summary": "adkfhlkqgflqwef",
-      "date": "08/15/2018 at 9:38:52 AM",
-      "url": "test.com",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "dsFSDFFASDF",
-      "summary": "hgjlerbvhbepcqbr",
-      "date": "08/15/2018 at 9:40:18 AM",
-      "url": "asdljbadsb.com",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "asdkfhldshf",
-      "summary": "a,sdhbalsdjbvlsdf",
-      "date": "08/15/2018 at 9:40:30 AM",
-      "url": "sadkjbfds.bc/sDF",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "title": "UAHRG,JAHLUGHKD.GF",
-      "summary": "ASDMFBASJKDGBVA,SGF",
-      "date": "08/15/2018 at 9:40:49 AM",
-      "url": "ASDJGDGF,AJSBCBJA.R.COM",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "title": "ergwergtewg",
-      "summary": "regfwerggwerg",
-      "date": "08/15/2018 at 15:14:42 PM",
-      "url": "argwergergerg.com",
-      "id": 9
     }
   ],
-  "events": [
-    {
-      "userId": 1,
-      "title": "Going on a Date",
-      "location": "Fido",
-      "date": "2018-08-15",
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "title": "Stuff",
-      "location": "Somewhere",
-      "date": "2018-08-16",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "title": "More Stuff",
-      "location": "Probably the same place",
-      "date": "2018-08-17",
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "title": "aksjdhflks",
-      "location": "asdfghasdlkgfhl",
-      "date": "2018-08-16",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "Going to Dentist",
-      "location": "Cool Springs",
-      "date": "2018-08-16",
-      "id": 5
-    }
-  ],
+  "events": [],
   "tasks": [
     {
       "title": "Slap Alex v3.7",
@@ -148,8 +71,8 @@
       "id": 2
     },
     {
-      "title": "change p2",
-      "completeDate": "2018-08-30",
+      "title": "Slap Alex Again again",
+      "completeDate": "2018-08-16",
       "completion": true,
       "userId": 1,
       "id": 3
@@ -171,66 +94,55 @@
     {
       "title": "dont slap me man",
       "completeDate": "2018-08-17",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 6
     },
     {
-      "title": "Slap Alex Again",
-      "completeDate": "2018-08-28",
-      "completion": false,
-      "userId": 2,
+      "title": "haha",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
       "id": 7
     },
     {
-      "title": "Slap Alex v3.9975",
-      "completeDate": "2018-08-18",
-      "completion": false,
-      "userId": 2,
+      "title": "adfljadf",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
       "id": 8
     },
     {
-      "title": "Slap Alex v3.99999745",
-      "completeDate": "2018-08-24",
+      "title": ";li",
+      "completeDate": "",
       "completion": true,
-      "userId": 2,
+      "userId": 1,
       "id": 9
     },
     {
-      "title": "Slap Alex Again v4",
-      "completeDate": "2018-08-23",
-      "completion": false,
-      "userId": 2,
+      "title": "olh",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
       "id": 10
     },
     {
-      "title": "heloo helloo",
-      "completeDate": "2018-08-22",
-      "completion": true,
+      "title": "daf",
+      "completeDate": "2018-08-29",
+      "completion": false,
       "userId": 1,
       "id": 11
     },
     {
-      "title": "looking around for the time",
-      "completeDate": "2018-08-29",
-      "completion": true,
+      "title": "adfa",
+      "completeDate": "2018-08-18",
+      "completion": false,
       "userId": 1,
       "id": 12
-    },
-    {
-      "title": "stuff dude",
-      "completeDate": "2018-08-19",
-      "completion": true,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "title": "drive to nashville really?",
-      "completeDate": "2018-08-19",
-      "completion": true,
-      "userId": 1,
-      "id": 14
-    },
+    }
+  ],
+  "friends": [],
+  "messages": [
     {
       "title": "I can still add??",
       "completeDate": "2018-09-07",
@@ -239,37 +151,7 @@
       "id": 15
     },
     {
-      "title": "newest task for the refactor",
-      "completeDate": "2018-07-10",
-      "completion": true,
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "title": "here we go boys and girls",
-      "completeDate": "2018-08-24",
-      "completion": true,
-      "userId": 1,
-      "id": 17
-    },
-    {
-      "title": "things I really wanna do",
-      "completeDate": "2018-08-06",
-      "completion": true,
-      "userId": 1,
-      "id": 18
-    },
-    {
-      "title": "can I add stuff",
-      "completeDate": "2018-08-17",
-      "completion": true,
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "title": "add this task",
-      "completeDate": "",
-      "completion": true,
+      "username": "ricky",
       "userId": 1,
       "id": 20
     },
@@ -302,31 +184,10 @@
       "id": 24
     },
     {
-      "title": "play games",
-      "completeDate": "2018-08-23",
-      "completion": false,
-      "userId": 2,
-      "id": 25
-    }
-  ],
-  "friends": [
-    {
-      "userId": 2,
-      "friendId": 1,
-      "friendUsername": "alex",
-      "id": 1
-    }
-  ],
-  "messages": [
-    {
-      "content": "asdf,jbasd,jfbsd",
-      "id": 26
-    },
-    {
-      "username": "alex",
+      "username": "david",
       "userId": 1,
-      "content": "good eh??",
-      "id": 27
+      "content": "dlafjad;flj",
+      "id": 25
     }
   ]
 }

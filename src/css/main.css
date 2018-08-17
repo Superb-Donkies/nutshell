@@ -161,3 +161,14 @@ main {
     display: block;
     width: 100%;
 }
+
+/*
+    David Taylor
+    Defines the style properties of the first child within the event-container element.
+*/
+
+.event-container div:first-child {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: palevioletred;
+}
