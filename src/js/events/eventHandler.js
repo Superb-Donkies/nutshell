@@ -43,7 +43,7 @@ function handleEvents(userId) {
         if (e.target.className === "delete-event-button") {
             let eventId = e.target.id.split("--")[1];
             DataManager.removeEvent(eventId).then(() => {
-                e.target.parentElement.remove();
+                e.target.parentElement.parentElement.remove();
             });
         }
         if (e.target.className === "save-event-edit-button") {

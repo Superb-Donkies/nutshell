@@ -12,7 +12,7 @@ let eventEditManager = Object.create(null, {
     },
     transformEvent: {
         value: (event) => {
-            let eventComponent = event.target.parentElement;
+            let eventComponent = event.target.parentElement.parentElement;
             let eventTitle = document.querySelector(`#event-title--${event.target.id.split("--")[1]}`);
             let eventLocation = document.querySelector(`#event-location--${event.target.id.split("--")[1]}`)
             let eventDate = document.querySelector(`#event-date--${event.target.id.split("--")[1]}`)

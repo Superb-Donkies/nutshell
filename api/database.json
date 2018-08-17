@@ -157,6 +157,14 @@
       "date": "08/16/2018 at 21:39:29 PM",
       "url": "getcrunk.com",
       "id": 12
+    },
+    {
+      "userId": 4,
+      "title": "hey",
+      "summary": "SUUUUUP",
+      "date": "08/17/2018 at 14:34:35 PM",
+      "url": "akjfh",
+      "id": 13
     }
   ],
   "events": [
@@ -187,13 +195,6 @@
       "location": "asdfghasdlkgfhl",
       "date": "2018-08-16",
       "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "Going to Dentist",
-      "location": "Cool Springs",
-      "date": "2018-08-16",
-      "id": 5
     },
     {
       "userId": 1,
@@ -229,6 +230,13 @@
       "location": "Everywhere, everyday",
       "date": "2018-08-16",
       "id": 10
+    },
+    {
+      "userId": 4,
+      "title": "wowing Dejan",
+      "location": "hackery",
+      "date": "2018-08-17",
+      "id": 11
     }
   ],
   "tasks": [
@@ -343,6 +351,34 @@
       "completion": false,
       "userId": 6,
       "id": 16
+    },
+    {
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "Slap Alex v3",
+      "completeDate": "2018-08-16",
+      "completion": false,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "Slap Alex",
+      "completeDate": "2018-08-18",
+      "completion": true,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "get crunk",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 4,
+      "id": 20
     }
   ],
   "friends": [
@@ -351,12 +387,6 @@
       "otherFriendId": 3,
       "friendUsername": "helen",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "otherFriendId": 4,
-      "friendUsername": "david",
-      "id": 3
     },
     {
       "userId": 5,
@@ -405,6 +435,18 @@
       "otherFriendId": 5,
       "friendUsername": "shan",
       "id": 11
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "friendUsername": "david",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 13
     }
   ],
   "messages": [
@@ -443,6 +485,18 @@
       "userId": 1,
       "content": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
       "id": 6
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hey Fig",
+      "id": 7
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hey Dejan",
+      "id": 8
     }
   ]
 }

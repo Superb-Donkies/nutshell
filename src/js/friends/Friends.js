@@ -3,7 +3,7 @@ const friendForm = Object.create(null, {
         value: () => {
             return `<div class="friendSearch">
 <input id="friendSearch" placeholder="Search for Friends"></input>
-<button id="friendButton">Search</button>
+<button id="friendButton">Search <i class="fas fa-search"></i></button>
 <div id="addButton"></div>
 </div>`
         }

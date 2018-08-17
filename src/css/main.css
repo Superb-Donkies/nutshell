@@ -1,8 +1,13 @@
 
+
 body {
-    background: linear-gradient(to bottom, #c9d6ff, #e2e2e2) no-repeat;
-    background-size: 100%;
+    display: block;
+    background: linear-gradient(to bottom, #c9d6ff70, #e2e2e26c) no-repeat fixed,
+    url("https://cdn.uconnectlabs.com/wp-content/uploads/sites/11/2016/11/tech.jpg") no-repeat fixed;
+    background-size: cover;
+    height: 100%;
 }
+
 
 #login-form,
 #register-form  {
@@ -65,6 +70,11 @@ nav button {
     display: block;
 }
 
+#user-page {
+    display: block;
+    background: linear-gradient(to bottom, #c9d6ff, #e2e2e2) no-repeat fixed;
+}
+
 main {
     padding: .5em;
     display: flex;
@@ -75,14 +85,14 @@ main {
     margin-left: .5em;
     padding: 1em;
     width: 35%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
 }
 
 .mid-container {
     margin: 0;
     padding: 1em;
     width: 30%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
     color: white;
 }
 
@@ -90,7 +100,7 @@ main {
     margin-right: .5em;
     padding: 1em;
     width: 35%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
 }
 
 .article-form {
@@ -147,7 +157,7 @@ main {
 }
 
 #event-content {
-    background: linear-gradient(to bottom, #ffefba, #ffffff);
+    background: linear-gradient(to bottom, #fdebad, #fff9b3);
     margin: .3em;
     margin-bottom: 1em;
     padding: .5em;
@@ -157,11 +167,25 @@ main {
 }
 
 #task-main {
-    background: linear-gradient(to bottom, #ffefba, #ffffff);
+    background: linear-gradient(to bottom, #000428, #004e92);
     margin: .3em;
     padding: .5em;
     max-height: 350px;
     overflow-y: scroll;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+#article-content {
+    background-color: white;
+    margin: .3em;
+    padding: 1em;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+#friends-content {
+    background-color: white;
+    margin: .3em;
+    padding: 1em;
     box-shadow: inset 0 0 10px #000000;
 }
 
@@ -173,4 +197,116 @@ main {
 .section-header {
     color: white;
     text-align: center;
+}
+
+.article-card {
+    background: linear-gradient(to top, #c9d6ff, #e2e2e2);
+    padding: 1em;
+    margin: 1em auto;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 15px 10px -5px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+
+.postit-top {
+    width: 200px;
+    height: 90px;
+    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%);
+    padding: 1em;
+    margin: 2.5em auto 0;
+    transform: rotate(0deg);
+    border-bottom-left-radius: 60px 15px;
+
+}
+
+.postit {
+    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%);
+    padding: 1em;
+    margin: -7em auto 2.5em;
+    font-family: 'Indie Flower', cursive;
+    width: 200px;
+    transform: rotate(-2deg);
+    /* box-shadow: 0px 4px 6px rgba(51, 51, 51, 0.6); */
+    /* border: black solid 1px; */
+    border-bottom-right-radius: 60px 5px;
+    border-top-left-radius: 100px 100px;
+    box-shadow: 0 15px 10px -5px rgba(0, 0, 0, 0.6);
+    
+}
+
+.postit:hover {
+    transform: rotate(0deg);
+    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffff88 100%);
+    border-bottom-right-radius: 0px;
+}
+
+.friendCard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friendCard div {
+    justify-content: center;
+}
+
+
+.friendCard button {
+    display: block;
+    margin-top: 20%;
+
+}
+
+#friends-content {
+    background-color: white;
+    padding: 1em;
+}
+
+#friendButton,
+.delete-btn,
+.delete-article-btn,
+.delete-event-button,
+.edit-article-btn,
+.edit-event-button,
+.edit-button {
+    background-color: black;
+    color: white;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 50px;
+    border: none;
+    opacity: .6;
+    margin: .2em;
+}
+
+.delete-btn,
+.delete-article-btn,
+.delete-event-button {
+    margin-right: 0;
+}
+
+.delete-btn:hover,
+.delete-article-btn:hover,
+.delete-event-button:hover {
+    background: linear-gradient( red, rgb(219, 0, 0));
+    opacity: 1;
+}
+
+#friendButton:hover,
+.edit-article-btn:hover,
+.edit-event-button:hover,
+.edit-button:hover {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.event-component {
+    background-color: lightskyblue;
+    margin: 1em auto;
+    padding: 1em;
 }
