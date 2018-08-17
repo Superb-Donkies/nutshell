@@ -1,3 +1,6 @@
+// Jeremiah Pritchard
+// This module creates the form that allows the user to search for friends
+
 const friendForm = Object.create(null, {
     friendSearchForm: {
         value: () => {
