@@ -1,3 +1,8 @@
+/*
+    Author: Ricky Bruner
+    Purpose: These two functions get the time and date when called and builds them into a clean looking string
+*/
+
 function getTime() {
     let time = "";
     let currentTime = new Date()
@@ -18,7 +23,6 @@ function getTime() {
     }
     return time;
 }
-
 
 function getDate(){
     let date = new Date();

@@ -1,3 +1,6 @@
+// Jeremiah Pritchard
+// This module is just the single logout button for the navbar
+
 let navbarFunctions = {}
 
 navbarFunctions.navbarBuilder = () => {

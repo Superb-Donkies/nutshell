@@ -1,4 +1,8 @@
 
+/*
+    Author: Ricky Bruner
+    Purpose: These two functions handle rendering the edit profile button and rendering the profile edit form
+*/
 
 function renderProfileBtn (){
     return `<button id="update-profile">Update Profile</button>`

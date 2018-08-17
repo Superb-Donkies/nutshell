@@ -1,9 +1,12 @@
-
+/*  
+    Author: Ricky Bruner  
+    This Module houses two functions. The first places a button that will render a form and the second sets the form in the form container
+*/
 
 const articleFormManager = Object.create(null, {
     renderFormBtn: {
         value: () => {
-            document.querySelector("#article-form-container").innerHTML +=
+            document.querySelector("#article-form-container").innerHTML =
                 `<button id="add-article-btn">Add A New Article</button>`
         }
     },

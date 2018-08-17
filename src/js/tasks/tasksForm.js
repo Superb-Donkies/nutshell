@@ -1,4 +1,5 @@
-////The HTML representation of the Task Forms
+// Author: Alejandro Font
+// The HTML representation of the Task Forms
 
 "use strict";
 

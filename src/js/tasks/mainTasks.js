@@ -1,5 +1,9 @@
 "use strict";
 
+
+// Author: Alejandro Font
+// This page handles all tasks associated with the tasks section of the user page.
+
 const DataManager = require("../data/DataManager");
 const taskCard = require("./tasksCard");
 const createForms = require("./tasksForm");

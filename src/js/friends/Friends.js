@@ -1,17 +1,19 @@
+// Jeremiah Pritchard
+// This module creates the form that allows the user to search for friends
+
 const friendForm = Object.create(null, {
     friendSearchForm: {
         value: () => {
             return `<div class="friendSearch">
-<input id="friendSearch" placeholder="Search for Friends"></input>
-<button id="friendButton">Search <i class="fas fa-search"></i></button>
-<div id="addButton"></div>
-</div>`
+                        <input id="friendSearch" placeholder="Search for Friends"></input>
+                        <button id="friendButton">Search <i class="fas fa-search"></i></button>
+                        <div id="addButton"></div>
+                    </div>`
         }
     },
     friendConfirmation: {
         value: () => {
-return `<button id="friendConfirmationButton">Add Friend</button>
-`
+            return `<button id="friendConfirmationButton">Add Friend</button>`
         }
     }
 

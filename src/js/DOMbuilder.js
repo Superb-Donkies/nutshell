@@ -1,4 +1,7 @@
-
+/*
+    Author: Ricky Bruner
+    Purpose: Build DOM structure for user-page once called
+*/
 
 function buildDom() {
     document.querySelector("#user-page").innerHTML +=
@@ -13,7 +16,7 @@ function buildDom() {
                 <h2 class="section-header"><i class="far fa-calendar-alt"></i> Upcoming Events</h2>
                 <div id="event-content">
                     <div id="event-form"></div>
-                    <div id="event-component"></div>
+                    <div class="event-list-container" id="event-component"></div>
                 </div>
                 <h2 class="section-header"><i class="fas fa-tasks"></i> To-Do List</h2>
                 <div id="task-main">

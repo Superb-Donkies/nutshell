@@ -72,7 +72,7 @@ nav button {
 
 #user-page {
     display: block;
-    background: linear-gradient(to bottom, #c9d6ff, #e2e2e2) no-repeat fixed;
+    background: linear-gradient(to bottom, #2c3e50, #3498db) no-repeat fixed;
 }
 
 main {
@@ -309,4 +309,14 @@ main {
     background-color: lightskyblue;
     margin: 1em auto;
     padding: 1em;
+}
+/*
+    David Taylor
+    Defines the style properties of the first child within the event-container element.
+*/
+
+.event-list-container div:first-child {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: palevioletred;
 }

@@ -1,5 +1,8 @@
 const DataManager = require("../data/DataManager")
 
+// Jeremiah Pritchard
+// This module creates the Login form with inputs for Username and Email with corresponding buttons for logging in or to register
+
 const loginBuilder = Object.create(null, {
     // function to create the form for the login
     loginForm: {

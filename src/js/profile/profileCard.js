@@ -1,3 +1,7 @@
+/*
+    Author: Ricky Bruner
+    Purpose: This module is the HTML representation of a users profile section of the user-page.
+*/
 
 function buildProfile(user){
     return `<div id="user-profile--${user.id}">

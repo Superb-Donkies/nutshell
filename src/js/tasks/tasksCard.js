@@ -1,4 +1,5 @@
-//// Creating the card that will show on the dom for each task 
+// Author: Alejandro Font
+// Creating the card that will show on the dom for each task 
 
 "use strict";
 

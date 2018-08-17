@@ -1,3 +1,7 @@
+/*  
+    Author: Ricky Bruner  
+    This Module is an HTML representation of an article card that plugs in information from the database
+*/
 
 function makeArticle(object){
     return  `<div class="article-card" id="article--${object.id}">

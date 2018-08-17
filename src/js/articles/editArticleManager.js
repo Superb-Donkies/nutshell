@@ -1,3 +1,7 @@
+/*  
+    Author: Ricky Bruner  
+    This Module houses two functions. The first returns a new object built from changes a user makes on a form during the edit process. The second function transforms an article card into a form, using the text content that was the prior as values in the inputs.
+*/
 
 let getDate = require("./../getDate");
 
