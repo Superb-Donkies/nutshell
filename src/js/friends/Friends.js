@@ -1,7 +1,7 @@
 const friendForm = Object.create(null, {
     friendSearchForm: {
         value: () => {
-            return `<div>
+            return `<div class="friendSearch">
 <input id="friendSearch" placeholder="Search for Friends"></input>
 <button id="friendButton">Search</button>
 <div id="addButton"></div>

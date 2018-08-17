@@ -8,7 +8,7 @@ const friendDisplay = Object.create(null, {
     },
     onLoadDisplay: {
         value: (friend, id) => {
-            return `<div>
+            return `<div class="friendCard">
                     <p>${friend}</p>
                     <button id="removeFriendButton--${id}" class="${friend}">Remove Friend</button>
                     </div>`
