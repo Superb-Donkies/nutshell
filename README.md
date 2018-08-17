@@ -34,19 +34,25 @@ hs -o
 This section displays your username and lets you personalize your dashboard with a picture, birthday, and bio.
 
 #### Events
-You can create an event with a title, location, and date.
+Create an event with a title, location, and date.
 Events are sorted by nearest date in descending order.
 Each event can be edited or deleted. 
 
 ### Tasks
-You can create an event with a title, date, and checkbox.
+Create a task with a title, date, and checkbox.
 Each task can be edited.
 Tasks are removed by checking in the checkbox.
 
 #### Articles
-You can create an article with a title, summary, and link.
+Post an article with a title, summary, and link.
 Each article can be edited or deleted.
 Articles are posted with the current date and time.
 The date and time are updated when the article is edited.
 
+#### Friends
+Search for friends on nutshell by username and add them to your friends list.
+After you add a friend, you can delete them from your friends list.
+
+
 #### Chat
+A group chat that allows you to talk with all you friends.
