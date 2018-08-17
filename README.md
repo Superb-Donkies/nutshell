@@ -1,10 +1,10 @@
 <!-- David Taylor -->
 
-# Nutshell(tm)
+# Nutshell^TM^
 
 ### Created by **Superb Donkies** :sunglasses:
 
-## What is Nutshell(tm)?
+## What is Nutshell^TM^?
 It's a dashboard for people to organize their daily tasks, events, news article, friends, and chat messages.
 
 ***
