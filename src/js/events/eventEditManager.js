@@ -4,23 +4,21 @@
 // Set prototype of object to null.
 // Gave the Object.create two property values.
 
-// One value saves the edited event as an object inside a variable within a function.
-// The variable is returned after it is defined as the object.
+// One value saves the edited event as an object inside a function.
 // The argument of userId is passed into the function and used as a value for one of the keys within the created object.
 
 // The other value transforms the event into the edited event.
 // An argument of event is passed into the function that transforms the event.
 // That argument's parent element is targeted and turned into a variable.
 
-// Three subsequent variables are linked to the id's defined by the number id given to each post.
-// Each post is being defined by the argument passed into the function.
-// The text data inside those linked id's is targeted with .textContent.
+// Three subsequent variables are defined by the number id given to each post.
+// The text data inside those numbered id's is targeted with .textContent.
 
 // innerHTML adds a template literal to the parent element variable delcated at the beginning of the transformEvent function.
-// Input fields are added the template string, each with a value directly related to the three variables linked to the id's in eventComponent.
+// Input fields are added the template string, each with a value directly related to the three variables with numbered id's.
 
 // A button is added to the end of the template literal.
-// The button id is defined by the number id given to each post.
+// The button id is also defined by the number id given to each post.
 
 // The eventEditManager variable exports to eventHandler
 

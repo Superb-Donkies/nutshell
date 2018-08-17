@@ -25,8 +25,8 @@
     {
       "userId": 1,
       "title": "klj",
-      "summary": "",
-      "date": "08/16/2018 at 10:51:59 AM",
+      "summary": "adfad",
+      "date": "edited on: 08/17/2018 at 10:29:32 AM",
       "url": "",
       "id": 1
     },
@@ -37,45 +37,25 @@
       "date": "08/16/2018 at 15:11:11 PM",
       "url": "",
       "id": 2
-    }
-  ],
-  "events": [
-    {
-      "userId": 1,
-      "title": "llalas",
-      "location": "",
-      "date": "2018-08-18",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "ilu",
-      "location": "",
-      "date": "2018-08-31",
-      "id": 4
     },
     {
       "userId": 1,
       "title": "",
-      "location": "",
-      "date": "2018-08-30",
-      "id": 5
+      "summary": "",
+      "date": "08/17/2018 at 10:30:14 AM",
+      "url": "",
+      "id": 3
     },
     {
       "userId": 1,
-      "title": "Go to Lunch",
-      "location": "Pizza 312",
-      "date": "2018-08-17",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "stuff",
-      "location": "here",
-      "date": "2018-08-16",
-      "id": 7
+      "title": "adfad",
+      "summary": "adfa",
+      "date": "08/17/2018 at 10:30:30 AM",
+      "url": "",
+      "id": 4
     }
   ],
+  "events": [],
   "tasks": [
     {
       "title": "Slap Alex v3.7",
@@ -146,6 +126,20 @@
       "completion": true,
       "userId": 1,
       "id": 10
+    },
+    {
+      "title": "daf",
+      "completeDate": "2018-08-29",
+      "completion": false,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "adfa",
+      "completeDate": "2018-08-18",
+      "completion": false,
+      "userId": 1,
+      "id": 12
     }
   ],
   "friends": [],

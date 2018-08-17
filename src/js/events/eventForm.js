@@ -1,8 +1,8 @@
 // David Taylor
 
-// Created event form using Object.create.
-// Set prototype of object to null.
-// Gave the Object.create two property values.
+// Creates event form using Object.create.
+// Sets prototype of object to null.
+// Gives the Object.create two property values.
 
 // One value renders the button to create an event form.
 // The other value renders the form after the button is pressed.
