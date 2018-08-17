@@ -30,7 +30,7 @@ const createForms = Object.create(null, {
                         </fieldset>
                         <fieldset class="complete-date">
                             <label>Complete Date</label>
-                            <input type="date" id="date-entry">
+                            <input type="date" id="date-entry" value="${document.querySelector(`#task-date--${event.target.id.split("--")[1]}`).textContent}">
                         </fieldset>
                         <fieldset>
                             <button class="edit-save-task">Save Task</button>

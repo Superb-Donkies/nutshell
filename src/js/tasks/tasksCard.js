@@ -5,7 +5,7 @@
 function createTaskCard (event) {
     return `<div class="task-card" id="card--${event.id}">
                 <h3 id="task-title--${event.id}">${event.title}</h3>
-                <p>${event.completeDate}</p>
+                <p id="task-date--${event.id}">${event.completeDate}</p>
                 <p>Finished Task?</p>
                 <input type="checkbox" class="checkbox" id="checkbox--${event.id}">
                 <div class="button-container">

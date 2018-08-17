@@ -77,7 +77,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                 return user
             })
             .then((user) => {
-                let userId = user.id;
+                let userId = JSON.parse(sessionStorage.getItem("user"))[0].id;
                 buildDom();
                 handleArticles(userId);
                 handleMessages(userId);

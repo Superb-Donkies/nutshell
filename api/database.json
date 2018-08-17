@@ -177,14 +177,14 @@
     },
     {
       "title": "Slap Alex Again",
-      "completeDate": "2018-08-24",
+      "completeDate": "2018-08-28",
       "completion": false,
       "userId": 2,
       "id": 7
     },
     {
       "title": "Slap Alex v3.9975",
-      "completeDate": "2018-08-17",
+      "completeDate": "2018-08-18",
       "completion": false,
       "userId": 2,
       "id": 8
@@ -198,7 +198,7 @@
     },
     {
       "title": "Slap Alex Again v4",
-      "completeDate": "2018-08-22",
+      "completeDate": "2018-08-23",
       "completion": false,
       "userId": 2,
       "id": 10
@@ -300,6 +300,13 @@
       "completion": false,
       "userId": 1,
       "id": 24
+    },
+    {
+      "title": "play games",
+      "completeDate": "2018-08-23",
+      "completion": false,
+      "userId": 2,
+      "id": 25
     }
   ],
   "friends": [
