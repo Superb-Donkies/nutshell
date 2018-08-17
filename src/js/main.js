@@ -45,6 +45,8 @@ document.querySelector("#wrapper").addEventListener("click", () => {
                                         .then(friendUsername => {
                                             let friendBox = friendDisplay.onLoadDisplay(friendUsername.friendUsername, friendUsername.id)
                                             document.querySelector("#friendBox").innerHTML += friendBox
+                                            document.querySelector("#friendSearch").value = ""
+                                            document.querySelector("#friendConfirmationButton").remove()
                                         })
                                 }
 
