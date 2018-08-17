@@ -128,9 +128,9 @@
     },
     {
       "userId": 1,
-      "title": "ergwergtewg v3",
+      "title": "ergwergtewg",
       "summary": "regfwerggwerg",
-      "date": "edited on: 08/16/2018 at 14:25:58 PM",
+      "date": "08/15/2018 at 15:14:42 PM",
       "url": "argwergergerg.com",
       "id": 9
     },
@@ -162,8 +162,8 @@
   "events": [
     {
       "userId": 1,
-      "title": "Going on a Date Again!",
-      "location": "Home",
+      "title": "Going on a Date",
+      "location": "Fido",
       "date": "2018-08-15",
       "id": 1
     },
@@ -235,21 +235,21 @@
     {
       "title": "Slap Alex v3.7",
       "completeDate": "2018-08-16",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 1
     },
     {
       "title": "Slap Alex Again",
       "completeDate": "2018-08-16",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 2
     },
     {
-      "title": "Slap Alex Again again",
-      "completeDate": "2018-08-16",
-      "completion": false,
+      "title": "change p2",
+      "completeDate": "2018-08-30",
+      "completion": true,
       "userId": 1,
       "id": 3
     },
@@ -268,7 +268,7 @@
       "id": 5
     },
     {
-      "title": "Slap the mess out of alex",
+      "title": "dont slap me man",
       "completeDate": "2018-08-17",
       "completion": false,
       "userId": 1,
@@ -276,14 +276,14 @@
     },
     {
       "title": "Slap Alex Again",
-      "completeDate": "2018-08-24",
+      "completeDate": "2018-08-28",
       "completion": false,
       "userId": 2,
       "id": 7
     },
     {
       "title": "Slap Alex v3.9975",
-      "completeDate": "2018-08-17",
+      "completeDate": "2018-08-18",
       "completion": false,
       "userId": 2,
       "id": 8
@@ -297,22 +297,22 @@
     },
     {
       "title": "Slap Alex Again v4",
-      "completeDate": "2018-08-22",
+      "completeDate": "2018-08-23",
       "completion": false,
       "userId": 2,
       "id": 10
     },
     {
-      "title": "Stop Slapping Alex",
-      "completeDate": "2018-08-15",
-      "completion": false,
+      "title": "heloo helloo",
+      "completeDate": "2018-08-22",
+      "completion": true,
       "userId": 1,
       "id": 11
     },
     {
-      "title": "slap axel again",
-      "completeDate": "",
-      "completion": false,
+      "title": "looking around for the time",
+      "completeDate": "2018-08-29",
+      "completion": true,
       "userId": 1,
       "id": 12
     },
@@ -346,12 +346,6 @@
     }
   ],
   "friends": [
-    {
-      "userId": 1,
-      "otherFriendId": 2,
-      "friendUsername": "alex",
-      "id": 1
-    },
     {
       "userId": 1,
       "otherFriendId": 3,
@@ -393,110 +387,62 @@
       "otherFriendId": 5,
       "friendUsername": "shan",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 2,
+      "friendUsername": "alex",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 5,
+      "friendUsername": "shan",
+      "id": 11
     }
   ],
   "messages": [
     {
       "username": "ricky",
       "userId": 1,
-      "content": "Hey Guys!",
+      "content": "hello",
       "id": 1
     },
     {
-      "username": "alex",
-      "userId": 2,
-      "content": "Hey man!",
-      "id": 18
-    },
-    {
-      "username": "alex",
-      "userId": 2,
-      "content": "Im always so late",
-      "id": 19
+      "username": "ricky",
+      "userId": 1,
+      "content": "is it me youre looking for",
+      "id": 2
     },
     {
       "username": "ricky",
       "userId": 1,
-      "content": "Yup. Sad",
-      "id": 20
+      "content": "gibberish",
+      "id": 3
     },
     {
       "username": "ricky",
       "userId": 1,
-      "content": "This is a clear form test",
-      "id": 21
+      "content": "alex you suck, dont ever push your API again",
+      "id": 4
     },
     {
       "username": "ricky",
       "userId": 1,
-      "content": "RBDVEEEGBE",
-      "id": 22
+      "content": "hello\nhello\n\n",
+      "id": 5
     },
     {
       "username": "ricky",
       "userId": 1,
-      "content": "VRWVFRWB",
-      "id": 23
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "ijashfladhsf\n",
-      "id": 24
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "asmdfbsjlfbjlasd,f",
-      "id": 25
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "asdf,jbasd,jfbsd",
-      "id": 26
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "iasdhflihsdf",
-      "id": 27
-    },
-    {
-      "username": "alex",
-      "userId": 2,
-      "content": "IM DUMB",
-      "id": 28
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "I agree.",
-      "id": 29
-    },
-    {
-      "username": "helen",
-      "userId": 3,
-      "content": "Hey Everyone!",
-      "id": 30
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
-      "id": 31
-    },
-    {
-      "username": "shan",
-      "userId": 5,
-      "content": "lololololol",
-      "id": 32
-    },
-    {
-      "username": "kayla",
-      "userId": 6,
-      "content": "shots!",
-      "id": 33
+      "content": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
+      "id": 6
     }
   ]
 }

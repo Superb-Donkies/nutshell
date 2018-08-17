@@ -181,7 +181,7 @@ const DataManager = Object.create(null, {
     },
     getTasks: {
         value: (userId) => {
-            return fetch(`http://localhost:8088/tasks?userId=${userId}`)
+            return fetch(`http://localhost:8088/users/${userId}/tasks?_sort=completeDate&_order=asc`)
                 .then(r => r.json())
         }
     },
@@ -224,7 +224,6 @@ const DataManager = Object.create(null, {
                 body: JSON.stringify(task)
             }).then(r => r.json())
         }
-
     },
     removeFriend: {
         value: (id) => {
