@@ -137,20 +137,26 @@ document.querySelector("#wrapper").addEventListener("click", () => {
             let email = document.querySelector("#registerEmail").value;
             let username = document.querySelector("#registerUsername").value;
             // Plug input fields into function that adds a new user
-            DataManager.login(email, username)
-                .then(result => {
-                    if (result.length) {
-                        alert("User alreay exists!")
-                    }
-                    else {
-                        DataManager.register(email, username)
-                            .then(() => {
-                                // Then clear the container and rebuild the login form
-                                document.querySelector("#loginContainer").innerHTML = ""
-                                document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
-                            })
-                    }
-                })
+            // Checks to make sure input fields are not blank
+            if (email || username === "") {
+                alert("Please Fill Requirements")
+            }
+            else {
+                DataManager.login(email, username)
+                    .then(result => {
+                        if (result.length) {
+                            alert("User alreay exists!")
+                        }
+                        else {
+                            DataManager.register(email, username)
+                                .then(() => {
+                                    // Then clear the container and rebuild the login form
+                                    document.querySelector("#loginContainer").innerHTML = ""
+                                    document.querySelector("#loginContainer").innerHTML = loginBuilder.loginForm()
+                                })
+                        }
+                    })
+            }
         })
         // Add event listener to back button to go back to login form
         document.querySelector("#backButton").addEventListener("click", () => {
