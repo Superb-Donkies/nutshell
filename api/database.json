@@ -15,20 +15,10 @@
       "username": "alex",
       "email": "alex@me.com",
       "about": {
-        "bio": "I are dumb.",
-        "image": "https://i.stack.imgur.com/MRSGX.jpg?s=328&g=1",
-        "birthday": "1992-02-18"
-      }
-    },
-    {
-      "email": "helen@me.com",
-      "username": "helen",
-      "about": {
-        "bio": "Im Helen and I have been to a shitload of countries",
+        "bio": "put something here",
         "image": "",
-        "birthday": "1990-12-25"
-      },
-      "id": 3
+        "birthday": "add your birthday"
+      }
     }
   ],
   "articles": [
@@ -98,26 +88,18 @@
     },
     {
       "userId": 1,
-      "title": "ergwergtewg v3",
+      "title": "ergwergtewg",
       "summary": "regfwerggwerg",
-      "date": "edited on: 08/16/2018 at 14:25:58 PM",
+      "date": "08/15/2018 at 15:14:42 PM",
       "url": "argwergergerg.com",
       "id": 9
-    },
-    {
-      "userId": 1,
-      "title": "new article",
-      "summary": "new stuff here",
-      "date": "08/16/2018 at 15:40:31 PM",
-      "url": "nope.com",
-      "id": 10
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "Going on a Date Again!",
-      "location": "Home",
+      "title": "Going on a Date",
+      "location": "Fido",
       "date": "2018-08-15",
       "id": 1
     },
@@ -148,41 +130,27 @@
       "location": "Cool Springs",
       "date": "2018-08-16",
       "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "Go to Lunch",
-      "location": "Pizza 312",
-      "date": "2018-08-17",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "stuff",
-      "location": "here",
-      "date": "2018-08-16",
-      "id": 7
     }
   ],
   "tasks": [
     {
       "title": "Slap Alex v3.7",
       "completeDate": "2018-08-16",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 1
     },
     {
       "title": "Slap Alex Again",
       "completeDate": "2018-08-16",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 2
     },
     {
-      "title": "Slap Alex Again again",
-      "completeDate": "2018-08-16",
-      "completion": false,
+      "title": "change p2",
+      "completeDate": "2018-08-30",
+      "completion": true,
       "userId": 1,
       "id": 3
     },
@@ -201,7 +169,7 @@
       "id": 5
     },
     {
-      "title": "Slap the mess out of alex",
+      "title": "dont slap me man",
       "completeDate": "2018-08-17",
       "completion": false,
       "userId": 1,
@@ -209,14 +177,14 @@
     },
     {
       "title": "Slap Alex Again",
-      "completeDate": "2018-08-24",
+      "completeDate": "2018-08-28",
       "completion": false,
       "userId": 2,
       "id": 7
     },
     {
       "title": "Slap Alex v3.9975",
-      "completeDate": "2018-08-17",
+      "completeDate": "2018-08-18",
       "completion": false,
       "userId": 2,
       "id": 8
@@ -230,118 +198,135 @@
     },
     {
       "title": "Slap Alex Again v4",
-      "completeDate": "2018-08-22",
+      "completeDate": "2018-08-23",
       "completion": false,
       "userId": 2,
       "id": 10
     },
     {
-      "title": "Stop Slapping Alex",
-      "completeDate": "2018-08-15",
-      "completion": false,
+      "title": "heloo helloo",
+      "completeDate": "2018-08-22",
+      "completion": true,
       "userId": 1,
       "id": 11
     },
     {
-      "title": "slap axel again",
-      "completeDate": "",
-      "completion": false,
+      "title": "looking around for the time",
+      "completeDate": "2018-08-29",
+      "completion": true,
       "userId": 1,
       "id": 12
+    },
+    {
+      "title": "stuff dude",
+      "completeDate": "2018-08-19",
+      "completion": true,
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "drive to nashville really?",
+      "completeDate": "2018-08-19",
+      "completion": true,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "I can still add??",
+      "completeDate": "2018-09-07",
+      "completion": true,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "newest task for the refactor",
+      "completeDate": "2018-07-10",
+      "completion": true,
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "title": "here we go boys and girls",
+      "completeDate": "2018-08-24",
+      "completion": true,
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "things I really wanna do",
+      "completeDate": "2018-08-06",
+      "completion": true,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "can I add stuff",
+      "completeDate": "2018-08-17",
+      "completion": true,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "add this task",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "title": "more tasks for check up",
+      "completeDate": "2018-08-13",
+      "completion": false,
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "title": "another one for the boys",
+      "completeDate": "2018-10-11",
+      "completion": false,
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "title": "more ya??",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "title": "add a new task jabroni rick",
+      "completeDate": "2018-08-28",
+      "completion": false,
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "title": "play games",
+      "completeDate": "2018-08-23",
+      "completion": false,
+      "userId": 2,
+      "id": 25
     }
   ],
   "friends": [
     {
-      "userId": 1,
-      "friendId": 2,
-      "friendUsername": "alex",
-      "id": 1
-    },
-    {
       "userId": 2,
       "friendId": 1,
-      "friendUsername": "ricky",
-      "id": 2
+      "friendUsername": "alex",
+      "id": 1
     }
   ],
   "messages": [
     {
-      "username": "ricky",
-      "userId": 1,
-      "content": "Hey Guys!",
-      "id": 1
-    },
-    {
-      "username": "alex",
-      "userId": 2,
-      "content": "Hey man!",
-      "id": 18
-    },
-    {
-      "username": "alex",
-      "userId": 2,
-      "content": "Im always so late",
-      "id": 19
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "Yup. Sad",
-      "id": 20
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "This is a clear form test",
-      "id": 21
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "RBDVEEEGBE",
-      "id": 22
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "VRWVFRWB",
-      "id": 23
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "ijashfladhsf\n",
-      "id": 24
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
-      "content": "asmdfbsjlfbjlasd,f",
-      "id": 25
-    },
-    {
-      "username": "ricky",
-      "userId": 1,
       "content": "asdf,jbasd,jfbsd",
       "id": 26
     },
     {
-      "username": "ricky",
-      "userId": 1,
-      "content": "iasdhflihsdf",
-      "id": 27
-    },
-    {
       "username": "alex",
-      "userId": 2,
-      "content": "IM DUMB",
-      "id": 28
-    },
-    {
-      "username": "ricky",
       "userId": 1,
-      "content": "I agree.",
-      "id": 29
+      "content": "good eh??",
+      "id": 27
     }
   ]
 }
