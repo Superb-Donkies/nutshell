@@ -34,9 +34,9 @@
       "email": "david@me.com",
       "username": "david",
       "about": {
-        "bio": "Im quiet.",
+        "bio": "I sing in talent shows. I was born at the beginning of the Great Depression",
         "image": "https://www.towerofpower.com.au/wp-content/uploads/2008/11/why-people-remain-quiet-shy-and-non-assertive.jpg",
-        "birthday": "1999-04-01"
+        "birthday": "1929-10-29"
       },
       "id": 4
     },
@@ -69,6 +69,16 @@
         "birthday": "Add your birthday!"
       },
       "id": 7
+    },
+    {
+      "email": "jeremiah123@me.com",
+      "username": "jeremiah123",
+      "about": {
+        "bio": "Add a bio for yourself!",
+        "image": "",
+        "birthday": "Add your birthday!"
+      },
+      "id": 8
     }
   ],
   "articles": [
@@ -81,28 +91,12 @@
       "id": 1
     },
     {
-      "userId": 1,
-      "title": "sa,djbf,asd",
-      "summary": "dsbfmsad,bfasdf",
-      "date": "edited on: 08/17/2018 at 15:01:37 PM",
-      "url": "sdfb,asdbf,s",
-      "id": 2
-    },
-    {
       "userId": 2,
-      "title": "im super stupid",
-      "summary": "yes i am",
-      "date": "08/14/2018 at 15:36:26 PM",
+      "title": "im not stupid",
+      "summary": "nope",
+      "date": "edited on: 08/20/2018 at 9:04:18 AM",
       "url": "asd,jbasdf.com",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Sup man",
-      "summary": "sadljkhfaksdhf;lsdf",
-      "date": "08/15/2018 at 9:37:53 AM",
-      "url": "asdlkfhakldsbfh.com",
-      "id": 4
     },
     {
       "userId": 1,
@@ -111,30 +105,6 @@
       "date": "edited on: 08/19/2018 at 9:36:45 AM",
       "url": "test.com",
       "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "dsFSDFFASDF v3",
-      "summary": "hgjlerbvhbepcqbr",
-      "date": "edited on: 08/19/2018 at 9:38:13 AM",
-      "url": "asdljbadsb.com",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "asdkfhldshf",
-      "summary": "a,sdhbalsdjbvlsdf",
-      "date": "08/15/2018 at 9:40:30 AM",
-      "url": "sadkjbfds.bc/sDF",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "title": "UAHRG,JAHLUGHKD.GF",
-      "summary": "ASDMFBASJKDGBVA,SGF",
-      "date": "edited on: 08/19/2018 at 19:59:41 PM",
-      "url": "ASDJGDGF,AJSBCBJA.R.COM",
-      "id": 8
     },
     {
       "userId": 1,
@@ -175,6 +145,14 @@
       "date": "08/18/2018 at 18:39:10 PM",
       "url": "test.com",
       "id": 14
+    },
+    {
+      "userId": 2,
+      "title": "Gaining the Smarts",
+      "summary": "learning the codes and stuff at NSS",
+      "date": "08/20/2018 at 9:04:00 AM",
+      "url": "nss.com",
+      "id": 15
     }
   ],
   "events": [
@@ -209,6 +187,38 @@
       "date": "2018-08-19",
       "time": "20:53",
       "id": 4
+    },
+    {
+      "userId": 2,
+      "title": "Presenting!",
+      "location": "NSS",
+      "date": "2018-08-20",
+      "time": "09:45",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "title": "learn react",
+      "location": "NSS",
+      "date": "2018-08-21",
+      "time": "09:05",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "title": "Editing my code",
+      "location": "NSS",
+      "date": "2018-08-17",
+      "time": "14:00",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "title": "presenting our nutshell",
+      "location": "Classroom @ NSS",
+      "date": "2018-08-20",
+      "time": "09:45",
+      "id": 8
     }
   ],
   "tasks": [
@@ -257,14 +267,14 @@
     {
       "title": "Slap Alex Again",
       "completeDate": "2018-08-28",
-      "completion": false,
+      "completion": true,
       "userId": 2,
       "id": 7
     },
     {
       "title": "Slap Alex v3.9975",
       "completeDate": "2018-08-18",
-      "completion": false,
+      "completion": true,
       "userId": 2,
       "id": 8
     },
@@ -278,7 +288,7 @@
     {
       "title": "Slap Alex Again v4",
       "completeDate": "2018-08-23",
-      "completion": false,
+      "completion": true,
       "userId": 2,
       "id": 10
     },
@@ -372,6 +382,27 @@
       "completion": false,
       "userId": 1,
       "id": 23
+    },
+    {
+      "title": "Stop eating cooked food",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 2,
+      "id": 24
+    },
+    {
+      "title": "complain about cooked food",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 2,
+      "id": 25
+    },
+    {
+      "title": "Practice singing in the mirror",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 4,
+      "id": 26
     }
   ],
   "friends": [
@@ -476,6 +507,12 @@
       "otherFriendId": 7,
       "friendUsername": "sam",
       "id": 19
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 2,
+      "friendUsername": "alex",
+      "id": 20
     }
   ],
   "messages": [
@@ -538,6 +575,36 @@
       "userId": 3,
       "content": "mean",
       "id": 10
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test\n",
+      "id": 11
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test",
+      "id": 12
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test",
+      "id": 13
+    },
+    {
+      "username": "alex",
+      "userId": 2,
+      "content": "Another test",
+      "id": 14
+    },
+    {
+      "username": "david",
+      "userId": 4,
+      "content": "Yet another test",
+      "id": 15
     }
   ]
 }

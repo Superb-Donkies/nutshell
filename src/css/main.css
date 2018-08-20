@@ -33,6 +33,7 @@ body {
     background-position-y: center;
     position: relative;
     z-index: -6;
+    min-height: 900px;
 }
 
 main {

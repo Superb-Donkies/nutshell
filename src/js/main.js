@@ -3,7 +3,6 @@ const loginBuilder = require("./login/Login");
 const buildDom = require("./DOMbuilder");
 const registerCreator = require("./login/Register");
 const navbarFunctions = require("./navbar/navbar");
-const getDate = require("./getDate");
 const friendForm = require("./friends/Friends");
 const friendDisplay = require("./friends/friendDisplay");
 const handleProfile = require("./profile/profileHandler");
