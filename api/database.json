@@ -59,6 +59,16 @@
         "birthday": "1993-12-01"
       },
       "id": 6
+    },
+    {
+      "email": "sam@me.com",
+      "username": "sam",
+      "about": {
+        "bio": "Add a bio for yourself!",
+        "image": "",
+        "birthday": "Add your birthday!"
+      },
+      "id": 7
     }
   ],
   "articles": [
@@ -66,7 +76,7 @@
       "userId": 1,
       "title": "Hey Alejandro v2.3.5.6.65.9",
       "summary": "nice stuff v2.3.5.6.7.9.10",
-      "date": "edited on: 08/16/2018 at 17:06:19 PM",
+      "date": "edited on: 08/18/2018 at 18:35:21 PM",
       "url": "jerk.com",
       "id": 1
     },
@@ -96,17 +106,17 @@
     },
     {
       "userId": 1,
-      "title": "test test test",
+      "title": "test test test v3",
       "summary": "adkfhlkqgflqwef",
-      "date": "08/15/2018 at 9:38:52 AM",
+      "date": "edited on: 08/19/2018 at 9:36:45 AM",
       "url": "test.com",
       "id": 5
     },
     {
       "userId": 1,
-      "title": "dsFSDFFASDF",
+      "title": "dsFSDFFASDF v3",
       "summary": "hgjlerbvhbepcqbr",
-      "date": "08/15/2018 at 9:40:18 AM",
+      "date": "edited on: 08/19/2018 at 9:38:13 AM",
       "url": "asdljbadsb.com",
       "id": 6
     },
@@ -122,17 +132,9 @@
       "userId": 1,
       "title": "UAHRG,JAHLUGHKD.GF",
       "summary": "ASDMFBASJKDGBVA,SGF",
-      "date": "08/15/2018 at 9:40:49 AM",
+      "date": "edited on: 08/19/2018 at 19:59:41 PM",
       "url": "ASDJGDGF,AJSBCBJA.R.COM",
       "id": 8
-    },
-    {
-      "userId": 1,
-      "title": "ergwergtewg",
-      "summary": "regfwerggwerg",
-      "date": "08/15/2018 at 15:14:42 PM",
-      "url": "argwergergerg.com",
-      "id": 9
     },
     {
       "userId": 1,
@@ -165,78 +167,48 @@
       "date": "08/17/2018 at 14:34:35 PM",
       "url": "akjfh",
       "id": 13
+    },
+    {
+      "userId": 3,
+      "title": "hello",
+      "summary": "testing",
+      "date": "08/18/2018 at 18:39:10 PM",
+      "url": "test.com",
+      "id": 14
     }
   ],
   "events": [
     {
       "userId": 1,
-      "title": "Going on a Date",
-      "location": "Fido",
-      "date": "2018-08-15",
+      "title": "Styling this page",
+      "location": "home",
+      "date": "2018-08-19",
+      "time": "12:30",
       "id": 1
     },
     {
-      "userId": 2,
-      "title": "Stuff",
-      "location": "Somewhere",
-      "date": "2018-08-16",
+      "userId": 1,
+      "title": "Grocery shopping with boo-thang",
+      "location": "Green Hills and Smyrna",
+      "date": "2018-08-18",
+      "time": "12:00",
       "id": 2
     },
     {
-      "userId": 2,
-      "title": "More Stuff",
-      "location": "Probably the same place",
-      "date": "2018-08-17",
+      "userId": 1,
+      "title": "Eating Pizza",
+      "location": "Home",
+      "date": "2018-08-19",
+      "time": "20:00",
       "id": 3
     },
     {
-      "userId": 2,
-      "title": "aksjdhflks",
-      "location": "asdfghasdlkgfhl",
-      "date": "2018-08-16",
-      "id": 4
-    },
-    {
       "userId": 1,
-      "title": "Go to Lunch",
-      "location": "Pizza 312",
-      "date": "2018-08-17",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "stuff",
-      "location": "here",
-      "date": "2018-08-16",
-      "id": 7
-    },
-    {
-      "userId": 5,
-      "title": "Painting with a twist",
-      "location": "murfreesboro",
-      "date": "2018-08-18",
-      "id": 8
-    },
-    {
-      "userId": 5,
-      "title": "holla'in atcha agin",
-      "location": "errwhure",
+      "title": "Finishing styling this section",
+      "location": "from the bed",
       "date": "2018-08-19",
-      "id": 9
-    },
-    {
-      "userId": 6,
-      "title": "Be Amazing",
-      "location": "Everywhere, everyday",
-      "date": "2018-08-16",
-      "id": 10
-    },
-    {
-      "userId": 4,
-      "title": "wowing Dejan",
-      "location": "hackery",
-      "date": "2018-08-17",
-      "id": 11
+      "time": "20:53",
+      "id": 4
     }
   ],
   "tasks": [
@@ -362,7 +334,7 @@
     {
       "title": "Slap Alex v3",
       "completeDate": "2018-08-16",
-      "completion": false,
+      "completion": true,
       "userId": 1,
       "id": 18
     },
@@ -379,6 +351,27 @@
       "completion": false,
       "userId": 4,
       "id": 20
+    },
+    {
+      "title": "Slap Alex",
+      "completeDate": "2018-08-19",
+      "completion": false,
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "title": "",
+      "completeDate": "",
+      "completion": true,
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "title": "add a go back button",
+      "completeDate": "2018-08-19",
+      "completion": false,
+      "userId": 1,
+      "id": 23
     }
   ],
   "friends": [
@@ -447,6 +440,42 @@
       "otherFriendId": 1,
       "friendUsername": "ricky",
       "id": 13
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 16
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 17
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 7,
+      "friendUsername": "sam",
+      "id": 19
     }
   ],
   "messages": [
@@ -497,6 +526,18 @@
       "userId": 1,
       "content": "hey Dejan",
       "id": 8
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "shut-up sam",
+      "id": 9
+    },
+    {
+      "username": "helen",
+      "userId": 3,
+      "content": "mean",
+      "id": 10
     }
   ]
 }

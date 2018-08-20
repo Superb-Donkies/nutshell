@@ -1,0 +1,220 @@
+/* Button Containers */
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Buttons for Login and Register Forms */
+
+#register-form button {
+    width: 20%;
+    margin: 1em auto;
+    padding: .3em;
+    border-radius: 5px;
+    box-shadow: 0 6px 4px -4px black;
+    border: none;
+
+}
+
+/* #registerSubmit {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+}
+
+#backButton {
+    background: linear-gradient( red, rgb(219, 0, 0));
+} */
+
+#backButton:hover,
+#registerSubmit:hover {
+    box-shadow: none;
+}
+
+#navLogout {
+    display: block;
+    width: 60px;
+    height: 20px;
+    overflow: hidden;
+    border: none;
+    color: transparent;
+    background: transparent;
+}
+
+#navLogout:hover {
+    color: black;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, whitesmoke, silver);
+    padding: .2em;
+    text-align: center;
+    margin-top: .5em;
+    height: 60px;
+    border-bottom-left-radius: 95px 95px;
+}
+
+
+/* Button for Message Area */
+
+.fa-arrow-right {
+    margin-top: 1em;
+}
+
+#send-message {
+    display: block;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+#send-message:hover {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+    color: white; 
+}
+
+
+/* Buttons for articles, events, & tasks areas */
+
+#friendButton,
+.delete-btn,
+.delete-article-btn,
+.delete-event-button,
+.edit-article-btn,
+.edit-event-button,
+.edit-button,
+.save-article-btn,
+.save-event-edit-button,
+.edit-save-task {
+    background-color: none;
+    color: black;
+    padding-right: .2em;
+    padding-left: .5em;
+    border-radius: 50%;
+    border: none;
+    opacity: .6;
+    margin: .2em;
+    width: 21px;
+    overflow: hidden;
+    height: 16px;
+}
+
+#friendButton:hover,
+.delete-btn:hover,
+.delete-article-btn:hover,
+.delete-event-button:hover,
+.edit-article-btn:hover,
+.edit-event-button:hover,
+.edit-button:hover,
+.save-article-btn:hover,
+.save-event-edit-button:hover,
+.edit-save-task:hover {
+    color: white;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.save-article-btn:hover,
+.save-event-edit-button:hover,
+.edit-save-task:hover {
+    width: 70px;
+    background: linear-gradient( rgb(0, 163, 22), rgb(28, 138, 0));
+}
+
+#friendButton {
+    height: 25px;
+    padding-top: .5em;
+}
+
+#friendButton:hover {
+    width: 100px;
+}
+
+.delete-btn {
+    display: block;
+    width: 25px;
+    height: 25px;
+    padding-top: .5em;
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+.delete-btn:hover {
+    width: 85px;
+}
+
+.delete-event-button:hover,
+.delete-article-btn:hover {
+    width: 70px;
+}
+
+
+.edit-article-btn:hover,
+.edit-event-button:hover,
+.edit-button:hover {
+    width: 60px;
+}
+
+.delete-btn,
+.delete-article-btn,
+.delete-event-button {
+    margin-right: 0;
+}
+
+.delete-btn:hover,
+.delete-article-btn:hover,
+.delete-event-button:hover {
+    background: linear-gradient( red, rgb(219, 0, 0));
+    opacity: 1;
+}
+
+#friendButton:hover,
+.edit-article-btn:hover,
+.edit-event-button:hover,
+.edit-button:hover {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+    opacity: 1;
+}
+
+#add-article-btn,
+#add-task,
+#new-event-button {
+    margin: 2em auto;
+    display: block;
+    border: none;
+    font-size: .8em;
+    border-radius: 50px;
+    padding: .5em;
+    opacity: .6;
+}
+
+#add-article-btn i,
+#add-task i,
+#new-event-button i {
+    margin-bottom: 0;
+}
+
+#add-article-btn:hover,
+#add-task:hover,
+#new-event-button:hover {
+    background: linear-gradient( rgb(67, 67, 255), rgb(36, 36, 211));
+    color: white;
+    opacity: 1;
+}
+
+#friendConfirmationButton {
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+}
+
+#friendConfirmationButton i {
+    margin-bottom: 0;
+}
+
+#friendConfirmationButton:hover {
+    background: linear-gradient( rgb(0, 163, 22), rgb(28, 138, 0));
+    color: white;
+}
+
+i {
+    margin-right: .5em;
+    margin-bottom: 1em;
+}

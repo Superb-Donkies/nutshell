@@ -1,112 +1,72 @@
+@import "buttons.css";
+@import "login.css";
+@import "articles.css";
+@import "tasks.css";
+@import "events.css";
 
+html {
+    position: relative;
+    z-index: -9;
+}
 
 body {
     display: block;
-    background: linear-gradient(to bottom, #c9d6ff70, #e2e2e26c) no-repeat fixed,
-    url("https://cdn.uconnectlabs.com/wp-content/uploads/sites/11/2016/11/tech.jpg") no-repeat fixed;
+    background:
+    url("https://images.unsplash.com/photo-1516820827855-3ea1bd6f79ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b736d7000068a60df32f0330fa9adf7&auto=format&fit=crop&w=1661&q=80") no-repeat fixed;
     background-size: cover;
     height: 100%;
+    position: relative;
+    z-index: -8;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-#login-form,
-#register-form  {
-    margin: 15% auto 30%;
-    padding: 1em;
-    background-color: white;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 8px 6px -6px black;
-    background: linear-gradient(to bottom, #16222a, #3a6073);
-    color: white;
-}
-
-#login-form input {
-    margin: .5em auto;
-    width: 80%;
-    padding: .2em;
-}
-
-#register-form input {
-    margin: .5em auto;
-    width: 80%;
-    padding: .2em;
-}
-
-#register-form button {
-    width: 20%;
-    margin: 1em auto;
-    padding: .3em;
-    border-radius: 5px;
-    box-shadow: 0 6px 4px -4px black;
-    border: none;
-    color: white;
-}
-
-#backButton {
-    background: linear-gradient( red, rgb(219, 0, 0));
-}
-
-#registerSubmit {
-    background: linear-gradient( blue, rgb(0, 0, 226));
-}
-
-#backButton:hover,
-#registerSubmit:hover {
-    box-shadow: none;
-}
-
-nav {
-    background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-}
-
-nav button {
-    display: block;
+#wrapper {
+    position: relative;
+    z-index: -7;
 }
 
 #user-page {
     display: block;
-    background: linear-gradient(to bottom, #2c3e50, #3498db) no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d34293717666869c9f8d26d353e1bb24&auto=format&fit=crop&w=1650&q=80") no-repeat fixed;
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+    z-index: -6;
 }
 
 main {
     padding: .5em;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    z-index: -5;
 }
 
 .left-container {
+    margin-top: 5%;
     margin-left: .5em;
     padding: 1em;
-    width: 35%;
-    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
+    width: 25%;
+    position: fixed;
+    left: 0;
 }
 
 .mid-container {
-    margin: 0;
+    margin-left: -2.5em;
     padding: 1em;
-    width: 30%;
-    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
+    width: 40%;
     color: white;
+    position: relative;
+    z-index: -4;
 }
 
 .right-container {
     margin-right: .5em;
     padding: 1em;
-    width: 35%;
-    /* background: linear-gradient(to bottom, #2980b9, #2c3e50); */
-}
-
-.article-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 30%;
+    position: fixed;
+    right: 0;
 }
 
 #messages-content {
@@ -143,180 +103,93 @@ main {
     width: 75%
 }
 
-#message-form button {
-    display: block;
-    width: 20%;
-    border-radius: 5px;
-}
-
 #profile-content {
-    background-color: white;
+    background: linear-gradient(to bottom, #8e9eab, #eef2f3);
     margin: .3em;
     margin-bottom: 1em;
-    padding: .5em;
-}
-
-#event-content {
-    background: linear-gradient(to bottom, #fdebad, #fff9b3);
-    margin: .3em;
-    margin-bottom: 1em;
-    padding: .5em;
-    max-height: 350px;
-    overflow-y: scroll;
-    box-shadow: inset 0 0 10px #000000;
-}
-
-#task-main {
-    background: linear-gradient(to bottom, #000428, #004e92);
-    margin: .3em;
-    padding: .5em;
-    max-height: 350px;
-    overflow-y: scroll;
-    box-shadow: inset 0 0 10px #000000;
-}
-
-#article-content {
-    background-color: white;
-    margin: .3em;
-    padding: 1em;
-    box-shadow: inset 0 0 10px #000000;
-}
-
-#friends-content {
-    background-color: white;
-    margin: .3em;
-    padding: 1em;
+    padding: .8em;
     box-shadow: inset 0 0 10px #000000;
 }
 
 #profile-image {
     display: block;
     width: 100%;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
 }
 
-.section-header {
-    color: white;
-    text-align: center;
-}
-
-.article-card {
-    background: linear-gradient(to top, #c9d6ff, #e2e2e2);
-    padding: 1em;
-    margin: 1em auto;
-    margin-bottom: 2em;
-    border-radius: 10px;
-    box-shadow: 0 15px 10px -5px rgba(0, 0, 0, 0.6);
-    color: black;
-}
-
-.postit-top {
-    width: 200px;
-    height: 90px;
-    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%);
-    padding: 1em;
-    margin: 2.5em auto 0;
-    transform: rotate(0deg);
-    border-bottom-left-radius: 60px 15px;
-
-}
-
-.postit {
-    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%);
-    padding: 1em;
-    margin: -7em auto 2.5em;
-    font-family: 'Indie Flower', cursive;
-    width: 200px;
-    transform: rotate(-2deg);
-    /* box-shadow: 0px 4px 6px rgba(51, 51, 51, 0.6); */
-    /* border: black solid 1px; */
-    border-bottom-right-radius: 60px 5px;
-    border-top-left-radius: 100px 100px;
-    box-shadow: 0 15px 10px -5px rgba(0, 0, 0, 0.6);
-    
-}
-
-.postit:hover {
-    transform: rotate(0deg);
-    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffff88 100%);
-    border-bottom-right-radius: 0px;
-}
-
-.friendCard {
+#profile-form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .3em;
+    margin: .5em;
 }
 
-.friendCard div {
-    justify-content: center;
+#profile-form  input {
+    width: 90%;
+    height: 15px;
+    margin: .2em auto;
 }
 
+#profile-form  textarea {
+    width: 90%;
+    margin: 1em auto;
+    height: 2em;
+}
 
-.friendCard button {
-    display: block;
-    margin-top: 20%;
-
+#profile-form button {
+    height: 20px;
+    margin: 1em auto;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 4px -6px black;
+    background: black;
+    opacity: .6;
 }
 
 #friends-content {
-    background-color: white;
+    margin: .3em;
     padding: 1em;
+    box-shadow: inset 0 0 10px #000000;
+    max-height: 250px;
+    overflow-y: scroll;
 }
 
-#friendButton,
-.delete-btn,
-.delete-article-btn,
-.delete-event-button,
-.edit-article-btn,
-.edit-event-button,
-.edit-button {
-    background-color: black;
-    color: white;
-    padding-right: 1em;
-    padding-left: 1em;
-    border-radius: 50px;
-    border: none;
-    opacity: .6;
-    margin: .2em;
+
+.section-header {
+    color: whitesmoke;
+    text-align: center;
 }
 
-.delete-btn,
-.delete-article-btn,
-.delete-event-button {
-    margin-right: 0;
-}
-
-.delete-btn:hover,
-.delete-article-btn:hover,
-.delete-event-button:hover {
-    background: linear-gradient( red, rgb(219, 0, 0));
-    opacity: 1;
-}
-
-#friendButton:hover,
-.edit-article-btn:hover,
-.edit-event-button:hover,
-.edit-button:hover {
-    background: linear-gradient( blue, rgb(0, 0, 226));
-    opacity: 1;
-}
-
-.button-container {
+.friendCard {
+    background: linear-gradient(to bottom, #bfd4e6, #eef2f3);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    border: black solid 1px;
 }
 
-.event-component {
-    background-color: lightskyblue;
-    margin: 1em auto;
+.friendCard div {
+    margin-right: 1em;
+}
+
+
+.friendCard p {
+    display: block;
+    margin: 1em;
+}
+
+#friends-content {
     padding: 1em;
 }
-/*
-    David Taylor
-    Defines the style properties of the first child within the event-container element.
-*/
 
-.event-list-container div:first-child {
-    font-size: larger;
-    font-weight: bolder;
-    background-color: palevioletred;
+#friendSearch {
+    width: 60%;
+    padding: .5em;
 }
+
+fieldset {
+    border: none;
+}
+
+

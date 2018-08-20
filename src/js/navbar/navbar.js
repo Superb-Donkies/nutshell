@@ -4,8 +4,8 @@
 let navbarFunctions = {}
 
 navbarFunctions.navbarBuilder = () => {
-    return `<nav>
-                <button href="#" id="navLogout">Logout</button>
+    return `<nav class="curl">
+                <button href="#" id="navLogout">Logout <i class="fas fa-sign-out-alt"></i></button>
             </nav>`
 }
 

@@ -30,8 +30,8 @@ const editArticleManager = Object.create(null, {
                 <textarea id="editedSummary">${summary}</textarea>
                 <input type="text" value="${url}" id="editedUrl">
                 <div class="button-container">
-                    <button class="save-article-btn" id="save--${event.target.id.split("--")[1]}">Save <i class="far fa-save"></i></button>
-                    <button class="delete-article-btn" id="delete--${event.target.id.split("--")[1]}">Delete <i class="far fa-times-circle"></i></button>
+                    <button class="save-article-btn" id="save--${event.target.id.split("--")[1]}"><i class="far fa-save"></i> Save</button>
+                    <button class="delete-article-btn" id="delete--${event.target.id.split("--")[1]}"><i class="far fa-times-circle"></i> Delete</button>
                 </div>`
         }
     }

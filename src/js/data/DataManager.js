@@ -1,4 +1,12 @@
+/*
+    Author: The Superb Donkies
+    Purpose: Object housing all Promise functions used throughout the Project.
+*/
+
 const DataManager = Object.create(null, {
+    /*
+        Promise Functions by Jeremiah Pritchard
+    */
     login: {
         // Function that passes the values from login and looks up user
         value: (email, username) => {
@@ -27,9 +35,63 @@ const DataManager = Object.create(null, {
             });
         }
     },
+    friendAdder: {
+        value: (userId, friendId, friendUsername) => {
+            return fetch(`http://localhost:8088/friends`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    otherFriendId: friendId,
+                    friendUsername: friendUsername
+                })
+            })
+                .then(result => result.json())
+        }
+    },
+    friendDisplayer: {
+        value: (friendUsername) => {
+            return fetch(`http://localhost:8088/friends?username=${friendUsername.friendUsername}`)
+                .then(r => r.json())
+                .then(result => {
+                    let username = result.friendUsername
+                    return username
+                })
+        }
+    },
+    friendsList: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/friends?userId=${userId}`)
+                .then(result => result.json())
+        }
+    },
+    friendChecker: {
+        value: (searchedUser) => {
+            return fetch(`http://localhost:8088/users?username=${searchedUser}`)
+                .then(result => result.json())
+        }
+    },
+    friendValidator: {
+        value: (userId, friendId) => {
+            return fetch(`http://localhost:8088/friends?userId=${userId}&otherFriendId=${friendId}`)
+                .then(response => response.json())
+        }
+    },
+    removeFriend: {
+        value: (id) => {
+            return fetch(`http://localhost:8088/friends/${id}`, {
+                method: 'DELETE'
+            })
+        }
+    },
+    /* 
+        Promise Functions by Ricky Bruner
+    */  
     getArticles: {
         value: (userId) => {
-            return fetch(`http://localhost:8088/articles?userId=${userId}`)
+            return fetch(`http://localhost:8088/users/${userId}/articles?_sort=id&_order=desc`)
                 .then(res => res.json())
         }
     },
@@ -82,50 +144,26 @@ const DataManager = Object.create(null, {
                 .then(result => result.json())
         }
     },
-    friendAdder: {
-        value: (userId, friendId, friendUsername) => {
-            return fetch(`http://localhost:8088/friends`, {
-                method: "POST",
+    getUser: {
+        value: (userId) => {
+            return fetch(`http://localhost:8088/users/${userId}`)
+            .then(res => res.json())
+        }
+    },
+    editProfile: {
+        value: (userId, object) => {
+            return fetch(`http://localhost:8088/users/${userId}`, {
+                method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    userId: userId,
-                    otherFriendId: friendId,
-                    friendUsername: friendUsername
-                })
-            })
-                .then(result => result.json())
+                body: JSON.stringify({about:object})
+            }).then(result => result.json())
         }
     },
-    friendDisplayer: {
-        value: (friendUsername) => {
-            return fetch(`http://localhost:8088/friends?username=${friendUsername.friendUsername}`)
-                .then(r => r.json())
-                .then(result => {
-                    let username = result.friendUsername
-                    return username
-                })
-        }
-    },
-    friendsList: {
-        value: (userId) => {
-            return fetch(`http://localhost:8088/friends?userId=${userId}`)
-                .then(result => result.json())
-        }
-    },
-    friendChecker: {
-        value: (searchedUser) => {
-            return fetch(`http://localhost:8088/users?username=${searchedUser}`)
-                .then(result => result.json())
-        }
-    },
-    friendValidator: {
-        value: (userId, friendId) => {
-            return fetch(`http://localhost:8088/friends?userId=${userId}&otherFriendId=${friendId}`)
-                .then(response => response.json())
-        }
-    },
+    /*
+        Promise Functions by David Taylor
+    */
     getEvents: {
         value: (userId) => {
             return fetch(`http://localhost:8088/users/${userId}/events?_sort=date&_order=asc`)
@@ -162,23 +200,9 @@ const DataManager = Object.create(null, {
             }).then(result => result.json())
         }
     },
-    getUser: {
-        value: (userId) => {
-            return fetch(`http://localhost:8088/users/${userId}`)
-            .then(res => res.json())
-        }
-    },
-    editProfile: {
-        value: (userId, object) => {
-            return fetch(`http://localhost:8088/users/${userId}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({about:object})
-            }).then(result => result.json())
-        }
-    },
+    /* 
+        Promise Functions by Alejandro Font
+    */
     getTasks: {
         value: (userId) => {
             return fetch(`http://localhost:8088/users/${userId}/tasks?_sort=completeDate&_order=asc`)
@@ -223,13 +247,6 @@ const DataManager = Object.create(null, {
                 },
                 body: JSON.stringify(task)
             }).then(r => r.json())
-        }
-    },
-    removeFriend: {
-        value: (id) => {
-            return fetch(`http://localhost:8088/friends/${id}`, {
-                method: 'DELETE'
-            })
         }
     }
 });

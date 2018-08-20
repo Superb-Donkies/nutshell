@@ -20,11 +20,15 @@ function handleProfile(userId){
     /*
     Event Listener on profile container
     1st condition: if the update button is clicked, render the update form
-    2nd condition: is the user clicks the save changed button, send the updates to the users DB "about:" value and then re-render the area with the new details.
+    2nd condition: swap the form for the button is user clicks "Go Back"
+    3rd condition: is the user clicks the save changed button, send the updates to the users DB "about:" value and then re-render the area with the new details.
     */
     document.querySelector("#profile-content").addEventListener("click", (e) => {
         if(e.target.id === "update-profile"){
             document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileForm();
+        }
+        if (e.target.id === "leave-profile-form") {
+            document.querySelector("#profile-form").innerHTML = profileFormManager.renderProfileBtn();
         }
         if(e.target.id === "save-profile"){
             DataManager.editProfile(userId, saveUserDetails()).then(() => {

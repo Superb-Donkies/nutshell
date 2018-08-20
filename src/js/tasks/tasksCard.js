@@ -11,7 +11,7 @@ function createTaskCard (event) {
                 <p>Finished Task? <input type="checkbox" class="checkbox" id="checkbox--${event.id}"></p>
                 
                 <div class="button-container">
-                    <button class="edit-button" id="button--${event.id}">Edit <i class="far fa-edit"></i></button>
+                    <button class="edit-button" id="button--${event.id}"><i class="far fa-edit"></i> Edit</button>
                 </div>
             </div>`
 }

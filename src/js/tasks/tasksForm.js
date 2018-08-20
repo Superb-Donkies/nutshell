@@ -8,18 +8,21 @@ const createForms = Object.create(null, {
     addTaskForm: {
         value: () => {
             return `<div id="form">
-                <fieldset class="task">
-                    <label>Task</label>
-                    <input type="text" id="task-entry" placeholder="What do you want to do?">
-                </fieldset>
-                <fieldset class="complete-date">
-                    <label>Complete Date</label>
-                    <input type="date" id="date-entry">
-                </fieldset>
-                <fieldset>
-                    <button id="save-task">Save Task</button>
-                </fieldset> 
-            </div>`
+                        <fieldset class="task">
+                            <label>Task</label>
+                            <input type="text" id="task-entry" placeholder="What do you want to do?">
+                        </fieldset>
+                        <fieldset class="complete-date">
+                            <label>Complete Date</label>
+                            <input type="date" id="date-entry">
+                        </fieldset>
+                        <fieldset>
+                            <div class="button-container">
+                                <button id="leave-task-form">Go Back</button>
+                                <button id="save-task">Save Task</button>
+                            </div>
+                        </fieldset> 
+                    </div>`
         }
     },
     addEditForm: {
@@ -34,7 +37,7 @@ const createForms = Object.create(null, {
                             <input type="date" id="date-entry" value="${document.querySelector(`#task-date--${event.target.id.split("--")[1]}`).textContent}">
                         </fieldset>
                         <fieldset>
-                            <button class="edit-save-task">Save Task</button>
+                            <button class="edit-save-task"><i class="far fa-save"></i> Save</button>
                         </fieldset> 
                     </div>`
         }

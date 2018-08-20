@@ -138,7 +138,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
             let username = document.querySelector("#registerUsername").value;
             // Plug input fields into function that adds a new user
             // Checks to make sure input fields are not blank
-            if (email || username === "") {
+            if (email === "" || username === "") {
                 alert("Please Fill Requirements")
             }
             else {
