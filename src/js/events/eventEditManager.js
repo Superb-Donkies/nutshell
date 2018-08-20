@@ -29,23 +29,30 @@ let eventEditManager = Object.create(null, {
                 userId: userId,
                 title: document.querySelector("#edited-event-title").value,
                 location: document.querySelector("#edited-event-location").value,
-                date: document.querySelector("#edited-event-date").value
+                date: document.querySelector("#edited-event-date").value,
+                time: document.querySelector("#edited-event-time").value
             }
             return editedEvent
         }
     },
     transformEvent: {
         value: (event) => {
-            let eventComponent = event.target.parentElement;
-            let eventTitle = document.querySelector(`#event-title--${event.target.id.split("--")[1]}`).textContent
-            let eventLocation = document.querySelector(`#event-location--${event.target.id.split("--")[1]}`).textContent
-            let eventDate = document.querySelector(`#event-date--${event.target.id.split("--")[1]}`).textContent
+            let eventComponent = event.target.parentElement.parentElement
+            let eventTitle = document.querySelector(`#event-title--${event.target.id.split("--")[1]}`).textContent;
+            let eventLocation = document.querySelector(`#event-location--${event.target.id.split("--")[1]}`).textContent;
+            let eventDate = document.querySelector(`#event-date--${event.target.id.split("--")[1]}`).textContent;
+            let month = eventDate.split(" / ")[0];
+            let year = eventDate.split(" / ")[1];
+            let day = document.querySelector(`#event-day--${event.target.id.split("--")[1]}`).textContent;
+            eventDate = year + "-" + month + "-" + day;
+            let eventTime = document.querySelector(`#event-time--${event.target.id.split("--")[1]}`).textContent;
             eventComponent.innerHTML =
                 `<input type="text" value="${eventTitle}" id="edited-event-title">
                 <input type="text" value="${eventLocation}" id="edited-event-location">
                 <input type="date" value="${eventDate}" id="edited-event-date">
+                <input type="time" value="${eventTime}" id="edited-event-time">
                 <div class="button-container">
-                    <button class="save-event-edit-button" id="save-event-edit--${event.target.id.split("--")[1]}">Save Changes</button>
+                    <button class="save-event-edit-button" id="save-event-edit--${event.target.id.split("--")[1]}"><i class="far fa-save"></i> Save</button>
                 </div>`
         }
     }

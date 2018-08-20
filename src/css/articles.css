@@ -1,0 +1,140 @@
+
+.article-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    background: linear-gradient(to bottom, #efefbb, #d4d3dd);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); 
+}
+
+.article-form input {
+    width: 90%;
+    height: 25px;
+    margin: 1em auto;
+    font-size: 1em;
+}
+
+.article-form textarea {
+    width: 90%;
+    margin: 1em auto;
+    height: 8em;
+    font-size: 1em
+}
+
+.article-form button {
+    width: 80px;
+    height: 20px;
+    margin: 1em auto;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 4px -6px black;
+    background: black;
+    opacity: .6;
+}
+
+#post-article:hover {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+}
+
+#leave-article-form:hover {
+    background: linear-gradient( red, rgb(219, 0, 0));
+}
+
+#post-article:hover,
+#leave-article-form:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    opacity: 1; 
+}
+
+#article-content {
+    margin: .5em;
+    padding: 1em;
+    position: relative;
+    z-index: -3;
+}
+
+.article-card {
+    padding: 1em;
+    margin: 1em auto;
+    margin-bottom: 2em;
+    color: black;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); */
+    overflow-wrap: break-word;
+    box-shadow: 0 8px 6px -6px black;
+    background: linear-gradient(to bottom, #efefbb, #d4d3dd);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.article-card h2 {
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.article-card h5 {
+    text-align: right;
+    font-size: .7em;
+    margin-top: 0;
+}
+
+.article-card a {
+    text-decoration: none;
+    text-align: right;
+    margin-bottom: .5em;
+}
+
+.article-card input {
+    width: 90%;
+    margin: 1em auto;
+    font-size: .8em;
+    height: 25px;
+}
+
+.article-card textarea {
+    width: 90%;
+    margin: 1em auto;
+    height: 8em;
+    font-size: .8em;
+}
+
+.paper {
+    background: linear-gradient(to bottom, #efefbb, #d4d3dd);
+    padding: 30px;
+    position: relative;
+}
+  
+.paper,
+.paper::before,
+.paper::after {
+    /* Styles to distinguish sheets from one another */
+    border: 1px solid #bbb;
+}
+  
+.paper::before,
+.paper::after {
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 99%;
+    background-color: #eee;
+}
+  
+.paper::before {
+    right: 10px;
+    top: 0;
+    transform: rotate(-1deg);
+    z-index: -1;
+    background: linear-gradient(to bottom, #e9e9a2, #aeadb6);
+}
+  
+.paper::after {
+    top: 5px;
+    right: -5px;
+    transform: rotate(1deg);
+    z-index: -2;
+    background: linear-gradient(to bottom, #ececa3, #afaeb8);
+}  

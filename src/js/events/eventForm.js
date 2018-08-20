@@ -20,24 +20,33 @@
 const makeEventForm = Object.create(null, {
     renderAddEventButton: {
         value: () => {
-            document.querySelector("#event-form").innerHTML = `<button id="new-event-button">New Event</button>`
+            document.querySelector("#event-form").innerHTML = `<button id="new-event-button"><i class="far fa-plus-square"></i> New Event</button>`
         }
     },
     renderEventForm: {
         value: () => {
-            return `<fieldset class="event-form-field">
-                    <label for="event-title">Title</label>
-                    <input required type="text" id="event-title" placeholder="What're you doing?">
-                </fieldset>
-                <fieldset class="event-location-field">
-                    <label for="event-location">Location</label>
-                    <input required type="text" id="event-location" placeholder="Where are you doing it?">
-                </fieldset>
-                <fieldset class="event-date-field">
-                    <label for="event-date">Date</label>
-                    <input required type="date" id="event-date">
-                </fieldset>
-                <button id="save-event-button">Save Event</button>`
+            return `<div id="add-event-form">
+                        <fieldset class="event-form-field">
+                            <label for="event-title">Title</label>
+                            <input required type="text" id="event-title" placeholder="What're you doing?">
+                        </fieldset>
+                        <fieldset class="event-location-field">
+                            <label for="event-location">Location</label>
+                            <input required type="text" id="event-location" placeholder="Where are you doing it?">
+                        </fieldset>
+                        <fieldset class="event-date-field">
+                            <label for="event-date">Date</label>
+                            <input required type="date" id="event-date">
+                        </fieldset>
+                        <fieldset class="event-time-field">
+                            <label for="event-time">Time</label>
+                            <input type="time" required id="event-time">
+                        </fieldset>
+                        <div class="button-container">
+                            <button id="save-event-button">Save Event</button>
+                            <button id="leave-event-form">Go Back</button>
+                        </div>
+                    </div>`
         }
     }
 })

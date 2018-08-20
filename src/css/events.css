@@ -1,0 +1,153 @@
+
+#event-content {
+    /* background: linear-gradient(to bottom, #fdebad, #fff9b3); */
+    margin: .3em;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+.event-component {
+    background: linear-gradient(to bottom, #bfd4e6, #eef2f3);
+    color: black;
+    margin: 2em auto;
+    /* padding: 1em; */
+    width: 275px;
+    height: 275px;
+    transform: rotate(1deg);
+    border: black solid 3px;
+    box-shadow: 0px 0px 3px black inset;
+    outline: 3px solid #eef2f3;
+    outline-offset: 0px;
+
+}
+
+.event-component input {
+    display: block;
+    width: 90%;
+    height: 25px;
+    font-size: .8em;
+    margin: 2em auto;
+    padding: .2em;
+    border: none;
+    background: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* .event-component:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(0deg);
+} */
+
+.event-component .button-container {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .3em;
+}
+
+.event-date {
+    margin: 0;
+    padding: .5em;
+    font-size: 1em;
+    color: whitesmoke;
+    background: black;
+    text-align: center;
+}
+
+.event-day {
+    margin: 0;
+    padding: .5em;
+    padding-bottom: 0;
+    font-size: 2em;
+}
+
+.event-title {
+    margin: 0;
+    text-align: center;
+    padding: .3em;
+    font-family: 'Indie Flower', cursive;
+    color: navy;
+}
+
+.event-location {
+    margin: 0;
+    text-align: left;
+    padding: .3em;
+    font-family: 'Indie Flower', cursive;
+    color: navy;
+}
+
+.event-time {
+    margin: 0;
+    text-align: left;
+    color: navy;
+    padding: .3em;
+    font-family: 'Indie Flower', cursive;
+}
+
+#add-event-form {
+    background: linear-gradient(to bottom, #bfd4e6, #eef2f3);
+    color: black;
+    margin: 2em auto;
+    padding: 1em;
+    width: 300px;
+    border: black solid 3px;
+    box-shadow: 0px 0px 3px black inset;
+    outline: 3px solid #eef2f3;
+    outline-offset: 0px;
+}
+
+#add-event-form input {
+    display: block;
+    width: 90%;
+    height: 25px;
+    font-size: .9em;
+    margin: 1em auto;
+    padding: .3em;
+    border: none;
+    background: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+#add-event-form button {
+    width: 80px;
+    height: 20px;
+    margin: 1em auto;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 4px -6px black;
+    background: black;
+    opacity: .6;
+}
+
+#save-event-button:hover {
+    background: linear-gradient( blue, rgb(0, 0, 226));
+}
+
+#leave-event-form:hover {
+    background: linear-gradient( red, rgb(219, 0, 0));
+}
+
+#save-event-button:hover,
+#leave-event-form:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    opacity: 1; 
+}
+
+/*
+    David Taylor
+    Defines the style properties of the first child within the event-container element.
+*/
+.event-list-container div:first-child {
+    font-size: larger;
+    font-weight: bolder;
+    background: linear-gradient(to bottom, #cac531, #f3f9a7);
+    outline: 3px solid #cac531;
+    outline-offset: 0px;
+    width: 280px;
+    height: 280px;
+}
+

@@ -2,12 +2,22 @@
   "users": [
     {
       "id": 1,
-      "username": "david",
-      "email": "david@fake.com",
+      "username": "ricky",
+      "email": "ricky@me.com",
       "about": {
-        "bio": "I like turtles",
-        "image": "https://pics.me.me/its-called-fashion-brenda-look-it-up-dab-moms-its-7175440.png",
-        "birthday": "10/29/1929"
+        "bio": "I am Ricky and I really dislike Alex. Such a jerk. Again.",
+        "image": "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/27164902_10157084298692729_6480717072479412519_o.jpg?_nc_cat=0&oh=c54352be81245cefe1184b305da6a17a&oe=5BC5FB92",
+        "birthday": "1988-12-10"
+      }
+    },
+    {
+      "id": 2,
+      "username": "alex",
+      "email": "alex@me.com",
+      "about": {
+        "bio": "I are dumb.",
+        "image": "https://i.stack.imgur.com/MRSGX.jpg?s=328&g=1",
+        "birthday": "1992-02-18"
       }
     },
     {
@@ -15,46 +25,202 @@
       "username": "helen",
       "about": {
         "bio": "Im Helen and I have been to a shitload of countries",
+        "image": "https://i.ytimg.com/vi/qQ8kXlsme4c/hqdefault.jpg",
+        "birthday": "1990-12-25"
+      },
+      "id": 3
+    },
+    {
+      "email": "david@me.com",
+      "username": "david",
+      "about": {
+        "bio": "I sing in talent shows. I was born at the beginning of the Great Depression",
+        "image": "https://www.towerofpower.com.au/wp-content/uploads/2008/11/why-people-remain-quiet-shy-and-non-assertive.jpg",
+        "birthday": "1929-10-29"
+      },
+      "id": 4
+    },
+    {
+      "email": "shan@me.com",
+      "username": "shan",
+      "about": {
+        "bio": "I cuts hair and slays bitches",
+        "image": "https://pbs.twimg.com/profile_images/894330027352969216/VPvNwhoI_400x400.jpg",
+        "birthday": "1990-09-17"
+      },
+      "id": 5
+    },
+    {
+      "email": "kayla@me.com",
+      "username": "kayla",
+      "about": {
+        "bio": "Im the very best person to ever live!",
+        "image": "https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/19221504_10156323805382729_8735263925981311453_o.jpg?_nc_cat=0&oh=7abfe0dd0b0969ff9d9fd42019301cfc&oe=5BFE3499",
+        "birthday": "1993-12-01"
+      },
+      "id": 6
+    },
+    {
+      "email": "sam@me.com",
+      "username": "sam",
+      "about": {
+        "bio": "Add a bio for yourself!",
         "image": "",
-        "birthday": "add your birthday"
-      }
+        "birthday": "Add your birthday!"
+      },
+      "id": 7
+    },
+    {
+      "email": "jeremiah123@me.com",
+      "username": "jeremiah123",
+      "about": {
+        "bio": "Add a bio for yourself!",
+        "image": "",
+        "birthday": "Add your birthday!"
+      },
+      "id": 8
     }
   ],
   "articles": [
     {
       "userId": 1,
-      "title": "klj",
-      "summary": "adfad",
-      "date": "edited on: 08/17/2018 at 10:29:32 AM",
-      "url": "",
+      "title": "Hey Alejandro v2.3.5.6.65.9",
+      "summary": "nice stuff v2.3.5.6.7.9.10",
+      "date": "edited on: 08/18/2018 at 18:35:21 PM",
+      "url": "jerk.com",
       "id": 1
     },
     {
-      "userId": 1,
-      "title": "lkjhlkjhlkjhlkjhlkjhlkjhlkjh",
-      "summary": "",
-      "date": "08/16/2018 at 15:11:11 PM",
-      "url": "",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "title": "",
-      "summary": "",
-      "date": "08/17/2018 at 10:30:14 AM",
-      "url": "",
+      "userId": 2,
+      "title": "im not stupid",
+      "summary": "nope",
+      "date": "edited on: 08/20/2018 at 9:04:18 AM",
+      "url": "asd,jbasdf.com",
       "id": 3
     },
     {
       "userId": 1,
-      "title": "adfad",
-      "summary": "adfa",
-      "date": "08/17/2018 at 10:30:30 AM",
-      "url": "",
-      "id": 4
+      "title": "test test test v3",
+      "summary": "adkfhlkqgflqwef",
+      "date": "edited on: 08/19/2018 at 9:36:45 AM",
+      "url": "test.com",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "new article",
+      "summary": "new stuff here",
+      "date": "08/16/2018 at 15:40:31 PM",
+      "url": "nope.com",
+      "id": 10
+    },
+    {
+      "userId": 5,
+      "title": "Bitches got stitches",
+      "summary": "they did",
+      "date": "08/16/2018 at 21:29:48 PM",
+      "url": "bitcheswithstitches.com",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "title": "Local Cidery is pretty L.I.T.",
+      "summary": "Pretty much the title.\n\nRose´all day baybay",
+      "date": "08/16/2018 at 21:39:29 PM",
+      "url": "getcrunk.com",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "title": "hey",
+      "summary": "SUUUUUP",
+      "date": "08/17/2018 at 14:34:35 PM",
+      "url": "akjfh",
+      "id": 13
+    },
+    {
+      "userId": 3,
+      "title": "hello",
+      "summary": "testing",
+      "date": "08/18/2018 at 18:39:10 PM",
+      "url": "test.com",
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "title": "Gaining the Smarts",
+      "summary": "learning the codes and stuff at NSS",
+      "date": "08/20/2018 at 9:04:00 AM",
+      "url": "nss.com",
+      "id": 15
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "userId": 1,
+      "title": "Styling this page",
+      "location": "home",
+      "date": "2018-08-19",
+      "time": "12:30",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "Grocery shopping with boo-thang",
+      "location": "Green Hills and Smyrna",
+      "date": "2018-08-18",
+      "time": "12:00",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "title": "Eating Pizza",
+      "location": "Home",
+      "date": "2018-08-19",
+      "time": "20:00",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "Finishing styling this section",
+      "location": "from the bed",
+      "date": "2018-08-19",
+      "time": "20:53",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "title": "Presenting!",
+      "location": "NSS",
+      "date": "2018-08-20",
+      "time": "09:45",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "title": "learn react",
+      "location": "NSS",
+      "date": "2018-08-21",
+      "time": "09:05",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "title": "Editing my code",
+      "location": "NSS",
+      "date": "2018-08-17",
+      "time": "14:00",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "title": "presenting our nutshell",
+      "location": "Classroom @ NSS",
+      "date": "2018-08-20",
+      "time": "09:45",
+      "id": 8
+    }
+  ],
   "tasks": [
     {
       "title": "Slap Alex v3.7",
@@ -71,8 +237,8 @@
       "id": 2
     },
     {
-      "title": "Slap Alex Again again",
-      "completeDate": "2018-08-16",
+      "title": "change p2",
+      "completeDate": "2018-08-30",
       "completion": true,
       "userId": 1,
       "id": 3
@@ -94,100 +260,351 @@
     {
       "title": "dont slap me man",
       "completeDate": "2018-08-17",
-      "completion": true,
+      "completion": false,
       "userId": 1,
       "id": 6
     },
     {
-      "title": "haha",
-      "completeDate": "",
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-28",
       "completion": true,
-      "userId": 1,
+      "userId": 2,
       "id": 7
     },
     {
-      "title": "adfljadf",
-      "completeDate": "",
+      "title": "Slap Alex v3.9975",
+      "completeDate": "2018-08-18",
       "completion": true,
-      "userId": 1,
+      "userId": 2,
       "id": 8
     },
     {
-      "title": ";li",
-      "completeDate": "",
+      "title": "Slap Alex v3.99999745",
+      "completeDate": "2018-08-24",
       "completion": true,
-      "userId": 1,
+      "userId": 2,
       "id": 9
     },
     {
-      "title": "olh",
-      "completeDate": "",
+      "title": "Slap Alex Again v4",
+      "completeDate": "2018-08-23",
       "completion": true,
-      "userId": 1,
+      "userId": 2,
       "id": 10
     },
     {
-      "title": "daf",
-      "completeDate": "2018-08-29",
-      "completion": false,
+      "title": "heloo helloo",
+      "completeDate": "2018-08-22",
+      "completion": true,
       "userId": 1,
       "id": 11
     },
     {
-      "title": "adfa",
-      "completeDate": "2018-08-18",
-      "completion": false,
-      "userId": 1,
-      "id": 12
-    }
-  ],
-  "friends": [],
-  "messages": [
-    {
-      "title": "I can still add??",
-      "completeDate": "2018-09-07",
+      "title": "looking around for the time",
+      "completeDate": "2018-08-29",
       "completion": true,
       "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "Slap Alex",
+      "completeDate": "2018-08-24",
+      "completion": false,
+      "userId": 5,
+      "id": 13
+    },
+    {
+      "title": "Slap Alex v3",
+      "completeDate": "2018-08-14",
+      "completion": false,
+      "userId": 5,
+      "id": 14
+    },
+    {
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-18",
+      "completion": false,
+      "userId": 5,
       "id": 15
     },
     {
-      "username": "ricky",
+      "title": "Bring sexy back",
+      "completeDate": "2018-08-31",
+      "completion": false,
+      "userId": 6,
+      "id": 16
+    },
+    {
+      "title": "Slap Alex Again",
+      "completeDate": "2018-08-17",
+      "completion": false,
       "userId": 1,
+      "id": 17
+    },
+    {
+      "title": "Slap Alex v3",
+      "completeDate": "2018-08-16",
+      "completion": true,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "title": "Slap Alex",
+      "completeDate": "2018-08-18",
+      "completion": true,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "get crunk",
+      "completeDate": "2018-08-17",
+      "completion": false,
+      "userId": 4,
       "id": 20
     },
     {
-      "title": "more tasks for check up",
-      "completeDate": "2018-08-13",
+      "title": "Slap Alex",
+      "completeDate": "2018-08-19",
       "completion": false,
-      "userId": 1,
+      "userId": 3,
       "id": 21
     },
     {
-      "title": "another one for the boys",
-      "completeDate": "2018-10-11",
-      "completion": false,
+      "title": "",
+      "completeDate": "",
+      "completion": true,
       "userId": 1,
       "id": 22
     },
     {
-      "title": "more ya??",
-      "completeDate": "2018-08-21",
+      "title": "add a go back button",
+      "completeDate": "2018-08-19",
       "completion": false,
       "userId": 1,
       "id": 23
     },
     {
-      "title": "add a new task jabroni rick",
-      "completeDate": "2018-08-28",
+      "title": "Stop eating cooked food",
+      "completeDate": "2018-08-21",
       "completion": false,
-      "userId": 1,
+      "userId": 2,
       "id": 24
     },
     {
-      "username": "david",
-      "userId": 1,
-      "content": "dlafjad;flj",
+      "title": "complain about cooked food",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 2,
       "id": 25
+    },
+    {
+      "title": "Practice singing in the mirror",
+      "completeDate": "2018-08-21",
+      "completion": false,
+      "userId": 4,
+      "id": 26
+    }
+  ],
+  "friends": [
+    {
+      "userId": 1,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 5
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 6
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 7
+    },
+    {
+      "userId": 6,
+      "otherFriendId": 5,
+      "friendUsername": "shan",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 2,
+      "friendUsername": "alex",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 5,
+      "friendUsername": "shan",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 4,
+      "friendUsername": "david",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "otherFriendId": 3,
+      "friendUsername": "helen",
+      "id": 16
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 1,
+      "friendUsername": "ricky",
+      "id": 17
+    },
+    {
+      "userId": 3,
+      "otherFriendId": 6,
+      "friendUsername": "kayla",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "otherFriendId": 7,
+      "friendUsername": "sam",
+      "id": 19
+    },
+    {
+      "userId": 4,
+      "otherFriendId": 2,
+      "friendUsername": "alex",
+      "id": 20
+    }
+  ],
+  "messages": [
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hello",
+      "id": 1
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "is it me youre looking for",
+      "id": 2
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "gibberish",
+      "id": 3
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "alex you suck, dont ever push your API again",
+      "id": 4
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hello\nhello\n\n",
+      "id": 5
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
+      "id": 6
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hey Fig",
+      "id": 7
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "hey Dejan",
+      "id": 8
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "shut-up sam",
+      "id": 9
+    },
+    {
+      "username": "helen",
+      "userId": 3,
+      "content": "mean",
+      "id": 10
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test\n",
+      "id": 11
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test",
+      "id": 12
+    },
+    {
+      "username": "ricky",
+      "userId": 1,
+      "content": "test",
+      "id": 13
+    },
+    {
+      "username": "alex",
+      "userId": 2,
+      "content": "Another test",
+      "id": 14
+    },
+    {
+      "username": "david",
+      "userId": 4,
+      "content": "Yet another test",
+      "id": 15
     }
   ]
 }

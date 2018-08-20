@@ -3,7 +3,6 @@ const loginBuilder = require("./login/Login");
 const buildDom = require("./DOMbuilder");
 const registerCreator = require("./login/Register");
 const navbarFunctions = require("./navbar/navbar");
-const getDate = require("./getDate");
 const friendForm = require("./friends/Friends");
 const friendDisplay = require("./friends/friendDisplay");
 const handleProfile = require("./profile/profileHandler");
@@ -14,7 +13,7 @@ const handleMessages = require("./messages/messageHandler");
 
 // Creates the Login page to on Load
 
-// JP event listeners to decect login or register
+// JP event listeners to detect login or register
 
 /*              Note On Wrapper
 With all the Ids and event listeners being added dynamically everytime a form was cleared or added or refreshed the event listeners kept being detached
@@ -138,7 +137,7 @@ document.querySelector("#wrapper").addEventListener("click", () => {
             let username = document.querySelector("#registerUsername").value;
             // Plug input fields into function that adds a new user
             // Checks to make sure input fields are not blank
-            if (email || username === "") {
+            if (email === "" || username === "") {
                 alert("Please Fill Requirements")
             }
             else {
@@ -176,6 +175,10 @@ loginChecker = () => {
         let userId = JSON.parse(sessionStorage.getItem("user"))[0].id;
         console.log(userId);
         buildDom();
+        DataManager.friendsList(userId)
+                    .then(result => {
+                        friendDisplay.onLoadDisplay(result.friendUsername, result.otherFriendId)
+                    })
         handleArticles(userId);
         handleMessages(userId);
         handleProfile(userId);

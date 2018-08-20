@@ -8,10 +8,10 @@ const loginBuilder = Object.create(null, {
     loginForm: {
         value: () => {
             return `<div id="login-form">
-                        <h2>Login Ya Jerk</h2>
+                        <h2>Login</h2>
                         <input id="loginUsername" placeholder="Please Enter Username"></input>
                         <input id="loginEmail" placeholder="Please Enter Email"></input>
-                        <div class="button-container">
+                        <div class="button-container-1">
                             <button id="loginSubmit">Login</button>
                             <button id="register">Register</button>
                         </div>

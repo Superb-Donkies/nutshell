@@ -1,102 +1,73 @@
+@import "buttons.css";
+@import "login.css";
+@import "articles.css";
+@import "tasks.css";
+@import "events.css";
+
+html {
+    position: relative;
+    z-index: -9;
+}
 
 body {
-    background: linear-gradient(to bottom, #c9d6ff, #e2e2e2) no-repeat;
-    background-size: 100%;
-}
-
-#login-form,
-#register-form  {
-    margin: 15% auto 30%;
-    padding: 1em;
-    background-color: white;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 8px 6px -6px black;
-    background: linear-gradient(to bottom, #16222a, #3a6073);
-    color: white;
-}
-
-#login-form input {
-    margin: .5em auto;
-    width: 80%;
-    padding: .2em;
-}
-
-#register-form input {
-    margin: .5em auto;
-    width: 80%;
-    padding: .2em;
-}
-
-#register-form button {
-    width: 20%;
-    margin: 1em auto;
-    padding: .3em;
-    border-radius: 5px;
-    box-shadow: 0 6px 4px -4px black;
-    border: none;
-    color: white;
-}
-
-#backButton {
-    background: linear-gradient( red, rgb(219, 0, 0));
-}
-
-#registerSubmit {
-    background: linear-gradient( blue, rgb(0, 0, 226));
-}
-
-#backButton:hover,
-#registerSubmit:hover {
-    box-shadow: none;
-}
-
-nav {
-    background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-}
-
-nav button {
     display: block;
+    background:
+    url("https://images.unsplash.com/photo-1516820827855-3ea1bd6f79ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b736d7000068a60df32f0330fa9adf7&auto=format&fit=crop&w=1661&q=80") no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    z-index: -8;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+    position: relative;
+    z-index: -7;
+}
+
+#user-page {
+    display: block;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d34293717666869c9f8d26d353e1bb24&auto=format&fit=crop&w=1650&q=80") no-repeat fixed;
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+    z-index: -6;
+    min-height: 900px;
 }
 
 main {
     padding: .5em;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    z-index: -5;
 }
 
 .left-container {
+    margin-top: 5%;
     margin-left: .5em;
     padding: 1em;
-    width: 35%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    width: 25%;
+    position: fixed;
+    left: 0;
 }
 
 .mid-container {
-    margin: 0;
+    margin-left: -2.5em;
     padding: 1em;
-    width: 30%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    width: 40%;
     color: white;
+    position: relative;
+    z-index: -4;
 }
 
 .right-container {
     margin-right: .5em;
     padding: 1em;
-    width: 35%;
-    background: linear-gradient(to bottom, #2980b9, #2c3e50);
-}
-
-.article-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 30%;
+    position: fixed;
+    right: 0;
 }
 
 #messages-content {
@@ -110,6 +81,12 @@ main {
     max-height: 200px;
     overflow-y: scroll;
     box-shadow: inset 0 0 10px #000000;
+}
+
+#message-feed p {
+    margin: .1em;
+    width: 100%;
+    word-break: break-all
 }
 
 .username {
@@ -127,48 +104,93 @@ main {
     width: 75%
 }
 
-#message-form button {
-    display: block;
-    width: 20%;
-    border-radius: 5px;
-}
-
 #profile-content {
-    background-color: white;
+    background: linear-gradient(to bottom, #8e9eab, #eef2f3);
     margin: .3em;
-    padding: .5em;
-}
-
-#event-content {
-    background-color: lightgray;
-    margin: .3em;
-    padding: .5em;
-    max-height: 350px;
-    overflow-y: scroll;
-    box-shadow: inset 0 0 10px #000000;
-}
-
-#task-main {
-    background-color: lightseagreen;
-    margin: .3em;
-    padding: .5em;
-    max-height: 350px;
-    overflow-y: scroll;
+    margin-bottom: 1em;
+    padding: .8em;
     box-shadow: inset 0 0 10px #000000;
 }
 
 #profile-image {
     display: block;
     width: 100%;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
 }
 
-/*
-    David Taylor
-    Defines the style properties of the first child within the event-container element.
-*/
-
-.event-container div:first-child {
-    font-size: larger;
-    font-weight: bolder;
-    background-color: palevioletred;
+#profile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .3em;
+    margin: .5em;
 }
+
+#profile-form  input {
+    width: 90%;
+    height: 15px;
+    margin: .2em auto;
+}
+
+#profile-form  textarea {
+    width: 90%;
+    margin: 1em auto;
+    height: 2em;
+}
+
+#profile-form button {
+    height: 20px;
+    margin: 1em auto;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 4px -6px black;
+    background: black;
+    opacity: .6;
+}
+
+#friends-content {
+    margin: .3em;
+    padding: 1em;
+    box-shadow: inset 0 0 10px #000000;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+
+.section-header {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.friendCard {
+    background: linear-gradient(to bottom, #bfd4e6, #eef2f3);
+    display: flex;
+    justify-content: space-between;
+    border: black solid 1px;
+}
+
+.friendCard div {
+    margin-right: 1em;
+}
+
+
+.friendCard p {
+    display: block;
+    margin: 1em;
+}
+
+#friends-content {
+    padding: 1em;
+}
+
+#friendSearch {
+    width: 60%;
+    padding: .5em;
+}
+
+fieldset {
+    border: none;
+}
+
+

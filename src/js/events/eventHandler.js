@@ -36,12 +36,16 @@ function handleEvents(userId) {
         if (e.target.id === "new-event-button") {
             document.querySelector("#event-form").innerHTML = eventForm.renderEventForm();
         }
+        if (e.target.id === "leave-event-form") {
+            eventForm.renderAddEventButton();
+        }
         if (e.target.id === "save-event-button") {
             let newEvent = {
                 userId: userId,
                 title: document.querySelector("#event-title").value,
                 location: document.querySelector("#event-location").value,
-                date: document.querySelector("#event-date").value
+                date: document.querySelector("#event-date").value,            
+                time: document.querySelector("#event-time").value            
             }
             document.querySelector("#event-form").innerHTML = "";
             eventForm.renderAddEventButton();
@@ -83,7 +87,7 @@ function handleEvents(userId) {
         if (e.target.className === "delete-event-button") {
             let eventId = e.target.id.split("--")[1];
             DataManager.removeEvent(eventId).then(() => {
-                e.target.parentElement.remove();
+                e.target.parentElement.parentElement.remove();
             });
         }
         if (e.target.className === "save-event-edit-button") {
